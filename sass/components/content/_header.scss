@@ -1,0 +1,129 @@
+.site-branding {
+    display: flex;
+    align-items: center;
+
+    .site-title {
+        font-size: 37px;
+        line-height: 40px;
+        letter-spacing: .05em;
+        font-weight: 700;
+        margin: 0;
+        display: block;
+        font-family: $font__heading;
+
+        a {
+            color: inherit;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .site-description {
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 10px;
+        letter-spacing: 0.295em;
+        margin: 0;
+    }
+
+    .custom-logo {
+        display: block;
+        margin-right: 10px;
+    }
+}
+
+.site-header {
+    position: relative;
+    padding: 60px 10px;
+    @include respond-to(sm) {
+        padding: 60px 25px;
+    }
+    @include respond-to(md) {
+        padding: 60px 50px;
+    }
+
+    &-container {
+        @include container-wide;
+        display: flex;
+        align-items: center;
+    }
+
+    .navigation-container {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+
+        > * {
+            margin-left: 20px;
+        }
+    }
+
+    .site-branding,
+    .header-menu-container,
+    .header-socials-container {
+        z-index: 1;
+    }
+
+    .header-dropdown{
+        &.toggled-on{
+            .header-dropdown-content{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        &-content {
+            opacity: 0;
+            visibility: hidden;
+            overflow: hidden;
+            position: absolute;
+            background: $color__background-body;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 0;
+            height: 100vh;
+            padding: 250px 10px 50px;
+            @include respond-to(sm) {
+                padding: 250px 25px 50px;
+            }
+            @include respond-to(md) {
+                padding: 250px 50px 50px;
+            }
+
+            &-wrapper {
+                @include container-wide;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                flex: 1 0 50%;
+                > *{
+                    overflow: auto;
+                }
+            }
+        }
+    }
+
+    .header-dropdown-toggle {
+        padding: 35px 30px;
+        background: $themeColor1;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+            background: $themeColor2;
+        }
+    }
+
+    .header-sidebar{
+        padding-top: 50px;
+        border-top: 2px solid $themeColor3;
+    }
+}
+
+body{
+    &.menu-opened{
+        overflow: hidden;
+    }
+}

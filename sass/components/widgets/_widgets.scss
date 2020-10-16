@@ -1,8 +1,25 @@
-.widget {
-	margin: 0 0 1.5em;
+.header-sidebar {
+    display: flex;
 
-	// Make sure select elements fit in widgets.
-	select {
-		max-width: 100%;
-	}
+    > * {
+        flex: 1 0 auto;
+        text-align: center;
+
+        &:last-child {
+            text-align: right;
+        }
+
+        &:first-child {
+            text-align: left;
+        }
+    }
+}
+
+.widget {
+    margin: 0 0 1.5em;
+
+    // Make sure select elements fit in widgets.
+    select {
+        max-width: 100%;
+    }
 }

@@ -11,21 +11,29 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'albatross' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'albatross' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'albatross' ), 'albatross', '<a href="https://motopress.com/">MotoPress</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+<footer id="colophon" class="site-footer">
+    <div class="site-footer-wrapper">
+		<?php get_sidebar(); ?>
+
+        <div class="site-info">
+			<?php
+			$dateObj = new DateTime;
+			$year = $dateObj->format("Y");
+			printf(
+				get_theme_mod('albatross_footer_text',
+					sprintf(
+						esc_html_x('%1$s &copy; %2$s All Rights Reserved', 'Default footer text, %1$s - blog name, %2$s - current year', 'albatross'),
+						get_bloginfo('name'),
+						$year
+					)
+				),
+				get_bloginfo('name'),
+				$year
+			);
+			?>
+        </div><!-- .site-info -->
+    </div>
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

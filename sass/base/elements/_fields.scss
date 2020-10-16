@@ -14,20 +14,45 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: $color__text-input;
-	border: 1px solid $color__border-input;
-	border-radius: 3px;
-	padding: 3px;
-
-	&:focus {
-		color: $color__text-input-focus;
-	}
+    color: $color__text-input;
+    border: 1px solid $color__border-input;
+    border-radius: 0;
+    padding: 16px 18px;
+    line-height: 21px;
+    display: block;
+    width: 100%;
+    background: $themeColor4;
 }
 
 select {
-	border: 1px solid $color__border-input;
+    border: 1px solid $color__border-input;
+    height: 55px;
 }
 
 textarea {
-	width: 100%;
+    width: 100%;
+}
+
+label {
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    margin-bottom: 4px;
+    display: inline-block;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline-block;
+    margin: 3px 5px 0 0;
+}
+
+form {
+    > * {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }

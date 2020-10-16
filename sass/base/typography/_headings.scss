@@ -4,5 +4,49 @@ h3,
 h4,
 h5,
 h6 {
-	clear: both;
+    clear: both;
+    font-family: $font__heading;
+    margin-top: 1.5em;
+    margin-bottom: .5em;
+    font-weight: normal;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+h1 {
+    font-size: 130px;
+    line-height: 120px;
+}
+
+h2 {
+    font-size: 55px;
+    line-height: 65px;
+}
+
+h3 {
+    font-size: 38px;
+    line-height: 44px;
+}
+
+h4 {
+    font-size: 30px;
+    line-height: 38px;
+}
+
+h5 {
+    font-size: 18px;
+    line-height: 20px;
+    font-family: $font__main;
+}
+
+h6 {
+    font-size: 15px;
+    line-height: 18px;
+    font-family: $font__main;
 }

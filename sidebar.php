@@ -7,11 +7,43 @@
  * @package Albatross
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+if (!is_active_sidebar('sidebar-4') &&
+	!is_active_sidebar('sidebar-5') &&
+	!is_active_sidebar('sidebar-6') &&
+	!is_active_sidebar('sidebar-7')) {
 	return;
 }
 ?>
 
-<aside id="secondary" class="widget-area">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</aside><!-- #secondary -->
+<div id="footer-widgets" class="footer-widgets">
+	<?php
+	if (is_active_sidebar('sidebar-4')):
+		?>
+        <div class="widget-area">
+			<?php dynamic_sidebar('sidebar-4'); ?>
+        </div>
+	<?php
+	endif;
+	if (is_active_sidebar('sidebar-5')):
+		?>
+        <div class="widget-area">
+			<?php dynamic_sidebar('sidebar-5'); ?>
+        </div>
+	<?php
+	endif;
+	if (is_active_sidebar('sidebar-6')):
+		?>
+        <div class="widget-area">
+			<?php dynamic_sidebar('sidebar-6'); ?>
+        </div>
+	<?php
+	endif;
+	if (is_active_sidebar('sidebar-7')):
+		?>
+        <div class="widget-area">
+			<?php dynamic_sidebar('sidebar-7'); ?>
+        </div>
+	<?php
+	endif;
+	?>
+</div><!-- #secondary -->

@@ -1,7 +1,198 @@
 .comment-content a {
-	word-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .bypostauthor {
-	display: block;
+    display: block;
+}
+
+.comments-area {
+    padding: 0 10px;
+    @include respond-to(sm) {
+        padding: 0 25px;
+    }
+    @include respond-to(md) {
+        padding: 0 50px;
+    }
+
+    > * {
+        max-width: $content-width;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .comments-title {
+        margin-bottom: 50px;
+    }
+}
+
+.comment-navigation {
+    margin-bottom: 25px;
+}
+
+.comment-list {
+    list-style: none;
+    padding: 0;
+
+    .comment {
+        margin-bottom: 50px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &-body {
+            position: relative;
+            border: 1px solid $themeColor3;
+            background: #fff;
+            padding: 30px 30px 30px 120px;
+            min-height: 126px;
+        }
+
+        &-meta {
+            margin-bottom: 16px;
+        }
+
+        &-author {
+            .avatar {
+                position: absolute;
+                left: 25px;
+                top: 30px;
+                border-radius: 50%;
+            }
+
+            .says {
+                display: none;
+            }
+
+            .fn {
+                font-weight: normal;
+                font-size: 30px;
+                line-height: 39px;
+                font-family: $font__heading;
+            }
+        }
+
+        &-metadata {
+            font-size: 15px;
+
+            a {
+                color: inherit;
+                text-decoration: none;
+
+                &:hover {
+                    color: $themeColor1;
+                }
+            }
+        }
+
+        &-content {
+            line-height: 40px;
+        }
+
+        .reply {
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            font-size: 15px;
+        }
+    }
+
+    .children {
+        list-style: none;
+        margin-top: 50px;
+    }
+}
+
+.comment-respond {
+    margin-top: 80px;
+    margin-bottom: 100px;
+
+    .comment-reply-title {
+        margin-bottom: 50px;
+        a{
+            display: inline-block;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+    }
+}
+
+.comment-form {
+    border: 1px solid $themeColor3;
+    background: #fff;
+    padding: 35px 45px 45px;
+
+    .comment-notes {
+        font-size: 15px;
+    }
+
+
+    .form-submit {
+
+        button {
+            position: relative;
+            background: transparent;
+            color: inherit;
+            margin-left: 25px;
+            padding-left: 60px;
+            transition: padding-left .3s;
+
+            &:hover {
+                padding-left: 70px;
+
+                &:after,
+                &:before {
+                    transform: rotate(-45deg) scale(1.2);
+                }
+
+                svg {
+                    fill: #fff;
+                    transform: translateX(5px);
+
+                    rect {
+                        transform: scaleX(.5);
+                    }
+                }
+            }
+
+            &:after,
+            &:before {
+                left: 0;
+                top: 0;
+                width: 38px;
+                height: 38px;
+                content: "";
+                position: absolute;
+                transform: rotate(45deg);
+                transition: .3s;
+            }
+
+            &:before {
+                border: 2px solid currentColor;
+            }
+
+            &:after {
+                background: currentColor;
+                transform: scale(.01) rotate(45deg);
+            }
+        }
+
+        svg {
+            fill: currentColor;
+            top: 13px;
+            left: -25px;
+            width: 50px;
+            height: 12px;
+            z-index: 1;
+            position: absolute;
+            transition: .3s;
+
+            rect {
+                will-change: transform;
+                transform-origin: right center;
+                transition: transform .3s;
+            }
+        }
+    }
 }

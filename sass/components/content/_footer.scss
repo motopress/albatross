@@ -1,0 +1,34 @@
+.site-footer{
+    background: $themeColor2;
+    color: #fff;
+    padding: 25px 10px;
+    @include respond-to(sm){
+        padding: 50px 25px;
+    }
+    @include respond-to(md){
+        padding: 120px 50px;
+    }
+
+    &-wrapper{
+        max-width: $content-width-wide;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .site-info{
+        opacity: .5;
+        font-size: 15px;
+    }
+}
+
+.footer-widgets{
+    display: flex;
+    > *{
+        flex: 1 0 33.333%;
+        &:first-child{
+            &:not(last-child){
+
+            }
+        }
+    }
+}

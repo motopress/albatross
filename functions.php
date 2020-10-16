@@ -7,12 +7,12 @@
  * @package Albatross
  */
 
-if ( ! defined( 'ALBATROSS_VERSION' ) ) {
+if (!defined('ALBATROSS_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define( 'ALBATROSS_VERSION', '0.0.1' );
+	define('ALBATROSS_VERSION', get_albatross_version());
 }
 
-if ( ! function_exists( 'albatross_setup' ) ) :
+if (!function_exists('albatross_setup')) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -20,17 +20,18 @@ if ( ! function_exists( 'albatross_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function albatross_setup() {
+	function albatross_setup()
+	{
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on Albatross, use a find and replace
 		 * to change 'albatross' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'albatross', get_template_directory() . '/languages' );
+		load_theme_textdomain('albatross', get_template_directory() . '/languages');
 
 		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
+		add_theme_support('automatic-feed-links');
 
 		/*
 		 * Let WordPress manage the document title.
@@ -38,19 +39,21 @@ if ( ! function_exists( 'albatross_setup' ) ) :
 		 * hard-coded <title> tag in the document head, and expect WordPress to
 		 * provide it for us.
 		 */
-		add_theme_support( 'title-tag' );
+		add_theme_support('title-tag');
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
-		add_theme_support( 'post-thumbnails' );
+		add_theme_support('post-thumbnails');
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'albatross' ),
+				'menu-1' => esc_html__('Header Flat', 'albatross'),
+				'menu-2' => esc_html__('Header Socials', 'albatross'),
+				'menu-3' => esc_html__('Primary', 'albatross'),
 			)
 		);
 
@@ -84,7 +87,7 @@ if ( ! function_exists( 'albatross_setup' ) ) :
 		);
 
 		// Add theme support for selective refresh for widgets.
-		add_theme_support( 'customize-selective-refresh-widgets' );
+		add_theme_support('customize-selective-refresh-widgets');
 
 		/**
 		 * Add support for core custom logo.
@@ -94,15 +97,15 @@ if ( ! function_exists( 'albatross_setup' ) ) :
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 250,
-				'width'       => 250,
-				'flex-width'  => true,
+				'height' => 250,
+				'width' => 250,
+				'flex-width' => true,
 				'flex-height' => true,
 			)
 		);
 	}
 endif;
-add_action( 'after_setup_theme', 'albatross_setup' );
+add_action('after_setup_theme', 'albatross_setup');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -111,45 +114,127 @@ add_action( 'after_setup_theme', 'albatross_setup' );
  *
  * @global int $content_width
  */
-function albatross_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'albatross_content_width', 640 );
+function albatross_content_width()
+{
+	$GLOBALS['content_width'] = apply_filters('albatross_content_width', 640);
 }
-add_action( 'after_setup_theme', 'albatross_content_width', 0 );
+
+add_action('after_setup_theme', 'albatross_content_width', 0);
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function albatross_widgets_init() {
+function albatross_widgets_init()
+{
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'albatross' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'albatross' ),
+			'name' => esc_html__('Header 1', 'albatross'),
+			'id' => 'sidebar-1',
+			'description' => esc_html__('Add widgets here.', 'albatross'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'after_widget' => '</section>',
+			'before_title' => '<h5 class="widget-title">',
+			'after_title' => '</h5>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name' => esc_html__('Header 2', 'albatross'),
+			'id' => 'sidebar-2',
+			'description' => esc_html__('Add widgets here.', 'albatross'),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '<h5 class="widget-title">',
+			'after_title' => '</h5>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name' => esc_html__('Header 3', 'albatross'),
+			'id' => 'sidebar-3',
+			'description' => esc_html__('Add widgets here.', 'albatross'),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '<h5 class="widget-title">',
+			'after_title' => '</h5>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name' => esc_html__('Footer 1', 'albatross'),
+			'id' => 'sidebar-4',
+			'description' => esc_html__('Add widgets here.', 'albatross'),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '<h4 class="widget-title">',
+			'after_title' => '</h4>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name' => esc_html__('Footer 2', 'albatross'),
+			'id' => 'sidebar-5',
+			'description' => esc_html__('Add widgets here.', 'albatross'),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '<h4 class="widget-title">',
+			'after_title' => '</h4>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name' => esc_html__('Footer 3', 'albatross'),
+			'id' => 'sidebar-6',
+			'description' => esc_html__('Add widgets here.', 'albatross'),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '<h4 class="widget-title">',
+			'after_title' => '</h4>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name' => esc_html__('Footer 4', 'albatross'),
+			'id' => 'sidebar-7',
+			'description' => esc_html__('Add widgets here.', 'albatross'),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '<h4 class="widget-title">',
+			'after_title' => '</h4>',
 		)
 	);
 }
-add_action( 'widgets_init', 'albatross_widgets_init' );
+
+add_action('widgets_init', 'albatross_widgets_init');
 
 /**
  * Enqueue scripts and styles.
  */
-function albatross_scripts() {
-	wp_enqueue_style( 'albatross-style', get_stylesheet_uri(), array(), ALBATROSS_VERSION );
-	wp_style_add_data( 'albatross-style', 'rtl', 'replace' );
+function albatross_scripts()
+{
+	wp_enqueue_style('fontawesome-free', 'https://use.fontawesome.com/releases/v5.10.0/css/all.css', [], '5.10.0');
 
-	wp_enqueue_script( 'albatross-navigation', get_template_directory_uri() . '/js/navigation.js', array(), ALBATROSS_VERSION, true );
+	wp_enqueue_style('albatross-fonts', albatross_fonts_url(), array(), ALBATROSS_VERSION);
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+	wp_enqueue_style('albatross-style', get_stylesheet_uri(), array(), ALBATROSS_VERSION);
+	wp_style_add_data('albatross-style', 'rtl', 'replace');
+
+	wp_enqueue_script('albatross-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), ALBATROSS_VERSION, true);
+
+	if (is_singular() && comments_open() && get_option('thread_comments')) {
+		wp_enqueue_script('comment-reply');
 	}
 }
-add_action( 'wp_enqueue_scripts', 'albatross_scripts' );
+
+add_action('wp_enqueue_scripts', 'albatross_scripts');
 
 /**
  * Implement the Custom Header feature.
@@ -174,7 +259,38 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Load Jetpack compatibility file.
  */
-if ( defined( 'JETPACK__VERSION' ) ) {
+if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function albatross_fonts_url()
+{
+	$url = 'https://fonts.googleapis.com/css2?';
+	$fonts = [];
+
+	$font1 = esc_html_x('on', 'Amiri font: on or off', 'albatross');
+	if ('off' !== $font1) {
+		$fonts[] = 'family=Amiri:ital,wght@0,400;0,700;1,400;1,700';
+	}
+
+	$font2 = esc_html_x('on', 'Montserrat font: on or off', 'albatross');
+	if ('off' !== $font2) {
+		$fonts[] = 'family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700';
+	}
+
+	if (!$fonts) {
+		return null;
+	}
+
+	$url .= implode('&amp;', $fonts);
+	$url .= '&amp;display=swap';
+
+	return esc_url_raw($url);
+}
+
+function get_albatross_version()
+{
+	$theme_info = wp_get_theme(get_template());
+
+	return $theme_info->get('Version');
+}
