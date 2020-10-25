@@ -1,6 +1,7 @@
 .site-branding {
     display: flex;
     align-items: center;
+    flex: 1 0 auto;
 
     .site-title {
         font-size: 37px;
@@ -34,26 +35,82 @@
     }
 }
 
+body {
+    &:not(.menu-opened) {
+        .site-header.absolute {
+            color: #fff;
+
+            .custom-logo-link {
+                display: none;
+
+                &.light {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    &.menu-opened {
+        .custom-logo-link.light {
+            display: none;
+        }
+    }
+}
+
 .site-header {
     position: relative;
-    padding: 60px 10px;
+    padding: 20px 10px;
     @include respond-to(sm) {
-        padding: 60px 25px;
+        padding: 40px 25px;
     }
     @include respond-to(md) {
         padding: 60px 50px;
+    }
+
+    &.absolute {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
     }
 
     &-container {
         @include container-wide;
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
+        @include respond-to(sm) {
+            flex-wrap: nowrap;
+        }
+    }
+
+    .default-navigation {
+        display: flex;
+        flex-wrap: nowrap;
+        flex: 1 1 auto;
+        margin-bottom: 20px;
+        z-index: 10;
+        @include respond-to(sm) {
+            margin-bottom: 0;
+        }
+
+        .header-menu-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
     }
 
     .navigation-container {
-        margin-left: auto;
         display: flex;
         align-items: center;
+        flex: 1 0 auto;
+        justify-content: flex-end;
+        @include respond-to(sm) {
+            flex: 0 1 auto;
+        }
 
         > * {
             margin-left: 20px;
@@ -66,16 +123,20 @@
         z-index: 1;
     }
 
-    .header-dropdown{
-        &.toggled-on{
-            .header-dropdown-content{
+    .header-dropdown {
+        &.toggled-on {
+            .header-dropdown-content {
                 opacity: 1;
                 visibility: visible;
+                transform: none;
             }
         }
+
         &-content {
             opacity: 0;
             visibility: hidden;
+            transform: translateY(-100%);
+            transition: .5s ease-out;
             overflow: hidden;
             position: absolute;
             background: $color__background-body;
@@ -84,11 +145,14 @@
             right: 0;
             z-index: 0;
             height: 100vh;
-            padding: 250px 10px 50px;
+            padding: 150px 10px 20px;
             @include respond-to(sm) {
-                padding: 250px 25px 50px;
+                padding: 150px 25px 30px;
             }
             @include respond-to(md) {
+                padding: 200px 50px 50px;
+            }
+            @include respond-to(lg) {
                 padding: 250px 50px 50px;
             }
 
@@ -98,15 +162,18 @@
                 flex-direction: column;
                 height: 100%;
                 flex: 1 0 50%;
-                > *{
-                    overflow: auto;
-                }
             }
         }
     }
 
     .header-dropdown-toggle {
-        padding: 35px 30px;
+        padding: 10px 20px;
+        @include respond-to(sm) {
+            padding: 25px 30px;
+        }
+        @include respond-to(md) {
+            padding: 35px 30px;
+        }
         background: $themeColor1;
         position: relative;
         z-index: 1;
@@ -116,14 +183,32 @@
         }
     }
 
-    .header-sidebar{
-        padding-top: 50px;
-        border-top: 2px solid $themeColor3;
+    .main-navigation {
+        overflow: auto;
+    }
+
+    .header-sidebar {
+        font-size: 13px;
+        max-height: 100px;
+        overflow: auto;
+        @include respond-to(sm) {
+            max-height: 200px;
+            font-size: 15px;
+        }
+        @include respond-to(md) {
+            font-size: 18px;
+        }
+
+        &-wrapper {
+            margin-top: 50px;
+            border-top: 2px solid $themeColor3;
+            padding-top: 50px;
+        }
     }
 }
 
-body{
-    &.menu-opened{
+body {
+    &.menu-opened {
         overflow: hidden;
     }
 }

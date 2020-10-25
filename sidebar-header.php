@@ -14,30 +14,32 @@ if (!is_active_sidebar('sidebar-1') &&
 }
 ?>
 
-<div id="header-sidebar" class="header-sidebar">
-	<?php
-	if (is_active_sidebar('sidebar-1')) :
-		?>
-        <div class="widget-area">
-			<?php dynamic_sidebar('sidebar-1'); ?>
-        </div>
-	<?php
-	endif;
+<div class="header-sidebar-wrapper">
+    <div id="header-sidebar" class="header-sidebar">
+		<?php
+		if (is_active_sidebar('sidebar-1')) :
+			?>
+            <div class="widget-area">
+				<?php dynamic_sidebar('sidebar-1'); ?>
+            </div>
+		<?php
+		endif;
 
-	if (is_active_sidebar('sidebar-2')) :
-		?>
-        <div class="widget-area">
-			<?php dynamic_sidebar('sidebar-2'); ?>
-        </div>
-	<?php
-	endif;
+		if (is_active_sidebar('sidebar-2')) :
+			?>
+            <div class="widget-area">
+				<?php dynamic_sidebar('sidebar-2'); ?>
+            </div>
+		<?php
+		endif;
 
-	if (is_active_sidebar('sidebar-3')) :
+		if (is_active_sidebar('sidebar-3')) :
+			?>
+            <div class="widget-area">
+				<?php dynamic_sidebar('sidebar-3'); ?>
+            </div>
+		<?php
+		endif;
 		?>
-        <div class="widget-area">
-			<?php dynamic_sidebar('sidebar-3'); ?>
-        </div>
-	<?php
-	endif;
-	?>
-</div><!-- #secondary -->
+    </div><!-- #secondary -->
+</div>

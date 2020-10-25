@@ -7,6 +7,7 @@
 }
 
 .comments-area {
+    margin-bottom: 100px;
     padding: 0 10px;
     @include respond-to(sm) {
         padding: 0 25px;
@@ -45,8 +46,11 @@
             position: relative;
             border: 1px solid $themeColor3;
             background: #fff;
-            padding: 30px 30px 30px 120px;
             min-height: 126px;
+            padding: 120px 30px 30px 30px;
+            @include respond-to(sm){
+                padding: 30px 30px 30px 120px;
+            }
         }
 
         &-meta {
@@ -55,10 +59,10 @@
 
         &-author {
             .avatar {
+                border-radius: 50%;
                 position: absolute;
                 left: 25px;
                 top: 30px;
-                border-radius: 50%;
             }
 
             .says {
@@ -98,9 +102,18 @@
         }
     }
 
+    .pingback,
+    .trackback {
+        .comment-body {
+            padding: 30px;
+            min-height: auto;
+        }
+    }
+
     .children {
         list-style: none;
         margin-top: 50px;
+        padding: 0;
     }
 }
 
@@ -110,7 +123,8 @@
 
     .comment-reply-title {
         margin-bottom: 50px;
-        a{
+
+        a {
             display: inline-block;
             margin-left: 20px;
             font-size: 18px;
@@ -126,7 +140,6 @@
     .comment-notes {
         font-size: 15px;
     }
-
 
     .form-submit {
 

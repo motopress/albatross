@@ -1,0 +1,32 @@
+// .entry-content - default content wrapper class
+// change it if you need
+.entry-content {
+    > * {
+        max-width: $block-default-width;
+        margin-bottom: $space-between-blocks;
+        margin-left: auto;
+        margin-right: auto;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.alignwide {
+            max-width: $block-wide-width;
+        }
+
+        &.alignfull {
+            max-width: $block-full-width;
+            margin-left: 10px;
+            margin-right: 10px;
+            @include respond-to(sm){
+                margin-left: 25px;
+                margin-right: 25px;
+            }
+            @include respond-to(md){
+                margin-left: 50px;
+                margin-right: 50px;
+            }
+        }
+    }
+}

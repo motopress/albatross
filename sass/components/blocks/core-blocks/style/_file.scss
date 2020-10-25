@@ -1,0 +1,41 @@
+.wp-block-file {
+
+    &.aligncenter {
+
+    }
+
+    &.alignright {
+
+    }
+
+    .wp-block-file__button {
+
+    }
+
+    a.wp-block-file__button {
+        background: $themeColor2;
+        color: #fff;
+        font-size: 15px;
+        line-height: 18px;
+        padding: 10px 20px;
+        border: 0;
+        border-radius: 0;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        transition: .3s;
+        text-decoration: none;
+
+        &:hover,
+        &:visited,
+        &:focus,
+        &:active {
+            cursor: pointer;
+            background-color: $themeColor1;
+        }
+    }
+
+    * + .wp-block-file__button {
+
+    }
+}

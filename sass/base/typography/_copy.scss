@@ -15,7 +15,18 @@ i {
 }
 
 blockquote {
-    margin: 0 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid $themeColor3;
+    border-radius: 4px;
+    padding: 34px;
+    line-height: 40px;
+    background: $themeColor5;
+
+    cite {
+        font-style: italic;
+        font-size: 15px;
+    }
 }
 
 address {

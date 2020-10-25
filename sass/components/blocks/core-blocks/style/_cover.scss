@@ -1,0 +1,11 @@
+.wp-block-cover {
+
+    .wp-block-cover__inner-container {
+
+    }
+
+    &.alignleft,
+    &.alignright{
+        max-width: 50%;
+    }
+}

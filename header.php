@@ -25,47 +25,57 @@
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'albatross'); ?></a>
 
-    <header id="masthead" class="site-header">
+    <header id="masthead"
+            class="<?php echo esc_attr(implode(' ', apply_filters('albatross_header_classes', ['site-header']))); ?>">
         <div class="site-header-container">
-            <div class="site-branding">
+            <div class="default-navigation">
+                <div class="site-branding">
+					<?php
+					the_custom_logo();
+					?>
+                    <div class="title-wrapper">
+						<?php
+						if (is_front_page() && is_home()) :
+							?>
+                            <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"
+                                                      rel="home"><?php bloginfo('name'); ?></a></h1>
+						<?php
+						else :
+							?>
+                            <p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"
+                                                     rel="home"><?php bloginfo('name'); ?></a></p>
+						<?php
+						endif;
+						$albatross_description = get_bloginfo('description', 'display');
+						if ($albatross_description || is_customize_preview()) :
+							?>
+                            <p class="site-description"><?php echo $albatross_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+								?></p>
+						<?php endif; ?>
+                    </div>
+                </div><!-- .site-branding -->
 				<?php
-				the_custom_logo();
+				if (has_nav_menu('menu-1')) :
+					?>
+                    <div class="header-menu-wrapper">
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'menu-1',
+								'menu_id' => 'header-menu',
+								'menu_class' => 'header-menu',
+								'container_class' => 'header-menu-container'
+							)
+						);
+						?>
+                    </div>
+				<?php
+				endif;
 				?>
-                <div class="title-wrapper">
-					<?php
-					if (is_front_page() && is_home()) :
-						?>
-                        <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"
-                                                  rel="home"><?php bloginfo('name'); ?></a></h1>
-					<?php
-					else :
-						?>
-                        <p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"
-                                                 rel="home"><?php bloginfo('name'); ?></a></p>
-					<?php
-					endif;
-					$albatross_description = get_bloginfo('description', 'display');
-					if ($albatross_description || is_customize_preview()) :
-						?>
-                        <p class="site-description"><?php echo $albatross_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-							?></p>
-					<?php endif; ?>
-                </div>
-            </div><!-- .site-branding -->
-
+            </div>
             <div class="navigation-container">
-				<?php
-				if (has_nav_menu('menu-1')) {
-					wp_nav_menu(
-						array(
-							'theme_location' => 'menu-1',
-							'menu_id' => 'header-menu',
-							'menu_class' => 'header-menu',
-							'container_class' => 'header-menu-container'
-						)
-					);
-				}
 
+				<?php
 				if (has_nav_menu('menu-2')) {
 					wp_nav_menu(
 						array(

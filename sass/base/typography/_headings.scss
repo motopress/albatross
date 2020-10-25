@@ -20,8 +20,12 @@ h6 {
 }
 
 h1 {
-    font-size: 130px;
-    line-height: 120px;
+    font-size: 65px;
+    line-height: 75px;
+    @include respond-to(md) {
+        font-size: 130px;
+        line-height: 120px;
+    }
 }
 
 h2 {

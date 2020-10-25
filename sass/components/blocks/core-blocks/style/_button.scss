@@ -1,0 +1,36 @@
+.wp-block-button {
+
+    &__link {
+        text-decoration: none;
+        border-radius: 0;
+        font-size: 15px;
+        letter-spacing: .05em;
+        line-height: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 26px;
+        background-color: $themeColor2;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &:visited {
+            color: #fff;
+            text-decoration: none;
+            background: $themeColor1;
+        }
+    }
+}
+
+.is-style-outline {
+
+    .wp-block-button__link {
+
+        &:hover,
+        &:focus,
+        &:active,
+        &:visited {
+            border-color: transparent;
+        }
+    }
+}

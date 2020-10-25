@@ -1,0 +1,39 @@
+.wp-block-gallery {
+
+    &.alignleft,
+    &.alignright {
+        max-width: 50%;
+    }
+
+    .blocks-gallery-caption {
+        width: 100%;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .blocks-gallery-item {
+        figcaption {
+
+        }
+    }
+
+    @for $i from 1 through 6 {
+        &.columns-#{$i} {
+            .blocks-gallery-item {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: $wp-block-image-gallery__image-gap;
+
+                @include respond-to(sm) {
+                    width: calc((100% - #{$wp-block-image-gallery__image-gap} * #{$i - 1}) / #{$i});
+                    margin-right: $wp-block-image-gallery__image-gap;
+
+                    &:last-child,
+                    &:nth-of-type(#{$i}n) {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

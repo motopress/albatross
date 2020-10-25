@@ -4,8 +4,8 @@
     float: left;
 
     /*rtl:ignore*/
-    margin-right: 1.5em;
-    margin-bottom: 1.5em;
+    margin-right: 40px;
+    margin-bottom: 30px;
 }
 
 .alignright {
@@ -14,14 +14,12 @@
     float: right;
 
     /*rtl:ignore*/
-    margin-left: 1.5em;
-    margin-bottom: 1.5em;
+    margin-left: 40px;
+    margin-bottom: 30px;
 }
 
 .aligncenter {
     clear: both;
-
     @include center-block;
-
-    margin-bottom: 1.5em;
+    margin-bottom: 30px;
 }

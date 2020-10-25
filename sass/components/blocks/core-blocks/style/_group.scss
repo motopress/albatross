@@ -1,0 +1,14 @@
+.wp-block-group {
+    &.has-background {
+        padding: 16px;
+    }
+
+    .wp-block-group__inner-container{
+        > *{
+            margin-bottom: $space-between-blocks;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}

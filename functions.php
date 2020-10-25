@@ -48,6 +48,9 @@ if (!function_exists('albatross_setup')) :
 		 */
 		add_theme_support('post-thumbnails');
 
+		set_post_thumbnail_size(1620, 660);
+		add_image_size('albatross-small', 500, 300);
+
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
@@ -103,6 +106,36 @@ if (!function_exists('albatross_setup')) :
 				'flex-height' => true,
 			)
 		);
+
+		add_post_type_support('page', 'excerpt');
+
+		add_theme_support('responsive-embeds');
+		add_theme_support('align-wide');
+		add_theme_support('editor-styles');
+		add_editor_style(array(albatross_fonts_url(), 'editor-style.css'));
+
+		add_theme_support('editor-color-palette', array(
+			array(
+				'name' => esc_html__('Color 1', 'albatross'),
+				'slug' => 'color-1',
+				'color' => '#fc9285',
+			),
+			array(
+				'name' => esc_html__('Color 2', 'albatross'),
+				'slug' => 'color-2',
+				'color' => '#455d58',
+			),
+			array(
+				'name' => esc_html__('Color 3', 'albatross'),
+				'slug' => 'color-3',
+				'color' => '#dadfde',
+			),
+			array(
+				'name' => esc_html__('Color 4', 'albatross'),
+				'slug' => 'color-4',
+				'color' => '#faf7f2',
+			)
+		));
 	}
 endif;
 add_action('after_setup_theme', 'albatross_setup');
@@ -227,7 +260,14 @@ function albatross_scripts()
 	wp_enqueue_style('albatross-style', get_stylesheet_uri(), array(), ALBATROSS_VERSION);
 	wp_style_add_data('albatross-style', 'rtl', 'replace');
 
-	wp_enqueue_script('albatross-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), ALBATROSS_VERSION, true);
+	if (get_theme_mod('albatross_header_lottie_enabled', true)) {
+		wp_enqueue_script('lottie-player', 'https://unpkg.com/@lottiefiles/lottie-player@0.5.1/dist/lottie-player.js', array('jquery'), '0.5.1', true);
+	}
+
+	wp_enqueue_style('slick', get_template_directory_uri() . '/assets/slick/slick.css', array(), '1.8.1');
+	wp_enqueue_script('slick', get_template_directory_uri() . '/assets/slick/slick.js', array('jquery'), '1.8.1', true);
+
+	wp_enqueue_script('albatross-functions', get_template_directory_uri() . '/js/functions.js', array('slick', 'jquery'), ALBATROSS_VERSION, true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
@@ -255,13 +295,6 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if (defined('JETPACK__VERSION')) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
 
 function albatross_fonts_url()
 {

@@ -1,33 +1,103 @@
-.site-footer{
+.site-footer {
     background: $themeColor2;
     color: #fff;
     padding: 25px 10px;
-    @include respond-to(sm){
+    @include respond-to(sm) {
         padding: 50px 25px;
     }
-    @include respond-to(md){
+    @include respond-to(md) {
         padding: 120px 50px;
     }
 
-    &-wrapper{
+    &-wrapper {
         max-width: $content-width-wide;
         margin-left: auto;
         margin-right: auto;
+        position: relative;
+        padding-right: 50px;
     }
 
-    .site-info{
+    .site-info {
         opacity: .5;
         font-size: 15px;
     }
+
+    .scroll-to-top-button {
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        right: 10px;
+        @include respond-to(sm){
+            right: 0;
+        }
+
+        &:after,
+        &:before {
+            left: 0;
+            top: 0;
+            width: 38px;
+            height: 38px;
+            content: "";
+            position: absolute;
+            transform: rotate(45deg);
+            transition: .3s;
+            opacity: .2;
+        }
+
+        &:before {
+            border: 2px solid #fff;
+        }
+
+        &:after {
+            background: #fff;
+            transform: scale(.01) rotate(45deg);
+        }
+
+        &:hover {
+            svg {
+                fill: $themeColor2;
+            }
+
+            &:after,
+            &:before {
+                opacity: 1;
+                transform: rotate(-45deg) scale(1.2);
+            }
+        }
+
+        svg {
+            z-index: 1;
+            fill: #fff;
+            transition: .3s;
+        }
+    }
 }
 
-.footer-widgets{
+.footer-widgets {
     display: flex;
-    > *{
-        flex: 1 0 33.333%;
-        &:first-child{
-            &:not(last-child){
+    flex-wrap: wrap;
+    margin: 0 -16px;
+    @include respond-to(md) {
+        flex-wrap: nowrap;
+    }
 
+    > * {
+        padding: 0 16px;
+        width: 100%;
+        @include respond-to(sm) {
+            width: 50%;
+        }
+        @include respond-to(md) {
+            width: auto;
+        }
+
+        &:first-child {
+            &:not(last-child) {
+                flex: 1 0 33%;
             }
         }
     }

@@ -1,0 +1,26 @@
+.wp-block-image {
+
+    .alignleft {
+        margin-right: 40px;
+        margin-bottom: 30px;
+    }
+
+    .alignright {
+        margin-left: 40px;
+        margin-bottom: 30px;
+    }
+
+    .aligncenter {
+        margin-bottom: 30px;
+    }
+
+    img {
+        display: block;
+    }
+
+    figcaption {
+        margin: 10px 0 0;
+        text-align: center;
+        font-size: 13px;
+    }
+}

@@ -17,7 +17,6 @@
 		<div class="entry-meta">
 			<?php
 			albatross_posted_on();
-			albatross_posted_by();
 			?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
