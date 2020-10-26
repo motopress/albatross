@@ -95,11 +95,11 @@
             rows: 0,
         });
 
-        fpSlider.find('.fp-slider-next').click(function () {
+        fpSlider.find('.fp-slider-next').on('click', function () {
             fpSlider.slick('slickNext');
         });
 
-        fpSlider.find('.fp-slider-prev').click(function () {
+        fpSlider.find('.fp-slider-prev').on('click', function () {
             fpSlider.slick('slickPrev');
         });
 
