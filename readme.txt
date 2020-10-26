@@ -10,11 +10,11 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called Albatross.
+Albatross - Free Elementor WordPress Theme.
 
 == Description ==
 
-Description
+Albatross - Free Elementor WordPress Theme.
 
 == Installation ==
 
@@ -24,7 +24,7 @@ Description
 
 == Changelog ==
 
-= 1.0 - May 12 2015 =
+= 0.0.1 - Oct 26 2020 =
 * Initial release
 
 == Credits ==
