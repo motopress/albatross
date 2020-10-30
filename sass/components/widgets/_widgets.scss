@@ -32,3 +32,122 @@
         max-width: 100%;
     }
 }
+
+.page-sidebar {
+    .widget {
+        background: #fff;
+        border: 1px solid $themeColor3;
+        border-radius: 4px;
+        padding: 40px;
+        font-size: 15px;
+        line-height: 28px;
+        letter-spacing: .02em;
+        margin-bottom: 100px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.front-page-sidebar-wrapper {
+    background: #334844;
+    color: #fff;
+
+    .front-page-sidebar {
+        max-width: 1920px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .widget {
+        padding: 40px;
+        margin: 0;
+
+        .widget-title {
+            display: none;
+        }
+    }
+
+    .widget_mphb_search_availability_widget {
+        padding: 40px;
+        @include respond-to(md){
+            padding: 0 40px 0 60px;
+        }
+
+        .mphb_widget_search-form {
+            display: flex;
+            margin: 0 -23px;
+            flex-wrap: wrap;
+            @include respond-to(md) {
+                flex-wrap: nowrap;
+            }
+
+            > * {
+                padding: 0 23px;
+                @include respond-to(md){
+                    margin: 0;
+                    padding: 23px 23px 43px;
+                }
+            }
+        }
+
+        .mphb_widget_search-check-out-date,
+        .mphb_widget_search-check-in-date {
+            flex: 1 0 100%;
+            @include respond-to(sm){
+                flex: 1 0 50%;
+            }
+            @include respond-to(md) {
+                flex: 2 1;
+            }
+        }
+
+        .mphb_widget_search-adults,
+        .mphb_widget_search-children {
+            flex: 1 0 100%;
+            @include respond-to(sm){
+                flex: 1 0 50%;
+            }
+            @include respond-to(md) {
+                flex: 1 2;
+            }
+        }
+
+        input[type="text"],
+        select {
+            border-color: transparent;
+            background-color: #2B3F3B;
+            color: #fff;
+        }
+
+        select {
+            background-image: url('images/angle_down_light.svg');
+        }
+
+        input[type="text"] {
+            background-image: url('images/calendar_light.svg');
+        }
+
+        .mphb_widget_search-submit-button-wrapper {
+            flex:  1 0 100%;
+            @include respond-to(md){
+                margin-right: -17px;
+                padding: 0 0 0 40px;
+                flex: 1 0 auto;
+            }
+
+            input {
+                height: 100%;
+                background: #fff;
+                letter-spacing: 0.05em;
+                color: $themeColor2;
+
+                &:hover {
+                    background: $themeColor1;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

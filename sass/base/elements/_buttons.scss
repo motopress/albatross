@@ -2,6 +2,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
+.button,
 .more-link {
     background: $themeColor2;
     color: #fff;
@@ -15,6 +16,7 @@ input[type="submit"],
     letter-spacing: 0.05em;
     transition: .3s;
     text-decoration: none;
+    display: inline-block;
 
     &:hover {
         color: #fff;
@@ -25,5 +27,76 @@ input[type="submit"],
 
     &:focus {
         background-color: $themeColor1;
+    }
+}
+
+.animated-button {
+    position: relative;
+    background: transparent;
+    color: inherit;
+    margin-left: 25px;
+    padding-left: 60px;
+    transition: padding-left .3s;
+
+    &:active {
+        outline: none;
+    }
+
+    &:focus,
+    &:hover {
+        outline: none;
+        padding-left: 70px;
+
+        &:after,
+        &:before {
+            transform: rotate(-45deg) scale(1.2);
+        }
+
+        svg {
+            fill: #fff;
+            transform: translateX(5px);
+
+            rect {
+                transform: scaleX(.5);
+            }
+        }
+    }
+
+    &:after,
+    &:before {
+        left: 0;
+        top: 8px;
+        width: 38px;
+        height: 38px;
+        content: "";
+        position: absolute;
+        transform: rotate(45deg);
+        transition: .3s;
+    }
+
+    &:before {
+        border: 2px solid currentColor;
+    }
+
+    &:after {
+        background: currentColor;
+        transform: scale(.01) rotate(45deg);
+    }
+
+    svg {
+        fill: currentColor;
+        top: 21px;
+        left: -25px;
+        width: 50px;
+        height: 12px;
+        z-index: 1;
+        position: absolute;
+        transition: .3s;
+
+        rect {
+            will-change: transform;
+            transform-origin: right center;
+            transition: transform .3s;
+        }
     }
 }

@@ -1,0 +1,89 @@
+.mphb-single-room-type-attributes,
+.mphb-loop-room-type-attributes,
+.loop-room-short-attributes {
+    list-style: none;
+    padding: 0;
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: .02em;
+
+    li {
+        padding-left: 30px;
+        position: relative;
+
+        &:before {
+            content: fa-content($fa-var-info-circle);
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            width: 20px;
+            text-align: left;
+            color: $themeColor1;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+        }
+
+        &.mphb-room-type-adults-capacity {
+            &:before {
+                content: fa-content($fa-var-user-friends);
+            }
+        }
+
+        &.mphb-room-type-children-capacity {
+            &:before {
+                content: fa-content($fa-var-child);
+            }
+        }
+
+        &.mphb-room-type-facilities {
+            &:before {
+                content: fa-content($fa-var-star);
+            }
+        }
+
+        &.mphb-room-type-view {
+            &:before {
+                content: fa-content($fa-var-eye);
+            }
+        }
+
+        &.mphb-room-type-bed-type {
+            &:before {
+                content: fa-content($fa-var-bed);
+            }
+        }
+
+        &.mphb-room-type-size {
+            &:before {
+                content: fa-content($fa-var-expand);
+            }
+        }
+
+        &.mphb-room-type-rating {
+            &:before {
+                content: fa-content($fa-var-star);
+                color: $themeColor1;
+            }
+        }
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            color: $themeColor1;
+        }
+    }
+}
+
+.mphb-loop-room-type-attributes {
+    margin: 0;
+    @include respond-to(md) {
+        columns: 2;
+    }
+}
+
+.mphb-single-room-type-attributes {
+    margin-bottom: 0;
+}

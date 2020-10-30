@@ -1,0 +1,119 @@
+.type-mphb_room_type {
+    .mphb-flexslider {
+        border: 0;
+        background: transparent;
+
+        &:hover {
+            .flex-direction-nav > * > a {
+                opacity: 1;
+            }
+
+            ul.flex-direction-nav {
+                .flex-nav-next {
+                    a {
+                        right: 55px;
+                    }
+                }
+
+                .flex-nav-prev {
+                    a {
+                        left: 55px;
+                    }
+                }
+            }
+        }
+
+        .gallery-item {
+            .gallery-icon,
+            a {
+                width: 100%;
+                display: block;
+            }
+
+
+            img {
+                width: 100% !important;
+                display: block !important;
+            }
+        }
+    }
+
+
+    ul.flex-direction-nav {
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .flex-nav-next {
+            a {
+                right: 10px;
+            }
+        }
+
+        .flex-nav-prev {
+            a {
+                left: 10px;
+            }
+        }
+
+        .flex-nav-next,
+        .flex-nav-prev {
+            a {
+                overflow: visible;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 45px;
+                height: 45px;
+                transition: .3s;
+                z-index: 5;
+
+                &:after,
+                &:before {
+                    left: 0;
+                    top: 0;
+                    width: 45px;
+                    height: 45px;
+                    content: "" !important;
+                    position: absolute;
+                    transform: rotate(-45deg);
+                    transition: .3s;
+                }
+
+                &:before {
+                    border: 2px solid #fff;
+                }
+
+                &:after {
+                    background: #fff;
+                }
+
+                &:hover {
+                    svg {
+                        fill: #fff;
+                    }
+
+                    &:after {
+                        transform: scale(.01) rotate(45deg);
+                        opacity: .2;
+                    }
+
+                    &:before {
+                        transform: rotate(45deg)
+                    }
+                }
+
+                svg {
+                    z-index: 1;
+                    fill: $themeColor2;
+                    transition: .3s;
+                }
+            }
+        }
+    }
+}
+

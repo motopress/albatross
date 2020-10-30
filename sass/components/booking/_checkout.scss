@@ -1,0 +1,226 @@
+.mphb-checkout-section {
+    margin-bottom: 86px;
+    background: #fff;
+    padding: 40px 40px 0 40px;
+    border: 1px solid $themeColor3;
+    border-radius: 4px;
+}
+
+.mphb-reserve-rooms-details {
+    margin: 54px -40px 0;
+
+    .mphb-room-details {
+        padding: 54px 40px 0;
+        border-top: 1px solid $themeColor3;
+    }
+
+    .mphb-room-number {
+        margin-top: 0;
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 24px;
+    }
+
+    .mphb-checkout-item-section {
+        margin: 0 -40px;
+        padding: 55px 40px;
+        border-top: 1px solid $themeColor3;
+    }
+
+    .guest-chooser-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px 34px;
+
+        > * {
+            margin-bottom: 20px;
+            padding: 0 10px;
+            flex: 1 0 100%;
+            @include respond-to(sm) {
+                flex: 1 0 50%;
+            }
+        }
+    }
+
+    .mphb-room-rate-chooser-title,
+    .mphb-services-details-title {
+        margin-bottom: 30px;
+    }
+
+    .mphb-room-rate-variant {
+        font-size: 15px;
+        letter-spacing: .02em;
+        line-height: 28px;
+        margin-bottom: 38px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .mphb-price {
+            color: $themeColor1;
+        }
+
+        label {
+            font-size: 18px;
+            letter-spacing: normal;
+            margin-bottom: 18px;
+
+            strong {
+                font-weight: 600;
+            }
+        }
+    }
+
+    .mphb_checkout-services-list {
+        margin: 0;
+        padding: 0;
+
+        label {
+            font-size: 18px;
+            display: inline;
+        }
+
+        li {
+
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        select {
+            max-width: 113px;
+            margin: 0 16px;
+            display: inline-block;
+        }
+    }
+}
+
+.mphb-booking-details {
+    .mphb-booking-details-title {
+        margin-top: 0;
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 24px;
+    }
+}
+
+.mphb-room-price-breakdown-wrapper {
+    overflow: hidden;
+
+    .mphb-price-breakdown-title {
+        margin-bottom: 30px;
+    }
+
+    table {
+        margin: 0 -40px;
+        width: calc(100% + 80px);
+
+        th {
+            text-align: left;
+            background: $themeColor4;
+        }
+
+        th,
+        td {
+            &:first-child {
+                border-left: 0;
+                padding-left: 40px;
+            }
+
+            &:last-child {
+                border-right: 0;
+            }
+        }
+
+        tfoot {
+            th {
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+.mphb-customer-details {
+    padding-bottom: 60px;
+
+    .mphb-customer-details-title {
+        font-size: 30px;
+        line-height: 38px;
+    }
+}
+
+#mphb-billing-details {
+    padding-bottom: 60px;
+    margin-bottom: 56px;
+
+    .mphb-gateway-chooser-title {
+        font-size: 30px;
+        line-height: 38px;
+        margin-bottom: 24px;
+    }
+
+    .mphb-gateways-list {
+        padding: 0;
+        margin: 0;
+
+        li {
+            font-size: 15px;
+            letter-spacing: .02em;
+            line-height: 28px;
+            margin-bottom: 38px;
+            margin-top: 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        label {
+            letter-spacing: normal;
+            font-size: 18px;
+            margin-bottom: 18px;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+    }
+}
+
+.mphb-checkout-terms-wrapper {
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 30px;
+    margin-top: 0 !important;
+
+    .mphb-terms-and-conditions-accept {
+        label {
+            font-size: 18px;
+        }
+    }
+}
+
+.mphb_sc_checkout-form {
+    > .mphb-total-price {
+        margin-bottom: 10px;
+
+        strong {
+            font-weight: 600;
+        }
+
+        .mphb-total-price-field {
+            margin-left: 30px;
+        }
+    }
+}
+
+.mphb_sc_booking_confirmation {
+    .mphb-payment-messages {
+        margin-bottom: 40px;
+    }
+}

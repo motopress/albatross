@@ -22,6 +22,12 @@ function albatross_body_classes($classes)
 		$classes[] = 'page-has-thumbnail';
 	}
 
+	if (is_home() && !is_front_page()) {
+		if (get_theme_mod('albatross_blog_minimalistic', true)) {
+			$classes[] = 'blog-minimalistic';
+		}
+	}
+
 	return $classes;
 }
 
@@ -111,9 +117,25 @@ function albatross_page_header()
 {
 	if (is_front_page()) {
 		albatross_front_page_header();
+	} elseif (is_page_template('template-page-sidebar.php')) {
+		albatross_simple_page_header();
 	} else {
 		albatross_default_page_header();
 	}
+}
+
+function albatross_simple_page_header()
+{
+	?>
+    <header class="entry-header">
+		<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+
+		<?php if (has_excerpt()) the_excerpt(); ?>
+
+		<?php the_post_thumbnail(); ?>
+
+    </header><!-- .entry-header -->
+	<?php
 }
 
 function albatross_default_page_header()
@@ -270,6 +292,18 @@ function albatross_front_page_header()
 					?>
                 </div>
             </div>
+
+			<?php
+			if (is_active_sidebar('sidebar-9')):
+				?>
+                <div class="front-page-sidebar-wrapper">
+                    <div class="front-page-sidebar">
+						<?php dynamic_sidebar('sidebar-9'); ?>
+                    </div>
+                </div>
+			<?php
+			endif;
+			?>
         </div>
     </div>
 	<?php
@@ -353,6 +387,9 @@ add_filter('albatross_header_classes', 'albatross_filter_header_classes');
 
 function albatross_filter_header_classes($classes)
 {
+	if (is_page_template('template-page-sidebar.php')) {
+		return $classes;
+	}
 
 	if (is_page() && has_post_thumbnail()) {
 		$classes[] = 'absolute';
@@ -410,3 +447,23 @@ function albatross_add_more_to_nav($nav_menu, $args)
 }
 
 add_filter('wp_nav_menu', 'albatross_add_more_to_nav', 10, 2);
+
+
+add_action('comment_form_top', 'albatross_comment_form_top');
+
+function albatross_comment_form_top()
+{
+	?>
+    <div class="comment-fields-wrapper">
+	<?php
+}
+
+add_action('comment_form', 'albatross_comment_form');
+
+function albatross_comment_form()
+{
+	?>
+    </div>
+	<?php
+
+}

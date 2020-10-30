@@ -1,0 +1,268 @@
+.mphb_sc_search_results-wrapper,
+.mphb_sc_rooms-wrapper {
+    .type-mphb_room_type {
+        background: #fff;
+
+        .entry-title {
+            text-align: left;
+            margin-bottom: 14px;
+        }
+
+        .mphb-regular-price {
+            margin-bottom: 17px;
+        }
+
+        .mphb-room-type-details-title {
+            display: none;
+        }
+
+        .mphb-to-book-btn-wrapper {
+            button {
+                @extend .animated-button;
+            }
+        }
+
+        .mphb-view-details-button {
+            background: transparent;
+            color: $themeColor1;
+
+            &:hover {
+                background: transparent;
+                color: $themeColor2;
+            }
+        }
+    }
+
+    .mphb-room-type {
+        &-content {
+
+        }
+
+        &-description {
+            padding: 25px 30px 20px;
+            @include respond-to(sm) {
+                padding: 50px 60px 40px;
+            }
+        }
+
+        &-excerpt {
+            line-height: 40px;
+            margin-bottom: 25px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-buttons {
+            padding: 15px 30px 20px;
+            @include respond-to(sm) {
+                padding: 30px 60px 40px;
+            }
+            display: flex;
+            flex-wrap: wrap;
+            border-top: 1px solid $themeColor3;
+            @media screen and (max-width: $screen-xs) {
+                > * {
+                    &:first-child {
+                        &:not(:last-child) {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mphb-loop-room-thumbnail {
+        margin: 0;
+    }
+}
+
+.mphb-recommendation-title {
+    font-size: 38px;
+    line-height: 44px;
+    margin-top: 35px;
+    margin-bottom: 60px;
+}
+
+.mphb_sc_search_results-wrapper {
+    .mphb-room-type-buttons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .mphb-reserve-room-section {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        select {
+            padding: 0;
+            max-width: 76px;
+            background-color: transparent;
+            background-position: right 0 top 24px;
+            border: 0;
+            border-bottom: 1px solid rgba($themeColor2, .5);
+            display: inline-block;
+            margin-right: 50px;
+        }
+
+        .mphb-book-button {
+            order: 0;
+            margin-right: 50px;
+        }
+
+        .mphb-rooms-quantity-wrapper {
+            order: 1;
+            margin: 0;
+            flex: 1 0 auto;
+            @include respond-to(xs) {
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+
+        .mphb-rooms-reservation-message-wrapper {
+            order: 2;
+            width: 100%;
+            margin: 25px 0;
+            font-size: 15px;
+            letter-spacing: .02em;
+        }
+
+        .mphb-confirm-reservation {
+            order: 3;
+        }
+
+    }
+
+    .mphb-view-details-button {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.mphb_sc_rooms-wrapper {
+    &.horizontal {
+        @include respond-to(md) {
+            .type-mphb_room_type {
+                background: transparent;
+                padding-left: 30%;
+                position: relative;
+                margin-bottom: 140px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &:nth-child(2n) {
+                    padding-left: 0;
+                    padding-right: 30%;
+
+                    .mphb-room-type-images {
+                        left: auto;
+                        right: 0;
+                    }
+
+                    .mphb-room-type-content-wrapper {
+                        margin-right: auto;
+                        margin-left: 0;
+                    }
+
+                    .flex-direction-nav {
+                        left: auto;
+                        right: 40px;
+                    }
+                }
+            }
+
+            .mphb-room-type-images {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: auto;
+                max-width: 970px;
+                width: 100%;
+
+                .flex-viewport,
+                .flex-viewport *,
+                .mphb-flexslider {
+                    height: 100% !important;
+                }
+
+                .mphb-loop-room-thumbnail {
+                    height: 100%;
+
+                    * {
+                        height: 100%;
+                    }
+
+                    a {
+                        display: block;
+                    }
+
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .mphb-room-type-content {
+                background: #fff;
+            }
+
+            .mphb-room-type-content-wrapper {
+                padding: 60px 0;
+                max-width: 776px;
+                margin-right: 0;
+                margin-left: auto;
+                z-index: 9;
+                position: relative;
+            }
+
+            .mphb-room-type-buttons {
+                border-top: 0;
+                padding-top: 0;
+            }
+
+            .flex-direction-nav {
+                position: absolute;
+                left: 40px;
+                bottom: 40px;
+                right: auto;
+                display: flex;
+                align-items: center;
+
+                li {
+                    display: block;
+
+                    + li {
+                        margin-left: 40px;
+                    }
+                }
+
+                a {
+                    position: relative;
+                    margin: 0;
+                }
+
+            }
+
+            .mphb-flexslider:hover ul.flex-direction-nav .flex-nav-next a {
+                right: 0;
+            }
+
+            .mphb-flexslider:hover ul.flex-direction-nav .flex-nav-prev a {
+                left: 0;
+            }
+        }
+    }
+}

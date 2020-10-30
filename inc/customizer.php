@@ -237,6 +237,31 @@ function albatross_customize_register($wp_customize)
 		'settings' => 'albatross_fp_video_text'
 	) );
 
+	$wp_customize->add_section(
+		'albatross_blog',
+		array(
+			'title' => esc_html__('Blog', 'albatross'),
+			'panel' => 'albatross_theme_settings'
+		)
+	);
+
+	$wp_customize->add_setting(
+		'albatross_blog_minimalistic',
+		array(
+			'default' => true,
+			'sanitize_callback' => 'albatross_sanitize_checkbox'
+		)
+	);
+
+	$wp_customize->add_control(
+		'albatross_blog_minimalistic',
+		array(
+			'label' => __('Enable minimalistic blog style?', 'albatross'),
+			'section' => 'albatross_blog',
+			'type' => 'checkbox'
+		)
+	);
+
 	$wp_customize->add_section( 'albatross_footer_options', array(
 		'title' => esc_html__( 'Footer', 'albatross' ),
 		'panel' => 'albatross_theme_settings'

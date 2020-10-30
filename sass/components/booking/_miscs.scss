@@ -1,0 +1,24 @@
+.mphb-regular-price {
+    font-family: $font__heading;
+    color: $themeColor1;
+
+    strong {
+        display: none;
+    }
+
+    .mphb-price {
+        font-size: 38px;
+        line-height: 44px;
+    }
+
+    .mphb-price-period {
+        border: 0;
+        font-size: 20px;
+        line-height: 24px;
+
+        &:before {
+            content: '/';
+            margin-right: 5px;
+        }
+    }
+}

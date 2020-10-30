@@ -1,0 +1,228 @@
+.mphbr-new-review-box {
+    display: block !important;
+
+    &.reviews-closed {
+        display: none !important;
+    }
+}
+
+.mphbr-review-wrapper {
+    .mphbr-review-rating {
+        line-height: 1;
+        margin-bottom: 15px;
+    }
+
+    .mphbr-star-rating {
+
+        > span {
+            color: $themeColor1;
+        }
+    }
+}
+
+.mphb-reviews {
+    margin-bottom: 0;
+    margin-top: 100px;
+
+    .no-comments {
+        text-align: center;
+        margin-bottom: 140px;
+    }
+
+    .comment-list{
+        margin-bottom: 100px;
+    }
+
+    .comments-title {
+        text-align: center;
+        margin-bottom: 100px;
+        @include respond-to(sm) {
+            font-size: 55px;
+            line-height: 65px;
+        }
+    }
+
+    .comment-body {
+        border: 0;
+        background: transparent;
+        padding: 128px 0 0 0;
+        @include respond-to(sm) {
+            padding: 0 0 0 128px;
+        }
+    }
+
+    .avatar {
+        position: absolute;
+        border-radius: 50%;
+        top: 0;
+        left: 5px;
+        @include respond-to(sm) {
+            top: 5px;
+            left: 0;
+        }
+    }
+
+    .review-comment-wrapper {
+        position: relative;
+        padding: 25px 40px;
+        background: #fff;
+        filter: drop-shadow(10px 25px 30px rgba(0, 0, 0, 0.08));
+
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            left: 0;
+            top: -18px;
+            width: 30px;
+            height: 18px;
+            border-top: 18px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 18px solid #fff;
+            border-left: 30px solid #ffff;
+
+            @include respond-to(sm) {
+                left: -18px;
+                top: 0;
+                width: 18px;
+                height: 30px;
+                border-top: 30px solid #fff;
+                border-right: 18px solid #fff;
+                border-bottom: 30px solid transparent;
+                border-left: 18px solid transparent;
+            }
+        }
+    }
+
+    .children {
+        .avatar {
+            display: none;
+        }
+
+        .comment-body {
+            @include respond-to(xs) {
+                padding: 0;
+            }
+        }
+
+        .review-comment-wrapper {
+            &:before {
+                left: 0;
+                top: -18px;
+                width: 30px;
+                height: 18px;
+                border-top: 18px solid transparent;
+                border-right: 30px solid transparent;
+                border-bottom: 18px solid #fff;
+                border-left: 30px solid #ffff;
+            }
+        }
+    }
+
+    .mphbr-new-review-box {
+        max-width: none;
+        background: #fff;
+        margin-bottom: 0;
+        margin-left: -10px;
+        margin-right: -10px;
+        padding: 120px 10px;
+        @include respond-to(sm) {
+            margin-left: -25px;
+            margin-right: -25px;
+            padding: 120px 25px;
+        }
+        @include respond-to(md) {
+            margin-left: -50px;
+            margin-right: -50px;
+            padding: 120px 50px;
+        }
+
+        &-wrapper {
+            max-width: 1052px;
+            margin: 0 auto;
+        }
+
+        .comment-reply-title {
+            text-align: center;
+            @include respond-to(sm) {
+                font-size: 55px;
+                line-height: 65px;
+            }
+        }
+
+        .comment-respond {
+            margin: 0;
+        }
+
+        .mphbr-review-form {
+
+            .comment-notes {
+                display: none;
+            }
+        }
+
+        .comment-fields-wrapper {
+            @include respond-to(sm) {
+                margin: 0 -20px;
+            }
+
+            &:after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+
+            > * {
+                display: block;
+                float: left;
+                width: 100%;
+                @include respond-to(sm) {
+                    width: 50%;
+                    padding: 0 20px;
+                }
+            }
+
+            .mphbr-rating-wrapper,
+            .comment-form-comment,
+            .comment-form-cookies-consent,
+            .form-submit {
+                width: 100%;
+            }
+        }
+
+        .mphbr-rating-wrapper {
+            margin: 0 0 20px 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            p {
+                margin: 0;
+            }
+
+            .mphbr-rating-parameter-wrapper {
+                margin: 0 50px 10px 0;
+                display: flex;
+                flex-direction: row-reverse;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                .mphbr-stars {
+                    margin: 0;
+                }
+
+                label {
+                    margin: 0;
+
+                    &:after {
+                        display: inline-block;
+                        content: '-';
+                        margin: 0 5px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -115,6 +115,12 @@
         margin-top: 50px;
         padding: 0;
     }
+
+    .comment-awaiting-moderation{
+        display: block;
+        margin: 20px 0;
+        font-size: 13px;
+    }
 }
 
 .comment-respond {
@@ -135,7 +141,10 @@
 .comment-form {
     border: 1px solid $themeColor3;
     background: #fff;
-    padding: 35px 45px 45px;
+    padding: 20px;
+    @include respond-to(sm){
+        padding: 35px 45px 45px;
+    }
 
     .comment-notes {
         font-size: 15px;
@@ -144,68 +153,7 @@
     .form-submit {
 
         button {
-            position: relative;
-            background: transparent;
-            color: inherit;
-            margin-left: 25px;
-            padding-left: 60px;
-            transition: padding-left .3s;
-
-            &:hover {
-                padding-left: 70px;
-
-                &:after,
-                &:before {
-                    transform: rotate(-45deg) scale(1.2);
-                }
-
-                svg {
-                    fill: #fff;
-                    transform: translateX(5px);
-
-                    rect {
-                        transform: scaleX(.5);
-                    }
-                }
-            }
-
-            &:after,
-            &:before {
-                left: 0;
-                top: 0;
-                width: 38px;
-                height: 38px;
-                content: "";
-                position: absolute;
-                transform: rotate(45deg);
-                transition: .3s;
-            }
-
-            &:before {
-                border: 2px solid currentColor;
-            }
-
-            &:after {
-                background: currentColor;
-                transform: scale(.01) rotate(45deg);
-            }
-        }
-
-        svg {
-            fill: currentColor;
-            top: 13px;
-            left: -25px;
-            width: 50px;
-            height: 12px;
-            z-index: 1;
-            position: absolute;
-            transition: .3s;
-
-            rect {
-                will-change: transform;
-                transform-origin: right center;
-                transition: transform .3s;
-            }
+         @extend .animated-button;
         }
     }
 }

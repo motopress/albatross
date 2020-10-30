@@ -6,12 +6,6 @@
     display: none;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-    margin: 1.5em 0 0;
-}
-
 .page-links {
     clear: both;
     margin: 0 0 1.5em;
@@ -235,6 +229,7 @@ body.page-has-thumbnail {
         display: flex;
         align-items: center;
         justify-content: center;
+        background-size: cover;
 
         padding: 150px 10px;
         margin-left: -10px;
@@ -366,17 +361,7 @@ body.page-has-thumbnail {
     min-height: 100vh;
     position: relative;
     display: flex;
-
-    margin-left: -10px;
-    margin-right: -10px;
-    @include respond-to(sm) {
-        margin-left: -25px;
-        margin-right: -25px;
-    }
-    @include respond-to(md) {
-        margin-left: -50px;
-        margin-right: -50px;
-    }
+    width: 100%;
 
     &:after {
         position: absolute;
@@ -394,14 +379,15 @@ body.page-has-thumbnail {
         width: 100%;
         position: relative;
         z-index: 1;
+        display: flex;
+        flex-direction: column;
     }
 
     .fp-header-animation-wrapper {
         max-width: 700px;
         position: absolute;
         left: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 115px;
         @include respond-to(md) {
             margin-left: 50px;
             margin-top: 50px;
@@ -410,6 +396,7 @@ body.page-has-thumbnail {
 
     .front-page-slider {
         height: 100%;
+        min-height: 920px;
 
         &-wrapper {
             height: 100%;
@@ -469,12 +456,8 @@ body.page-has-thumbnail {
         }
 
         .title {
-            font-size: 32px;
-            line-height: 38px;
-            @include respond-to(sm) {
-                font-size: 50px;
-                line-height: 58px;
-            }
+            font-size: 60px;
+            line-height: 78px;
             @include respond-to(md) {
                 font-size: 95px;
                 line-height: 100px;
@@ -544,5 +527,156 @@ body.page-has-thumbnail {
                 transform: none;
             }
         }
+    }
+}
+
+.page-with-sidebar-container {
+    padding: 0 10px;
+    @include respond-to(sm) {
+        padding: 0 25px;
+    }
+    @include respond-to(md) {
+        padding: 0 50px;
+    }
+}
+
+.page-with-sidebar-wrapper {
+    display: flex;
+    max-width: $content-width-wide;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    @include respond-to(md) {
+        flex-wrap: nowrap;
+    }
+
+    .site-main {
+        width: 100%;
+        max-width: 920px;
+        @include respond-to(md) {
+            margin-right: 50px;
+        }
+
+        > .hentry {
+            padding: 0;
+
+            > .entry-content {
+                > * {
+                    max-width: 100%;
+                }
+            }
+
+            > .entry-header .entry-title {
+                text-align: left;
+            }
+        }
+    }
+
+    .widget-area {
+        flex: 0 2 100%;
+        width: 100%;
+        margin-left: auto;
+        margin-bottom: 100px;
+        @include respond-to(md) {
+            max-width: 500px;
+        }
+    }
+}
+
+.site-main.wide-page {
+    > .hentry {
+        > .entry-content {
+            max-width: $content-width-wide;
+            margin-left: auto;
+            margin-right: auto;
+
+            > * {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.site-main.front-page {
+    > .hentry {
+        margin-bottom: 0;
+        padding: 0;
+
+        > .entry-content {
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+
+            > * {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+body.blog-minimalistic {
+
+    .site-main {
+        padding: 0 10px;
+        @include respond-to(sm) {
+            padding: 0 25px;
+        }
+        @include respond-to(md) {
+            padding: 0 50px;
+        }
+    }
+
+    .minimalistic-blog-wrapper {
+        max-width: 1620px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+    }
+
+    .minimalistic-blog-container {
+        margin: 0 -32px;
+        display: flex;
+        flex-wrap: wrap;
+
+        > * {
+            margin-bottom: 120px;
+            padding: 0 32px;
+            flex: 1 0 100%;
+            @include respond-to(sm) {
+                max-width: 50%;
+            }
+            @include respond-to(md) {
+                max-width: 33.333%;
+            }
+        }
+    }
+
+    .post-thumbnail {
+        margin-bottom: 35px;
+    }
+
+    .entry-header {
+        padding: 0 28px;
+        margin: 0;
+    }
+
+    .cat-links {
+        display: block;
+        margin-bottom: 19px;
+    }
+
+    .entry-title {
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+
+    .entry-meta {
+        text-align: left;
+    }
+
+    .navigation.pagination {
+        margin-top: 0;
     }
 }

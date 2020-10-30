@@ -3,14 +3,18 @@ table {
     width: 100%;
     border-collapse: collapse;
 
+    th {
+        font-weight: 600;
+    }
+
     td,
-    th{
+    th {
         border: 1px solid $themeColor3;
         padding: 10px;
-        @include respond-to(sm){
+        @include respond-to(sm) {
             padding: 10px 15px;
         }
-        @include respond-to(md){
+        @include respond-to(md) {
             padding: 20px 35px;
         }
     }

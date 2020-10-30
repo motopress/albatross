@@ -49,6 +49,7 @@ if (!function_exists('albatross_setup')) :
 		add_theme_support('post-thumbnails');
 
 		set_post_thumbnail_size(1620, 660);
+		add_image_size('albatross-large', 920, 650);
 		add_image_size('albatross-small', 500, 300);
 
 		// This theme uses wp_nav_menu() in one location.
@@ -244,6 +245,29 @@ function albatross_widgets_init()
 			'after_title' => '</h4>',
 		)
 	);
+
+	register_sidebar(
+		array(
+			'name' => esc_html__('Pages', 'albatross'),
+			'id' => 'sidebar-8',
+			'description' => esc_html__('Add widgets here.', 'albatross'),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name' => esc_html__('Front Page Header', 'albatross'),
+			'id' => 'sidebar-9',
+			'description' => esc_html__('Add widgets here.', 'albatross'),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+		)
+	);
 }
 
 add_action('widgets_init', 'albatross_widgets_init');
@@ -295,6 +319,13 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * MotoPress Hotel Booking functions
+ */
+if ( class_exists( 'HotelBookingPlugin' ) ) {
+	require get_template_directory() . '/inc/mphb-functions.php';
+}
 
 function albatross_fonts_url()
 {

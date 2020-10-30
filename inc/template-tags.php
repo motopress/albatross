@@ -187,10 +187,10 @@ if (!function_exists('wp_body_open')) :
 endif;
 
 if (!function_exists('albatross_post_navigation')):
-	function albatross_post_navigation()
+	function albatross_post_navigation($class = '')
 	{
 		?>
-        <div class="post-navigation-wrapper">
+        <div class="post-navigation-wrapper <?php esc_attr_e($class); ?>">
 			<?php
 			the_post_navigation(
 				array(
