@@ -665,6 +665,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button,
+.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__read-more a,
 .more-link {
 	background: #455d58;
 	color: #fff;
@@ -686,6 +687,7 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
 .button:hover,
+.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__read-more a:hover,
 .more-link:hover {
 	color: #fff;
 	cursor: pointer;
@@ -698,11 +700,12 @@ input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus,
 .button:focus,
+.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__read-more a:focus,
 .more-link:focus {
 	background-color: #fc9285;
 }
 
-.animated-button, .comment-form .form-submit button, .comment-form .form-submit .edit-link .post-edit-link, .edit-link .comment-form .form-submit .post-edit-link, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link,
+.animated-button, .albatross-button, .comment-form .form-submit button, .comment-form .form-submit .edit-link .post-edit-link, .edit-link .comment-form .form-submit .post-edit-link, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link,
 .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link {
 	position: relative;
 	background: transparent;
@@ -712,37 +715,37 @@ input[type="submit"]:focus,
 	transition: padding-left .3s;
 }
 
-.animated-button:active, .comment-form .form-submit button:active, .comment-form .form-submit .edit-link .post-edit-link:active, .edit-link .comment-form .form-submit .post-edit-link:active, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:active, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:active, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:active,
+.animated-button:active, .albatross-button:active, .comment-form .form-submit button:active, .comment-form .form-submit .edit-link .post-edit-link:active, .edit-link .comment-form .form-submit .post-edit-link:active, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:active, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:active, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:active,
 .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:active, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:active, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:active {
 	outline: none;
 }
 
-.animated-button:focus, .comment-form .form-submit button:focus, .comment-form .form-submit .edit-link .post-edit-link:focus, .edit-link .comment-form .form-submit .post-edit-link:focus, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:focus, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:focus, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:focus,
-.mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:focus, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:focus, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:focus, .animated-button:hover, .comment-form .form-submit button:hover, .comment-form .form-submit .edit-link .post-edit-link:hover, .edit-link .comment-form .form-submit .post-edit-link:hover, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:hover, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:hover, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:hover,
+.animated-button:focus, .albatross-button:focus, .comment-form .form-submit button:focus, .comment-form .form-submit .edit-link .post-edit-link:focus, .edit-link .comment-form .form-submit .post-edit-link:focus, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:focus, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:focus, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:focus,
+.mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:focus, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:focus, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:focus, .animated-button:hover, .albatross-button:hover, .comment-form .form-submit button:hover, .comment-form .form-submit .edit-link .post-edit-link:hover, .edit-link .comment-form .form-submit .post-edit-link:hover, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:hover, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:hover, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:hover,
 .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:hover, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:hover, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:hover {
 	outline: none;
 	padding-left: 70px;
 }
 
-.animated-button:focus:after, .comment-form .form-submit button:focus:after, .comment-form .form-submit .edit-link .post-edit-link:focus:after, .edit-link .comment-form .form-submit .post-edit-link:focus:after, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:focus:after, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:focus:after, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:focus:after,
-.mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:focus:after, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:focus:after, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:focus:after, .animated-button:focus:before, .comment-form .form-submit button:focus:before, .comment-form .form-submit .edit-link .post-edit-link:focus:before, .edit-link .comment-form .form-submit .post-edit-link:focus:before, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:focus:before, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:focus:before, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:focus:before,
-.mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:focus:before, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:focus:before, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:focus:before, .animated-button:hover:after, .comment-form .form-submit button:hover:after, .comment-form .form-submit .edit-link .post-edit-link:hover:after, .edit-link .comment-form .form-submit .post-edit-link:hover:after, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:hover:after, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:hover:after, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:hover:after,
-.mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:hover:after, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:hover:after, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:hover:after, .animated-button:hover:before, .comment-form .form-submit button:hover:before, .comment-form .form-submit .edit-link .post-edit-link:hover:before, .edit-link .comment-form .form-submit .post-edit-link:hover:before, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:hover:before, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:hover:before, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:hover:before,
+.animated-button:focus:after, .albatross-button:focus:after, .comment-form .form-submit button:focus:after, .comment-form .form-submit .edit-link .post-edit-link:focus:after, .edit-link .comment-form .form-submit .post-edit-link:focus:after, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:focus:after, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:focus:after, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:focus:after,
+.mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:focus:after, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:focus:after, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:focus:after, .animated-button:focus:before, .albatross-button:focus:before, .comment-form .form-submit button:focus:before, .comment-form .form-submit .edit-link .post-edit-link:focus:before, .edit-link .comment-form .form-submit .post-edit-link:focus:before, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:focus:before, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:focus:before, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:focus:before,
+.mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:focus:before, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:focus:before, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:focus:before, .animated-button:hover:after, .albatross-button:hover:after, .comment-form .form-submit button:hover:after, .comment-form .form-submit .edit-link .post-edit-link:hover:after, .edit-link .comment-form .form-submit .post-edit-link:hover:after, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:hover:after, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:hover:after, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:hover:after,
+.mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:hover:after, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:hover:after, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:hover:after, .animated-button:hover:before, .albatross-button:hover:before, .comment-form .form-submit button:hover:before, .comment-form .form-submit .edit-link .post-edit-link:hover:before, .edit-link .comment-form .form-submit .post-edit-link:hover:before, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:hover:before, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:hover:before, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:hover:before,
 .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:hover:before, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:hover:before, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:hover:before {
 	transform: rotate(-45deg) scale(1.2);
 }
 
-.animated-button:focus svg, .comment-form .form-submit button:focus svg, .comment-form .form-submit .edit-link .post-edit-link:focus svg, .edit-link .comment-form .form-submit .post-edit-link:focus svg, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:focus svg, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:focus svg, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:focus svg, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:focus svg, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:focus svg, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:focus svg, .animated-button:hover svg, .comment-form .form-submit button:hover svg, .comment-form .form-submit .edit-link .post-edit-link:hover svg, .edit-link .comment-form .form-submit .post-edit-link:hover svg, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:hover svg, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:hover svg, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:hover svg, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:hover svg, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:hover svg, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:hover svg {
+.animated-button:focus svg, .albatross-button:focus svg, .comment-form .form-submit button:focus svg, .comment-form .form-submit .edit-link .post-edit-link:focus svg, .edit-link .comment-form .form-submit .post-edit-link:focus svg, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:focus svg, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:focus svg, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:focus svg, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:focus svg, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:focus svg, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:focus svg, .animated-button:hover svg, .albatross-button:hover svg, .comment-form .form-submit button:hover svg, .comment-form .form-submit .edit-link .post-edit-link:hover svg, .edit-link .comment-form .form-submit .post-edit-link:hover svg, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:hover svg, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:hover svg, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:hover svg, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:hover svg, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:hover svg, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:hover svg {
 	fill: #fff;
 	transform: translateX(5px);
 }
 
-.animated-button:focus svg rect, .comment-form .form-submit button:focus svg rect, .comment-form .form-submit .edit-link .post-edit-link:focus svg rect, .edit-link .comment-form .form-submit .post-edit-link:focus svg rect, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:focus svg rect, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:focus svg rect, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:focus svg rect, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:focus svg rect, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:focus svg rect, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:focus svg rect, .animated-button:hover svg rect, .comment-form .form-submit button:hover svg rect, .comment-form .form-submit .edit-link .post-edit-link:hover svg rect, .edit-link .comment-form .form-submit .post-edit-link:hover svg rect, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:hover svg rect, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:hover svg rect, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:hover svg rect, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:hover svg rect, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:hover svg rect, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:hover svg rect {
+.animated-button:focus svg rect, .albatross-button:focus svg rect, .comment-form .form-submit button:focus svg rect, .comment-form .form-submit .edit-link .post-edit-link:focus svg rect, .edit-link .comment-form .form-submit .post-edit-link:focus svg rect, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:focus svg rect, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:focus svg rect, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:focus svg rect, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:focus svg rect, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:focus svg rect, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:focus svg rect, .animated-button:hover svg rect, .albatross-button:hover svg rect, .comment-form .form-submit button:hover svg rect, .comment-form .form-submit .edit-link .post-edit-link:hover svg rect, .edit-link .comment-form .form-submit .post-edit-link:hover svg rect, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:hover svg rect, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:hover svg rect, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:hover svg rect, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:hover svg rect, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:hover svg rect, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:hover svg rect {
 	transform: scaleX(0.5);
 }
 
-.animated-button:after, .comment-form .form-submit button:after, .comment-form .form-submit .edit-link .post-edit-link:after, .edit-link .comment-form .form-submit .post-edit-link:after, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:after, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:after, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:after,
-.mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:after, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:after, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:after, .animated-button:before, .comment-form .form-submit button:before, .comment-form .form-submit .edit-link .post-edit-link:before, .edit-link .comment-form .form-submit .post-edit-link:before, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:before, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:before, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:before,
+.animated-button:after, .albatross-button:after, .comment-form .form-submit button:after, .comment-form .form-submit .edit-link .post-edit-link:after, .edit-link .comment-form .form-submit .post-edit-link:after, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:after, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:after, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:after,
+.mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:after, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:after, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:after, .animated-button:before, .albatross-button:before, .comment-form .form-submit button:before, .comment-form .form-submit .edit-link .post-edit-link:before, .edit-link .comment-form .form-submit .post-edit-link:before, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:before, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:before, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:before,
 .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:before, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:before, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:before {
 	left: 0;
 	top: 8px;
@@ -754,18 +757,18 @@ input[type="submit"]:focus,
 	transition: .3s;
 }
 
-.animated-button:before, .comment-form .form-submit button:before, .comment-form .form-submit .edit-link .post-edit-link:before, .edit-link .comment-form .form-submit .post-edit-link:before, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:before, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:before, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:before,
+.animated-button:before, .albatross-button:before, .comment-form .form-submit button:before, .comment-form .form-submit .edit-link .post-edit-link:before, .edit-link .comment-form .form-submit .post-edit-link:before, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:before, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:before, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:before,
 .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:before, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:before, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:before {
 	border: 2px solid currentColor;
 }
 
-.animated-button:after, .comment-form .form-submit button:after, .comment-form .form-submit .edit-link .post-edit-link:after, .edit-link .comment-form .form-submit .post-edit-link:after, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:after, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:after, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:after,
+.animated-button:after, .albatross-button:after, .comment-form .form-submit button:after, .comment-form .form-submit .edit-link .post-edit-link:after, .edit-link .comment-form .form-submit .post-edit-link:after, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:after, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:after, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:after,
 .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button:after, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link:after, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link:after {
 	background: currentColor;
 	transform: scale(0.01) rotate(45deg);
 }
 
-.animated-button svg, .comment-form .form-submit button svg, .comment-form .form-submit .edit-link .post-edit-link svg, .edit-link .comment-form .form-submit .post-edit-link svg, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button svg, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link svg, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link svg, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button svg, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link svg, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link svg {
+.animated-button svg, .albatross-button svg, .comment-form .form-submit button svg, .comment-form .form-submit .edit-link .post-edit-link svg, .edit-link .comment-form .form-submit .post-edit-link svg, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button svg, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link svg, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link svg, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button svg, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link svg, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link svg {
 	fill: currentColor;
 	top: 21px;
 	left: -25px;
@@ -776,10 +779,25 @@ input[type="submit"]:focus,
 	transition: .3s;
 }
 
-.animated-button svg rect, .comment-form .form-submit button svg rect, .comment-form .form-submit .edit-link .post-edit-link svg rect, .edit-link .comment-form .form-submit .post-edit-link svg rect, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button svg rect, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link svg rect, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link svg rect, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button svg rect, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link svg rect, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link svg rect {
+.animated-button svg rect, .albatross-button svg rect, .comment-form .form-submit button svg rect, .comment-form .form-submit .edit-link .post-edit-link svg rect, .edit-link .comment-form .form-submit .post-edit-link svg rect, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button svg rect, .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link svg rect, .edit-link .mphb_sc_search_results-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link svg rect, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper button svg rect, .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .edit-link .post-edit-link svg rect, .edit-link .mphb_sc_rooms-wrapper .type-mphb_room_type .mphb-to-book-btn-wrapper .post-edit-link svg rect {
 	will-change: transform;
 	transform-origin: right center;
 	transition: transform .3s;
+}
+
+.albatross-button {
+	color: #fc9285;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 15px;
+	line-height: 23px;
+	border: 0;
+	border-radius: 0;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	text-decoration: none;
+	display: inline-block;
 }
 
 input[type="text"],
@@ -848,6 +866,49 @@ form > * {
 
 form > *:last-child {
 	margin-bottom: 0;
+}
+
+.an_mailchimp_wrapper form:after {
+	display: table;
+	content: '';
+	clear: both;
+}
+
+.an_mailchimp_wrapper form > * {
+	float: left;
+	width: 50%;
+	padding: 0 30px;
+}
+
+.an_mailchimp_wrapper form label {
+	width: 100%;
+}
+
+.an_mailchimp_wrapper form input[type="text"],
+.an_mailchimp_wrapper form input[type="email"] {
+	border: 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	color: #fff;
+	padding-left: 0;
+}
+
+.an_mailchimp_wrapper form input[type="text"]::placeholder,
+.an_mailchimp_wrapper form input[type="email"]::placeholder {
+	color: currentColor;
+}
+
+.an_mailchimp_wrapper form .mpam-submit {
+	background: transparent;
+	color: #fc9285;
+}
+
+.an_mailchimp_wrapper form .mpam-submit:hover {
+	background: transparent;
+}
+
+.an_mailchimp_wrapper form p:last-child {
+	width: 100%;
+	text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -2744,6 +2805,30 @@ body.blog-minimalistic .navigation.pagination {
 	margin-top: 0;
 }
 
+.site-main > .not-found {
+	margin-bottom: 100px;
+	padding: 0 10px;
+}
+
+@media (min-width: 768px) {
+	.site-main > .not-found {
+		padding: 0 25px;
+	}
+}
+
+@media (min-width: 992px) {
+	.site-main > .not-found {
+		padding: 0 50px;
+	}
+}
+
+.site-main > .not-found .page-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
 /* Comments
 --------------------------------------------- */
 .comment-content a {
@@ -3981,6 +4066,139 @@ pre.wp-block-verse {
 	transition: .3s;
 }
 
+.mphb_sc_rooms-wrapper.slider .mphb-pagination {
+	display: none;
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type {
+	display: none;
+	background: transparent;
+	margin-top: 0 !important;
+	padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+	.mphb_sc_rooms-wrapper.slider .type-mphb_room_type {
+		padding: 0 30px;
+	}
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type:focus {
+	outline: none;
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type:first-child {
+	display: block;
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-room-type-images {
+	margin-bottom: 22px;
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-room-type-description {
+	padding: 0;
+	margin-bottom: 15px;
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-room-type-description:last-child {
+	margin-bottom: 0;
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-room-type-buttons {
+	padding: 0;
+	border: 0;
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-room-type-title {
+	font-size: 28px;
+	line-height: 28px;
+	margin-bottom: 11px;
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-room-type-title:last-child {
+	margin-bottom: 0;
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-regular-price {
+	color: inherit;
+	margin-bottom: 10px;
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-regular-price:last-child {
+	margin-bottom: 0;
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-price {
+	font-size: 26px;
+	line-height: 24px;
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-room-type-excerpt {
+	font-size: 15px;
+	line-height: 20px;
+	margin-bottom: 15px;
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-room-type-excerpt:last-child {
+	margin-bottom: 0;
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-loop-room-type-attributes {
+	columns: auto;
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-loop-room-type-attributes .mphb-attribute-title {
+	display: none;
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-loop-room-type-attributes li {
+	margin-right: 22px;
+	display: none;
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-loop-room-type-attributes li.mphb-room-type-size, .mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-loop-room-type-attributes li.mphb-room-type-view, .mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-loop-room-type-attributes li.mphb-room-type-adults-capacity, .mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-loop-room-type-attributes li.mphb-room-type-children-capacity {
+	display: inline;
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-to-book-btn-wrapper {
+	margin: 0 20px 20px 0;
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-to-book-btn-wrapper:last-child {
+	margin: 0;
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-to-book-btn-wrapper .mphb-book-button {
+	margin: 0;
+	padding: 0;
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-to-book-btn-wrapper .mphb-book-button:hover {
+	color: #fc9285;
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-to-book-btn-wrapper .mphb-book-button svg, .mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-to-book-btn-wrapper .mphb-book-button:after, .mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-to-book-btn-wrapper .mphb-book-button:before {
+	display: none;
+}
+
+.mphb_sc_rooms-wrapper.slider .type-mphb_room_type .mphb-view-details-button {
+	padding: 0;
+}
+
+.mphb_sc_rooms-wrapper.slider .slick-initialized .type-mphb_room_type {
+	display: block;
+}
+
+.mphb_sc_rooms-wrapper.slider .slick-list {
+	padding: 0 40px;
+}
+
+@media (min-width: 768px) {
+	.mphb_sc_rooms-wrapper.slider .slick-list {
+		padding: 0 120px;
+	}
+}
+
 .mphb-single-room-type-attributes,
 .mphb-loop-room-type-attributes,
 .loop-room-short-attributes {
@@ -4991,6 +5209,295 @@ input.mphb-datepick {
 
 .mphb_sc_booking_confirmation .mphb-payment-messages {
 	margin-bottom: 40px;
+}
+
+.elementor-widget-heading.outlined .elementor-heading-title {
+	-webkit-text-stroke: 1px #dadfde;
+	-webkit-text-fill-color: transparent;
+	word-wrap: break-word;
+}
+
+.stratum-testimonial-carousel .stratum-testimonial-carousel__content {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.stratum-testimonial-carousel .stratum-testimonial-carousel__footer {
+	margin-bottom: 36px;
+}
+
+.stratum-testimonial-carousel .stratum-testimonial-carousel__cite {
+	margin-top: 34px;
+}
+
+.stratum-testimonial-carousel .swiper-slide .stratum-testimonial-carousel__wrapper .stratum-testimonial-carousel__subtitle {
+	margin: 0;
+}
+
+.stratum-testimonial-carousel .swiper-slide .stratum-testimonial-carousel__wrapper .stratum-testimonial-carousel__heading {
+	margin: 0;
+}
+
+.stratum-testimonial-carousel .swiper-slide .stratum-testimonial-carousel__wrapper .stratum-testimonial-carousel__container-inner .stratum-testimonial-carousel__footer > img {
+	width: auto;
+	height: auto;
+}
+
+.stratum-testimonial-carousel .stratum-main-swiper .swiper-slide .stratum-testimonial-carousel__wrapper .stratum-testimonial-carousel__container {
+	padding: 0 0 30px 0;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+	position: relative;
+	opacity: 1;
+	background: #fff;
+}
+
+.swiper-pagination .swiper-pagination-bullet:before {
+	content: '';
+	position: absolute;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	left: -4px;
+	right: -4px;
+	top: -4px;
+	bottom: -4px;
+}
+
+.swiper-pagination .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+	background: transparent !important;
+}
+
+.autowidth-image-carousel .elementor-image-carousel-wrapper img {
+	max-height: 470px;
+}
+
+.autowidth-image-carousel .elementor-image-carousel-wrapper .elementor-swiper-button {
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	left: auto;
+	transition: .3s ease;
+	top: -40px;
+}
+
+@media (min-width: 992px) {
+	.autowidth-image-carousel .elementor-image-carousel-wrapper .elementor-swiper-button {
+		top: -80px;
+	}
+}
+
+@media (min-width: 1470px) {
+	.autowidth-image-carousel .elementor-image-carousel-wrapper .elementor-swiper-button {
+		top: -140px;
+	}
+}
+
+.autowidth-image-carousel .elementor-image-carousel-wrapper .elementor-swiper-button i,
+.autowidth-image-carousel .elementor-image-carousel-wrapper .elementor-swiper-button .elementor-screen-only {
+	display: none;
+}
+
+.autowidth-image-carousel .elementor-image-carousel-wrapper .elementor-swiper-button-prev {
+	background-image: url("images/arrow_left.svg");
+	right: 60px;
+}
+
+@media (min-width: 768px) {
+	.autowidth-image-carousel .elementor-image-carousel-wrapper .elementor-swiper-button-prev {
+		right: 100px;
+	}
+}
+
+@media (min-width: 992px) {
+	.autowidth-image-carousel .elementor-image-carousel-wrapper .elementor-swiper-button-prev {
+		right: 300px;
+	}
+}
+
+@media (min-width: 1470px) {
+	.autowidth-image-carousel .elementor-image-carousel-wrapper .elementor-swiper-button-prev {
+		right: 625px;
+	}
+}
+
+.autowidth-image-carousel .elementor-image-carousel-wrapper .elementor-swiper-button-next {
+	background-image: url("images/arrow_right.svg");
+	right: 10px;
+}
+
+@media (min-width: 768px) {
+	.autowidth-image-carousel .elementor-image-carousel-wrapper .elementor-swiper-button-next {
+		right: 50px;
+	}
+}
+
+@media (min-width: 992px) {
+	.autowidth-image-carousel .elementor-image-carousel-wrapper .elementor-swiper-button-next {
+		right: 250px;
+	}
+}
+
+@media (min-width: 1470px) {
+	.autowidth-image-carousel .elementor-image-carousel-wrapper .elementor-swiper-button-next {
+		right: 540px;
+	}
+}
+
+.stratum-advanced-posts.layout-carousel {
+	position: relative;
+}
+
+.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide {
+	margin-right: 20px;
+	height: auto !important;
+	width: 540px;
+	max-width: 100%;
+	transition: width .3s ease;
+}
+
+.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide.swiper-slide-active {
+	width: 740px;
+	max-width: 100%;
+}
+
+.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__slide-container {
+	width: 100%;
+}
+
+.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__image {
+	position: relative;
+	text-align: center;
+}
+
+.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__slide-content {
+	position: relative;
+}
+
+.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__slide-content .stratum-advanced-posts__slide-wrapper {
+	padding: 25px;
+}
+
+.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__post-title {
+	color: inherit;
+}
+
+.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__post-title a {
+	color: inherit;
+}
+
+.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__post-title a:hover {
+	color: #fc9285;
+}
+
+.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__post-content {
+	color: inherit;
+	margin-bottom: 12px;
+}
+
+.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__entry-footer {
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 18px;
+}
+
+.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__entry-footer * {
+	font-size: inherit;
+}
+
+.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__entry-footer .stratum-advanced-posts__meta-fields-divider {
+	margin: 0 10px;
+}
+
+.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__entry-footer .comments-link {
+	margin-top: 0;
+}
+
+.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__entry-footer .posted-on a {
+	color: inherit;
+}
+
+.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__entry-footer .posted-on a:hover {
+	color: #fc9285;
+}
+
+.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__entry-footer .stratum-advanced-posts__read-more {
+	width: 100%;
+}
+
+.stratum-advanced-posts.layout-carousel .stratum-swiper-button-prev,
+.stratum-advanced-posts.layout-carousel .stratum-swiper-button-next {
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 25px !important;
+	height: 25px !important;
+	position: absolute;
+	left: auto;
+	transition: .3s ease;
+	top: -40px;
+}
+
+@media (min-width: 992px) {
+	.stratum-advanced-posts.layout-carousel .stratum-swiper-button-prev,
+	.stratum-advanced-posts.layout-carousel .stratum-swiper-button-next {
+		top: -80px;
+	}
+}
+
+@media (min-width: 1470px) {
+	.stratum-advanced-posts.layout-carousel .stratum-swiper-button-prev,
+	.stratum-advanced-posts.layout-carousel .stratum-swiper-button-next {
+		top: -140px;
+	}
+}
+
+.stratum-advanced-posts.layout-carousel .stratum-swiper-button-prev:after, .stratum-advanced-posts.layout-carousel .stratum-swiper-button-prev:before,
+.stratum-advanced-posts.layout-carousel .stratum-swiper-button-next:after,
+.stratum-advanced-posts.layout-carousel .stratum-swiper-button-next:before {
+	display: none;
+}
+
+.stratum-advanced-posts.layout-carousel .stratum-swiper-button-prev.swiper-button-disabled,
+.stratum-advanced-posts.layout-carousel .stratum-swiper-button-next.swiper-button-disabled {
+	opacity: .5;
+}
+
+.stratum-advanced-posts.layout-carousel .stratum-swiper-button-prev {
+	background-image: url("images/arrow_left.svg");
+	right: 60px;
+}
+
+@media (min-width: 768px) {
+	.stratum-advanced-posts.layout-carousel .stratum-swiper-button-prev {
+		right: 100px;
+	}
+}
+
+@media (min-width: 992px) {
+	.stratum-advanced-posts.layout-carousel .stratum-swiper-button-prev {
+		right: 235px;
+	}
+}
+
+.stratum-advanced-posts.layout-carousel .stratum-swiper-button-next {
+	background-image: url("images/arrow_right.svg");
+	right: 10px;
+}
+
+@media (min-width: 768px) {
+	.stratum-advanced-posts.layout-carousel .stratum-swiper-button-next {
+		right: 50px;
+	}
+}
+
+@media (min-width: 992px) {
+	.stratum-advanced-posts.layout-carousel .stratum-swiper-button-next {
+		right: 150px;
+	}
 }
 
 /*--------------------------------------------------------------

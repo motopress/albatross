@@ -467,3 +467,229 @@ function albatross_comment_form()
 	<?php
 
 }
+
+add_action('elementor/widget/render_content', 'albatross_render_elementor_widget', 10, 2);
+
+function albatross_render_elementor_widget($content, $widget)
+{
+	if ('stratum-advanced-posts' === $widget->get_name()) {
+		return albatross_stratum_advanced_posts_content($content, $widget);
+	}
+
+	return $content;
+}
+
+
+function albatross_stratum_advanced_posts_content($content, $widget)
+{
+	$settings = $widget->get_settings();
+
+	$query_args = [];
+	stratum_build_custom_query($query_args, $settings);
+
+	$q = new \WP_Query($query_args);
+
+	$widget_class = 'stratum-advanced-posts';
+	$slider_options = stratum_generate_swiper_options($settings);
+
+	$class = 'stratum-advanced-posts layout-carousel masonry-disable';
+
+	if ($settings['slide_animation_effect'] != 'none') {
+		$class .= ' slide-effect-' . $settings['slide_animation_effect'];
+	}
+
+	if ($settings['slide_text_animation_effect'] != 'none') {
+		$class .= ' has-text-animation-' . $settings['slide_text_animation_effect'];
+	}
+
+	ob_start();
+	?>
+    <div class="<?php echo esc_attr($class); ?>"
+         data-slider-options="<?php echo esc_attr(json_encode($slider_options)); ?>">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+				<?php
+				if ($q->have_posts()) {
+
+					while ($q->have_posts()):
+						$q->the_post();
+
+						$post_id = get_the_ID();
+						$url = get_the_post_thumbnail_url($post_id, $settings['image_size']);
+						?>
+
+                        <div class="swiper-slide stratum-advanced-posts__post">
+                            <div class="stratum-advanced-posts__image">
+                                <a href="<?php echo esc_url(get_permalink()); ?>">
+                                    <img src="<?php echo esc_url($url); ?>" alt="">
+                                </a>
+                            </div>
+                            <div class="stratum-advanced-posts__slide-content">
+                                <div class="stratum-advanced-posts__slide-wrapper">
+                                    <div class="stratum-advanced-posts__slide-container">
+
+										<?php
+										if (!empty($settings['show_meta'])) {
+											?>
+                                            <div class="stratum-advanced-posts__slide__entry-meta">
+												<?php
+												if (in_array("categories", $settings['show_meta'])) {
+													?>
+                                                    <div class="stratum-advanced-posts__post-categories">
+														<?php albatross_post_categories(); ?>
+                                                    </div>
+													<?php
+												}
+												?>
+                                            </div>
+											<?php
+										}
+
+										if ($settings['show_title'] == 'yes') {
+											$before_title = '<' . esc_attr($settings['title_typography_html_tag']) . ' 
+																		class="stratum-advanced-posts__post-title">
+																		<a href="' . esc_url(get_permalink()) . '">';
+											$after_title = '</a></' . esc_attr($settings['title_typography_html_tag']) . '>';
+
+											the_title($before_title, $after_title);
+										}
+
+										if ($settings['show_content'] == 'yes') {
+											?>
+                                            <div class="stratum-advanced-posts__post-content">
+												<?php
+												if ($settings['show_excerpt'] == 'yes') {
+													if ($settings['excerpt_length']) {
+														\Stratum\Excerpt_Helper::get_instance()->setExcerptLength($settings['excerpt_length']);
+														add_filter('excerpt_length', array('Stratum\Excerpt_Helper', 'excerpt_length'), 999);
+													}
+
+													the_excerpt();
+
+													remove_filter('excerpt_length', array('Stratum\Excerpt_Helper', 'excerpt_length'), 999);
+
+												} else {
+													the_content();
+												}
+												?>
+                                            </div>
+											<?php
+										}
+										?>
+                                        <div class="stratum-advanced-posts__entry-footer">
+											<?php
+											if (in_array("date", $settings['show_meta'])) {
+												?>
+                                                <span class="stratum-advanced-posts__post-date">
+                                                        <?php albatross_posted_on(); ?>
+                                                    </span>
+												<?php
+											}
+
+											if (in_array("author", $settings['show_meta'])) {
+												?>
+                                                <span class="stratum-advanced-posts__meta-fields-divider">
+                                                        <?php echo esc_html($settings['meta_fields_divider']) ?>
+                                                    </span>
+                                                <div class="stratum-advanced-posts__post-author">
+                                                    <span class="byline">
+                                                        <span class="author vcard">
+                                                        <a class="url fn n"
+                                                        href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>">
+                                                            <?php echo esc_html(get_the_author());?>
+                                                        </a></span>
+                                                    </span>
+                                                </div>
+												<?php
+											}
+
+											if (in_array("comments", $settings['show_meta'])) {
+												?>
+                                                <span class="stratum-advanced-posts__meta-fields-divider">
+                                                        <?php echo esc_html($settings['meta_fields_divider']) ?>
+                                                    </span>
+                                                <div class="stratum-advanced-posts__post-comments">
+                                                        <span class="comments-link">
+                                                        <?php
+														comments_popup_link(
+															sprintf(
+																wp_kses(
+																/* translators: %s: post title */
+																	__('Leave a Comment<span class="screen-reader-text"> on %s</span>', 'albatross'),
+																	array(
+																		'span' => array(
+																			'class' => array(),
+																		),
+																	)
+																),
+																wp_kses_post(get_the_title())
+															)
+														);
+														?>
+                                                        </span>
+                                                </div>
+												<?php
+											}
+
+											if ($settings['show_read_more'] == 'yes') {
+												?>
+
+                                                <div class="stratum-advanced-posts__read-more">
+                                                    <a href="<?php echo esc_url(get_permalink()); ?>"
+														<?php if ($settings['open_new_tab'] == 'yes') {
+															?>
+                                                            target='_blank'
+															<?php
+														}
+														?>
+                                                    > <?php echo esc_html($settings['read_more_text']); ?></a>
+                                                </div>
+												<?php
+											}
+
+											?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+					<?php
+
+					endwhile;
+					wp_reset_postdata();
+
+				} else {
+					?>
+                    <p><?php echo esc_html__('Nothing found.', 'albatross'); ?></p>
+					<?php
+				}
+				?>
+            </div>
+			<?php
+			if ($settings['navigation'] == 'both' || $settings['navigation'] == 'pagination') {
+				if ($settings['pagination_style'] == 'scrollbar') {
+					?>
+                    <div class='swiper-scrollbar'></div>
+					<?php
+				} else {
+					?>
+                    <div class='swiper-pagination'></div>
+					<?php
+				}
+			}
+			?>
+        </div>
+		<?php
+		if ($settings['navigation'] == 'both' || $settings['navigation'] == 'arrows') {
+			?>
+            <div class='stratum-swiper-button-prev'></div>
+            <div class='stratum-swiper-button-next'></div>
+			<?php
+		}
+		?>
+    </div>
+
+	<?php
+
+	return ob_get_clean();
+}

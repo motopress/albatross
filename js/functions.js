@@ -279,4 +279,50 @@
         subMenuPosition();
     }
 
+    function initRoomsSliders() {
+        $('.mphb_sc_rooms-wrapper.slider .rooms-wrapper').slick({
+            infinite: true,
+            slidesToShow: 3,
+            fade: false,
+            speed: 1000,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            dots: false,
+            arrows: false,
+            rows: 0,
+            swipeToSlide: true,
+            responsive: [
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                },
+            ]
+        })
+    }
+
+    initRoomsSliders();
+
+    $(window).on('elementor/frontend/init', function (e) {
+        elementorFrontend.hooks.addAction('frontend/element_ready/image-carousel.default', function ($scope) {
+            elementorFrontend.on('components:init', function () {
+                var slider = $scope.find('.elementor-image-carousel-wrapper')[0].swiper;
+
+                slider.params.slidesPerView = 'auto';
+                slider.params.loop = false;
+                slider.params.freeMode = true;
+
+                $scope.find('.swiper-slide').css('width', 'auto');
+                slider.update();
+            });
+        });
+    })
+
 }(jQuery));

@@ -117,3 +117,141 @@
     }
 }
 
+.mphb_sc_rooms-wrapper.slider {
+
+    .mphb-pagination {
+        display: none;
+    }
+
+    .type-mphb_room_type {
+        display: none;
+        background: transparent;
+        margin-top: 0 !important;
+        padding: 0 15px;
+        @include respond-to(sm){
+            padding: 0 30px;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:first-child {
+            display: block;
+        }
+
+        .mphb-room-type-images {
+            margin-bottom: 22px;
+        }
+
+        .mphb-room-type-description {
+            padding: 0;
+            margin-bottom: 15px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .mphb-room-type-buttons {
+            padding: 0;
+            border: 0;
+        }
+
+        .mphb-room-type-title {
+            font-size: 28px;
+            line-height: 28px;
+            margin-bottom: 11px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .mphb-regular-price {
+            color: inherit;
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .mphb-price {
+            font-size: 26px;
+            line-height: 24px;
+        }
+
+        .mphb-room-type-excerpt {
+            font-size: 15px;
+            line-height: 20px;
+            margin-bottom: 15px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .mphb-loop-room-type-attributes {
+            columns: auto;
+
+            .mphb-attribute-title {
+                display: none;
+            }
+
+            li {
+                margin-right: 22px;
+                display: none;
+
+                &.mphb-room-type-size,
+                &.mphb-room-type-view,
+                &.mphb-room-type-adults-capacity,
+                &.mphb-room-type-children-capacity {
+                    display: inline;
+                }
+
+            }
+        }
+
+        .mphb-to-book-btn-wrapper {
+            margin: 0 20px 20px 0;
+
+            &:last-child {
+                margin: 0;
+            }
+
+            .mphb-book-button {
+                margin: 0;
+                padding: 0;
+
+                &:hover {
+                    color: $themeColor1;
+                }
+
+                svg,
+                &:after,
+                &:before {
+                    display: none;
+                }
+            }
+        }
+
+        .mphb-view-details-button {
+            padding: 0;
+        }
+    }
+
+    .slick-initialized {
+        .type-mphb_room_type {
+            display: block;
+        }
+    }
+
+    .slick-list {
+        padding: 0 40px;
+        @include respond-to(sm){
+            padding: 0 120px;
+        }
+    }
+}
+

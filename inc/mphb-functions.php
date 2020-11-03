@@ -164,3 +164,19 @@ function albatross_mphb_sc_checkout_room_details_after(){
     </div>
 <?php
 }
+
+add_action('mphb_sc_rooms_before_loop', 'albatross_mphb_sc_rooms_before_loop');
+
+function albatross_mphb_sc_rooms_before_loop(){
+    ?>
+    <div class="rooms-wrapper">
+<?php
+}
+
+add_action('mphb_sc_rooms_after_loop', 'albatross_mphb_sc_rooms_after_loop');
+
+function albatross_mphb_sc_rooms_after_loop(){
+    ?>
+    </div>
+<?php
+}

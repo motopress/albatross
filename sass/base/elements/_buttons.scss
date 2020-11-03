@@ -100,3 +100,19 @@ input[type="submit"],
         }
     }
 }
+
+.albatross-button {
+    @extend .animated-button;
+    color: $themeColor1;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 15px;
+    line-height: 23px;
+    border: 0;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    display: inline-block;
+}

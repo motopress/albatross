@@ -680,3 +680,24 @@ body.blog-minimalistic {
         margin-top: 0;
     }
 }
+
+
+.site-main {
+    > .not-found {
+        margin-bottom: 100px;
+        padding: 0 10px;
+        @include respond-to(sm) {
+            padding: 0 25px;
+        }
+        @include respond-to(md) {
+            padding: 0 50px;
+        }
+
+        .page-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+}

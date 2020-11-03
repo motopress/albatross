@@ -66,3 +66,51 @@ form {
         }
     }
 }
+
+.an_mailchimp_wrapper {
+    form {
+        &:after {
+            display: table;
+            content: '';
+            clear: both;
+        }
+
+        > * {
+            float: left;
+            width: 50%;
+            padding: 0 30px;
+        }
+
+        label {
+            width: 100%;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            border: 0;
+            border-bottom: 1px solid rgba(#fff, .5);
+            color: #fff;
+            padding-left: 0;
+
+            &::placeholder {
+                color: currentColor;
+            }
+        }
+
+        .mpam-submit {
+            background: transparent;
+            color: $themeColor1;
+
+            &:hover {
+                background: transparent;
+            }
+        }
+
+        p {
+            &:last-child {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}

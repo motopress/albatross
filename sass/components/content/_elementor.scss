@@ -1,0 +1,269 @@
+.elementor-widget-heading {
+    &.outlined {
+        .elementor-heading-title {
+            -webkit-text-stroke: 1px $themeColor3;
+            -webkit-text-fill-color: transparent;
+            word-wrap: break-word;
+        }
+    }
+}
+
+.stratum-testimonial-carousel {
+
+    .stratum-testimonial-carousel__content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .stratum-testimonial-carousel__footer {
+        margin-bottom: 36px;
+    }
+
+    .stratum-testimonial-carousel__cite {
+        margin-top: 34px;
+    }
+
+    .swiper-slide .stratum-testimonial-carousel__wrapper .stratum-testimonial-carousel__subtitle {
+        margin: 0;
+    }
+
+    .swiper-slide .stratum-testimonial-carousel__wrapper .stratum-testimonial-carousel__heading {
+        margin: 0;
+    }
+
+    .swiper-slide .stratum-testimonial-carousel__wrapper
+    .stratum-testimonial-carousel__container-inner
+    .stratum-testimonial-carousel__footer > img {
+        width: auto;
+        height: auto;
+    }
+
+    .stratum-main-swiper .swiper-slide .stratum-testimonial-carousel__wrapper .stratum-testimonial-carousel__container {
+        padding: 0 0 30px 0;
+    }
+}
+
+.swiper-pagination {
+    .swiper-pagination-bullet {
+        position: relative;
+        opacity: 1;
+        background: #fff;
+
+        &:before {
+            content: '';
+            position: absolute;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            left: -4px;
+            right: -4px;
+            top: -4px;
+            bottom: -4px;
+        }
+
+        &:not(.swiper-pagination-bullet-active) {
+            background: transparent !important;
+        }
+    }
+}
+
+.autowidth-image-carousel {
+    .elementor-image-carousel-wrapper {
+        img {
+            max-height: 470px;
+        }
+
+        .elementor-swiper-button {
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            left: auto;
+            transition: .3s ease;
+            top: -40px;
+            @include respond-to(md) {
+                top: -80px;
+            }
+            @include respond-to(lg) {
+                top: -140px;
+            }
+
+            i,
+            .elementor-screen-only {
+                display: none;
+            }
+        }
+
+        .elementor-swiper-button-prev {
+            background-image: url("images/arrow_left.svg");
+            right: 60px;
+            @include respond-to(sm) {
+                right: 100px;
+            }
+            @include respond-to(md) {
+                right: 300px;
+            }
+            @include respond-to(lg) {
+                right: 625px;
+            }
+        }
+
+        .elementor-swiper-button-next {
+            background-image: url("images/arrow_right.svg");
+            right: 10px;
+            @include respond-to(sm) {
+                right: 50px;
+            }
+            @include respond-to(md) {
+                right: 250px;
+            }
+            @include respond-to(lg) {
+                right: 540px;
+            }
+        }
+
+    }
+}
+
+.stratum-advanced-posts.layout-carousel {
+    position: relative;
+
+    .swiper-container {
+        .swiper-slide {
+            margin-right: 20px;
+            height: auto !important;
+            width: 540px;
+            max-width: 100%;
+            transition: width .3s ease;
+
+            &.swiper-slide-active {
+                width: 740px;
+                max-width: 100%;
+            }
+
+            .stratum-advanced-posts__slide-container {
+                width: 100%;
+            }
+
+            .stratum-advanced-posts__image {
+                position: relative;
+                text-align: center;
+            }
+
+            .stratum-advanced-posts__slide-content {
+                position: relative;
+
+                .stratum-advanced-posts__slide-wrapper {
+                    padding: 25px;
+                }
+            }
+
+            .stratum-advanced-posts__post-title {
+                color: inherit;
+
+                a {
+                    color: inherit;
+
+                    &:hover {
+                        color: $themeColor1;
+                    }
+                }
+            }
+
+            .stratum-advanced-posts__post-content {
+                color: inherit;
+                margin-bottom: 12px;
+            }
+
+            .stratum-advanced-posts__read-more a {
+                @extend .button;
+            }
+
+            .stratum-advanced-posts__entry-footer {
+                display: flex;
+                flex-wrap: wrap;
+                font-size: 18px;
+
+                * {
+                    font-size: inherit;
+                }
+
+                .stratum-advanced-posts__meta-fields-divider {
+                    margin: 0 10px;
+                }
+
+                .comments-link {
+                    margin-top: 0;
+                }
+
+                .posted-on {
+                    a {
+                        color: inherit;
+
+                        &:hover {
+                            color: $themeColor1;
+                        }
+                    }
+                }
+
+                .stratum-advanced-posts__read-more {
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+
+    .stratum-swiper-button-prev,
+    .stratum-swiper-button-next {
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 25px !important;
+        height: 25px !important;
+        position: absolute;
+        left: auto;
+        transition: .3s ease;
+        top: -40px;
+        @include respond-to(md) {
+            top: -80px;
+        }
+        @include respond-to(lg) {
+            top: -140px;
+        }
+
+        &:after,
+        &:before {
+            display: none;
+        }
+
+        &.swiper-button-disabled{
+            opacity: .5;
+        }
+    }
+
+    .stratum-swiper-button-prev {
+        background-image: url("images/arrow_left.svg");
+        right: 60px;
+        @include respond-to(sm) {
+            right: 100px;
+        }
+        @include respond-to(md) {
+            right: 235px;
+        }
+    }
+
+    .stratum-swiper-button-next {
+        background-image: url("images/arrow_right.svg");
+        right: 10px;
+        @include respond-to(sm) {
+            right: 50px;
+        }
+        @include respond-to(md) {
+            right: 150px;
+        }
+    }
+
+
+}
