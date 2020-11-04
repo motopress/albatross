@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php albatross_post_thumbnail(); ?>
+	<?php albatross_post_thumbnail('albatross-large'); ?>
 
     <header class="entry-header">
 

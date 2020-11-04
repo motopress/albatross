@@ -139,7 +139,7 @@ if (!function_exists('albatross_post_thumbnail')) :
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 */
-	function albatross_post_thumbnail()
+	function albatross_post_thumbnail($size = 'post-thumbnail')
 	{
 		if (post_password_required() || is_attachment() || !has_post_thumbnail()) {
 			return;
@@ -157,7 +157,7 @@ if (!function_exists('albatross_post_thumbnail')) :
             <a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 				<?php
 				the_post_thumbnail(
-					'post-thumbnail',
+					$size,
 					array(
 						'alt' => the_title_attribute(
 							array(
@@ -190,7 +190,7 @@ if (!function_exists('albatross_post_navigation')):
 	function albatross_post_navigation($class = '')
 	{
 		?>
-        <div class="post-navigation-wrapper <?php esc_attr_e($class); ?>">
+        <div class="post-navigation-wrapper <?php echo esc_attr($class); ?>">
 			<?php
 			the_post_navigation(
 				array(

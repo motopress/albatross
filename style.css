@@ -4,7 +4,7 @@ Theme URI:
 Author: MotoPress
 Author URI: https://motopress.com/
 Description: Albatross - Free Elementor WordPress Theme.
-Version: 0.0.1
+Version: 0.0.1.12
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -458,12 +458,14 @@ h5 {
 	font-size: 18px;
 	line-height: 20px;
 	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
 }
 
 h6 {
 	font-size: 15px;
 	line-height: 18px;
 	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
 }
 
 p {
@@ -868,6 +870,14 @@ form > *:last-child {
 	margin-bottom: 0;
 }
 
+.an_mailchimp_wrapper {
+	overflow: hidden;
+}
+
+.an_mailchimp_wrapper form {
+	margin: 0 -30px;
+}
+
 .an_mailchimp_wrapper form:after {
 	display: table;
 	content: '';
@@ -876,8 +886,14 @@ form > *:last-child {
 
 .an_mailchimp_wrapper form > * {
 	float: left;
-	width: 50%;
+	width: 100%;
 	padding: 0 30px;
+}
+
+@media (min-width: 768px) {
+	.an_mailchimp_wrapper form > * {
+		width: 50%;
+	}
 }
 
 .an_mailchimp_wrapper form label {
@@ -888,8 +904,14 @@ form > *:last-child {
 .an_mailchimp_wrapper form input[type="email"] {
 	border: 0;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	background: transparent;
 	color: #fff;
 	padding-left: 0;
+}
+
+.an_mailchimp_wrapper form input[type="text"]:focus,
+.an_mailchimp_wrapper form input[type="email"]:focus {
+	outline: none;
 }
 
 .an_mailchimp_wrapper form input[type="text"]::placeholder,
@@ -1717,12 +1739,12 @@ form > *:last-child {
 	display: flex;
 	align-items: center;
 	flex: 1 0 auto;
+	text-transform: uppercase;
 }
 
 .site-branding .site-title {
-	font-size: 37px;
+	font-size: 35px;
 	line-height: 40px;
-	letter-spacing: .05em;
 	font-weight: 700;
 	margin: 0;
 	display: block;
@@ -2067,11 +2089,28 @@ body.menu-opened {
 @media (min-width: 992px) {
 	.footer-widgets > * {
 		width: auto;
+		flex: 1 2 auto;
 	}
 }
 
 .footer-widgets > *:first-child:not(last-child) {
-	flex: 1 0 33%;
+	flex: 2 1 33%;
+}
+
+.footer-widgets a {
+	color: inherit;
+}
+
+.footer-widgets a:hover {
+	color: #fc9285;
+}
+
+.footer-widgets p {
+	line-height: 40px;
+}
+
+.footer-widgets .footer-socials a {
+	margin-right: 20px;
 }
 
 .sticky {
@@ -2715,19 +2754,26 @@ body.page-has-thumbnail .page-header-wrapper .scroll-to-content-button svg {
 	max-width: 100%;
 }
 
+.site-main.full-width-page > .hentry,
 .site-main.front-page > .hentry {
 	margin-bottom: 0;
 	padding: 0;
 }
 
+.site-main.full-width-page > .hentry > .entry-content,
 .site-main.front-page > .hentry > .entry-content {
 	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+.site-main.full-width-page > .hentry > .entry-content > *,
 .site-main.front-page > .hentry > .entry-content > * {
 	max-width: 100%;
+}
+
+.site-main.full-width-page .page-header-wrapper {
+	margin: 0;
 }
 
 body.blog-minimalistic .site-main {

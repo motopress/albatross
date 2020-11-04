@@ -312,6 +312,9 @@
 
     $(window).on('elementor/frontend/init', function (e) {
         elementorFrontend.hooks.addAction('frontend/element_ready/image-carousel.default', function ($scope) {
+            if (!$scope.hasClass('autowidth-image-carousel')) {
+                return;
+            }
             elementorFrontend.on('components:init', function () {
                 var slider = $scope.find('.elementor-image-carousel-wrapper')[0].swiper;
 

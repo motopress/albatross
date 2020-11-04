@@ -68,7 +68,11 @@ form {
 }
 
 .an_mailchimp_wrapper {
+    overflow: hidden;
+
     form {
+        margin: 0 -30px;
+
         &:after {
             display: table;
             content: '';
@@ -77,8 +81,11 @@ form {
 
         > * {
             float: left;
-            width: 50%;
+            width: 100%;
             padding: 0 30px;
+            @include respond-to(sm) {
+                width: 50%;
+            }
         }
 
         label {
@@ -89,8 +96,13 @@ form {
         input[type="email"] {
             border: 0;
             border-bottom: 1px solid rgba(#fff, .5);
+            background: transparent;
             color: #fff;
             padding-left: 0;
+
+            &:focus {
+                outline: none;
+            }
 
             &::placeholder {
                 color: currentColor;

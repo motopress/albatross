@@ -48,8 +48,8 @@ if (!function_exists('albatross_setup')) :
 		 */
 		add_theme_support('post-thumbnails');
 
-		set_post_thumbnail_size(1620, 660);
-		add_image_size('albatross-large', 920, 650);
+		set_post_thumbnail_size(1620, 9999);
+		add_image_size('albatross-large', 920, 650, true);
 		add_image_size('albatross-small', 500, 300);
 
 		// This theme uses wp_nav_menu() in one location.

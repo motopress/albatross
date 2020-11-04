@@ -31,7 +31,7 @@
         width: 38px;
         height: 38px;
         right: 10px;
-        @include respond-to(sm){
+        @include respond-to(sm) {
             right: 0;
         }
 
@@ -93,12 +93,31 @@
         }
         @include respond-to(md) {
             width: auto;
+            flex: 1 2 auto;
         }
 
         &:first-child {
             &:not(last-child) {
-                flex: 1 0 33%;
+                flex: 2 1 33%;
             }
+        }
+    }
+
+    a {
+        color: inherit;
+
+        &:hover {
+            color: $themeColor1;
+        }
+    }
+
+    p {
+        line-height: 40px;
+    }
+
+    .footer-socials {
+        a {
+            margin-right: 20px;
         }
     }
 }

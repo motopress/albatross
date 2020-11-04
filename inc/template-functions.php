@@ -22,7 +22,7 @@ function albatross_body_classes($classes)
 		$classes[] = 'page-has-thumbnail';
 	}
 
-	if (is_home() && !is_front_page()) {
+	if (is_home()) {
 		if (get_theme_mod('albatross_blog_minimalistic', true)) {
 			$classes[] = 'blog-minimalistic';
 		}

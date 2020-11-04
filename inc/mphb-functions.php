@@ -127,11 +127,11 @@ function albatross_review_callback($comment, $args, $depth)
                         <time datetime="<?php comment_time('c'); ?>">
 							<?php
 							/* translators: 1: Comment date, 2: Comment time. */
-							printf(__('%1$s'), get_comment_date('', $comment));
+							printf(__('%1$s', 'albatross'), get_comment_date('', $comment));
 							?>
                         </time>
                     </a>
-					<?php edit_comment_link(__('Edit'), '<span class="edit-link">', '</span>'); ?>
+					<?php edit_comment_link(__('Edit', 'albatross'), '<span class="edit-link">', '</span>'); ?>
                 </div><!-- .comment-metadata -->
 
 				<?php if ('0' == $comment->comment_approved) : ?>

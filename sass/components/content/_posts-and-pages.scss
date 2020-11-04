@@ -598,6 +598,7 @@ body.page-has-thumbnail {
     }
 }
 
+.site-main.full-width-page,
 .site-main.front-page {
     > .hentry {
         margin-bottom: 0;
@@ -612,6 +613,12 @@ body.page-has-thumbnail {
                 max-width: 100%;
             }
         }
+    }
+}
+
+.site-main.full-width-page {
+    .page-header-wrapper {
+        margin: 0;
     }
 }
 
