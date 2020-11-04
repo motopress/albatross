@@ -115,10 +115,10 @@ add_filter('get_custom_logo', 'albatross_filter_logo', 10, 2);
 
 function albatross_page_header()
 {
-	if (is_front_page()) {
+	if (is_page_template('template-front-page.php')) {
 		albatross_front_page_header();
 	} elseif (is_page_template('template-page-sidebar.php')) {
-		albatross_simple_page_header();
+//		albatross_simple_page_header();
 	} else {
 		albatross_default_page_header();
 	}
@@ -226,7 +226,7 @@ function albatross_front_page_header()
 			$slider_fade = intval(get_theme_mod('albatross_fp_slider_enable_fade', false));
 			$slider_autoplay = intval(get_theme_mod('albatross_fp_slider_enable_autoplay', false));
 			$slider_autoplay_speed = get_theme_mod('albatross_fp_slider_autoplay_speed', 2000);
-			$slider_speed = get_theme_mod('albatross_fp_slider_slider_speed', 2000);
+			$slider_speed = get_theme_mod('albatross_fp_slider_slide_speed', 2000);
 			?>
 
             <div class="front-page-slider-wrapper">

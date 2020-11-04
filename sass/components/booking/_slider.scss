@@ -128,7 +128,7 @@
         background: transparent;
         margin-top: 0 !important;
         padding: 0 15px;
-        @include respond-to(sm){
+        @include respond-to(sm) {
             padding: 0 30px;
         }
 
@@ -249,9 +249,17 @@
 
     .slick-list {
         padding: 0 40px;
-        @include respond-to(sm){
+        @include respond-to(sm) {
             padding: 0 120px;
         }
+    }
+
+    .type-mphb_room_type .mphb-flexslider:hover ul.flex-direction-nav .flex-nav-prev a {
+        left: 30px;
+    }
+
+    .type-mphb_room_type .mphb-flexslider:hover ul.flex-direction-nav .flex-nav-next a {
+        right: 30px;
     }
 }
 

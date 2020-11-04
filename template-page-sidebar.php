@@ -6,6 +6,7 @@
 get_header();
 ?>
     <div class="page-with-sidebar-container">
+		<?php albatross_simple_page_header(); ?>
         <div class="page-with-sidebar-wrapper">
             <main id="primary" class="site-main">
 

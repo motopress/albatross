@@ -33,6 +33,31 @@
     }
 }
 
+.widget_nav_menu {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin: 0;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+    }
+}
+
+.widget_calendar{
+    table{
+        th, td{
+            padding: 5px;
+            text-align: center;
+        }
+    }
+}
+
 .page-sidebar {
     .widget {
         background: #fff;
@@ -46,6 +71,10 @@
 
         &:last-child {
             margin-bottom: 0;
+        }
+
+        &-title {
+            margin-bottom: 42px;
         }
     }
 }
@@ -71,7 +100,7 @@
 
     .widget_mphb_search_availability_widget {
         padding: 40px;
-        @include respond-to(md){
+        @include respond-to(md) {
             padding: 0 40px 0 60px;
         }
 
@@ -85,7 +114,7 @@
 
             > * {
                 padding: 0 23px;
-                @include respond-to(md){
+                @include respond-to(md) {
                     margin: 0;
                     padding: 23px 23px 43px;
                 }
@@ -95,7 +124,7 @@
         .mphb_widget_search-check-out-date,
         .mphb_widget_search-check-in-date {
             flex: 1 0 100%;
-            @include respond-to(sm){
+            @include respond-to(sm) {
                 flex: 1 0 50%;
             }
             @include respond-to(md) {
@@ -106,7 +135,7 @@
         .mphb_widget_search-adults,
         .mphb_widget_search-children {
             flex: 1 0 100%;
-            @include respond-to(sm){
+            @include respond-to(sm) {
                 flex: 1 0 50%;
             }
             @include respond-to(md) {
@@ -130,8 +159,8 @@
         }
 
         .mphb_widget_search-submit-button-wrapper {
-            flex:  1 0 100%;
-            @include respond-to(md){
+            flex: 1 0 100%;
+            @include respond-to(md) {
                 margin-right: -17px;
                 padding: 0 0 0 40px;
                 flex: 1 0 auto;

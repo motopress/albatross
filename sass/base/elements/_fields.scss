@@ -126,3 +126,31 @@ form {
         }
     }
 }
+
+.wpcf7 {
+    form {
+        margin: 0 -15px;
+
+        > * {
+            padding: 0 15px;
+            float: left;
+            width: 100%;
+
+            &.half-width {
+                @include respond-to(sm) {
+                    width: 50%;
+                }
+            }
+        }
+
+        label {
+            width: 100%;
+        }
+    }
+
+    p {
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}

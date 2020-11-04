@@ -29,7 +29,7 @@
         margin-bottom: 140px;
     }
 
-    .comment-list{
+    .comment-list {
         margin-bottom: 100px;
     }
 
@@ -180,6 +180,10 @@
                     width: 50%;
                     padding: 0 20px;
                 }
+            }
+
+            > script {
+                display: none;
             }
 
             .mphbr-rating-wrapper,

@@ -44,6 +44,23 @@
             margin-bottom: 30px;
         }
     }
+
+    .mphb-single-room-type-gallery-wrapper {
+        margin-top: 60px;
+    }
+
+    .room-excerpt {
+        font-size: 30px;
+        line-height: 38px;
+        font-family: $font__heading;
+        display: flex;
+
+        .first-letter {
+            font-size: 130px;
+            line-height: 120px;
+            margin-right: 15px;
+        }
+    }
 }
 
 .post-navigation-wrapper {

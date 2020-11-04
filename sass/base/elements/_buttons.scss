@@ -25,7 +25,12 @@ input[type="submit"],
         text-decoration: none;
     }
 
+    &:visited{
+        color: #fff;
+    }
+
     &:focus {
+        color: #fff;
         background-color: $themeColor1;
     }
 }

@@ -174,12 +174,24 @@ body {
         @include respond-to(md) {
             padding: 35px 30px;
         }
-        background: $themeColor1;
+        background: $themeColor1 center center no-repeat;
+        border: 2px solid transparent;
         position: relative;
         z-index: 20;
 
         &:hover {
-            background: $themeColor2;
+            background-color: $themeColor2;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &.toggled-on {
+            background-color: transparent;
+            border: 2px solid $themeColor1;
+            color: transparent;
+            background-image: url("images/menu_close.svg");
         }
     }
 

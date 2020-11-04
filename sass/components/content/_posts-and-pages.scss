@@ -450,7 +450,7 @@ body.page-has-thumbnail {
             @include respond-to(md) {
                 max-width: 60%;
             }
-            transition: 2s ease-in;
+            transition: 1s ease-in;
             opacity: .65;
             transform: translateX(20%);
         }
@@ -584,6 +584,7 @@ body.page-has-thumbnail {
     }
 }
 
+.site-main.wide-page-canvas,
 .site-main.wide-page {
     > .hentry {
         > .entry-content {
@@ -594,6 +595,15 @@ body.page-has-thumbnail {
             > * {
                 max-width: 100%;
             }
+        }
+    }
+}
+
+.site-main.wide-page-canvas {
+    > .hentry {
+        > .page-header-wrapper,
+        > .entry-header {
+            display: none;
         }
     }
 }
@@ -661,6 +671,17 @@ body.blog-minimalistic {
 
     .post-thumbnail {
         margin-bottom: 35px;
+        overflow: hidden;
+
+        img {
+            transition: .3s ease;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
     }
 
     .entry-header {

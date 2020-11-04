@@ -238,7 +238,7 @@
             display: none;
         }
 
-        &.swiper-button-disabled{
+        &.swiper-button-disabled {
             opacity: .5;
         }
     }
@@ -264,6 +264,14 @@
             right: 150px;
         }
     }
+}
 
+.stratum-flip-box {
+    .stratum-flip-box__title {
+        margin-top: 0;
+    }
 
+    .stratum-flip-box__layer{
+        border: 1px solid $themeColor3;
+    }
 }
