@@ -150,7 +150,7 @@ add_action('after_setup_theme', 'albatross_setup');
  */
 function albatross_content_width()
 {
-	$GLOBALS['content_width'] = apply_filters('albatross_content_width', 640);
+	$GLOBALS['content_width'] = apply_filters('albatross_content_width', 780);
 }
 
 add_action('after_setup_theme', 'albatross_content_width', 0);
@@ -319,6 +319,16 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * tgm init
+ */
+require get_template_directory() . '/inc/tgmpa-init.php';
+
+/**
+ * demo-import
+ */
+require get_template_directory() . '/inc/demo-import.php';
 
 /**
  * MotoPress Hotel Booking functions
