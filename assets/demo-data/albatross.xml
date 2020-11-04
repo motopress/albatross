@@ -35,7 +35,7 @@
 	<wp:base_site_url>http://themes.getmotopress.com/</wp:base_site_url>
 	<wp:base_blog_url>https://themes.getmotopress.com/albatross</wp:base_blog_url>
 
-		<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[admin]]></wp:author_login><wp:author_email><![CDATA[motopressapp@gmail.com]]></wp:author_email><wp:author_display_name><![CDATA[John Smith]]></wp:author_display_name><wp:author_first_name><![CDATA[John Smith]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
+		<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[admin]]></wp:author_login><wp:author_email><![CDATA[hello@email.com]]></wp:author_email><wp:author_display_name><![CDATA[John Smith]]></wp:author_display_name><wp:author_first_name><![CDATA[John Smith]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
 
 		<wp:category>
 		<wp:term_id>14</wp:term_id>
@@ -7980,7 +7980,7 @@ Commenter avatars come from <a href="https://gravatar.com">Gravatar</a>.]]></wp:
 1
 Albatross "[your-subject]"
 Albatross <wordpress@themes.getmotopress.com>
-motopressapp@gmail.com
+hello@email.com
 From: [your-name] <[your-email]>
 Subject: [your-subject]
 
@@ -8002,7 +8002,7 @@ Message Body:
 
 -- 
 This e-mail was sent from a contact form on Albatross (https://themes.getmotopress.com/albatross)
-Reply-To: motopressapp@gmail.com
+Reply-To: hello@email.com
 
 
 
@@ -8061,7 +8061,7 @@ The telephone number is invalid.]]></content:encoded>
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_mail]]></wp:meta_key>
-		<wp:meta_value><![CDATA[a:9:{s:6:"active";b:1;s:7:"subject";s:26:"Albatross "[your-subject]"";s:6:"sender";s:45:"Albatross <wordpress@themes.getmotopress.com>";s:9:"recipient";s:22:"motopressapp@gmail.com";s:4:"body";s:189:"From: [your-name] <[your-email]>
+		<wp:meta_value><![CDATA[a:9:{s:6:"active";b:1;s:7:"subject";s:26:"Albatross "[your-subject]"";s:6:"sender";s:45:"Albatross <wordpress@themes.getmotopress.com>";s:9:"recipient";s:15:"hello@email.com";s:4:"body";s:189:"From: [your-name] <[your-email]>
 Subject: [your-subject]
 
 Message Body:
@@ -8076,7 +8076,7 @@ This e-mail was sent from a contact form on Albatross (https://themes.getmotopre
 [your-message]
 
 -- 
-This e-mail was sent from a contact form on Albatross (https://themes.getmotopress.com/albatross)";s:18:"additional_headers";s:32:"Reply-To: motopressapp@gmail.com";s:11:"attachments";s:0:"";s:8:"use_html";b:0;s:13:"exclude_blank";b:0;}]]></wp:meta_value>
+This e-mail was sent from a contact form on Albatross (https://themes.getmotopress.com/albatross)";s:18:"additional_headers";s:25:"Reply-To: hello@email.com";s:11:"attachments";s:0:"";s:8:"use_html";b:0;s:13:"exclude_blank";b:0;}]]></wp:meta_value>
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_messages]]></wp:meta_key>
