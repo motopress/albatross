@@ -4,7 +4,7 @@ Theme URI:
 Author: MotoPress
 Author URI: https://motopress.com/
 Description: Albatross - Free Elementor WordPress Theme.
-Version: 0.0.1.30
+Version: 0.0.1.39
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -1814,7 +1814,7 @@ form > *:last-child {
 	font-weight: 500;
 	font-size: 10px;
 	line-height: 10px;
-	letter-spacing: 0.295em;
+	letter-spacing: 0.37em;
 	margin: 0;
 }
 
@@ -2608,6 +2608,51 @@ body.page-has-thumbnail .page-header-wrapper .scroll-to-content-button svg {
 	display: flex;
 }
 
+.front-page-header .front-page-slider[data-fade="1"] .slide-image {
+	transform: translateY(-50%);
+}
+
+.front-page-header .front-page-slider[data-fade="1"] .slide-image:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: #455d58;
+	transition: 1s ease;
+}
+
+.front-page-header .front-page-slider[data-fade="1"] .slide-header {
+	transform: none;
+}
+
+.front-page-header .front-page-slider[data-fade="1"] .title {
+	opacity: 0;
+	transform: translateY(20px);
+}
+
+.front-page-header .front-page-slider[data-fade="1"] .description {
+	opacity: 0;
+	transform: translateY(20px);
+}
+
+.front-page-header .front-page-slider[data-fade="1"] .slick-active .title {
+	opacity: 1;
+	transition: 1s ease;
+	transform: none;
+}
+
+.front-page-header .front-page-slider[data-fade="1"] .slick-active .description {
+	transition: 1s ease .25s;
+	opacity: 1;
+	transform: none;
+}
+
+.front-page-header .front-page-slider[data-fade="1"] .slick-active .slide-image:before {
+	width: 0;
+}
+
 .front-page-header .front-page-slider-slide {
 	padding: 150px 10px 50px;
 	color: #fff;
@@ -3099,6 +3144,10 @@ body.blog-minimalistic .navigation.pagination {
 	display: inline-block;
 	margin-left: 20px;
 	font-size: 18px;
+}
+
+.comment-respond .must-log-in {
+	text-align: center;
 }
 
 .comment-form {
@@ -4969,6 +5018,11 @@ input.mphb-datepick {
 	padding: 0;
 }
 
+.post-navigation-wrapper.room-types-navigation .nav-previous:only-child,
+.post-navigation-wrapper.room-types-navigation .nav-next:only-child {
+	text-align: center;
+}
+
 .post-navigation-wrapper.room-types-navigation svg,
 .post-navigation-wrapper.room-types-navigation .nav-subtitle {
 	display: none;
@@ -5493,8 +5547,17 @@ input.mphb-datepick {
 	background: transparent !important;
 }
 
+.autowidth-image-carousel .elementor-image-carousel-wrapper .swiper-slide-inner {
+	overflow: hidden;
+}
+
 .autowidth-image-carousel .elementor-image-carousel-wrapper img {
 	max-height: 470px;
+	transition: .3s ease;
+}
+
+.autowidth-image-carousel .elementor-image-carousel-wrapper img:hover {
+	transform: scale(1.1);
 }
 
 .autowidth-image-carousel .elementor-image-carousel-wrapper .elementor-swiper-button {
@@ -5596,6 +5659,15 @@ input.mphb-datepick {
 .stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__image {
 	position: relative;
 	text-align: center;
+	overflow: hidden;
+}
+
+.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__image:hover img {
+	transform: scale(1.1);
+}
+
+.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__image img {
+	transition: .3s ease;
 }
 
 .stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__slide-content {

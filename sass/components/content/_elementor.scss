@@ -68,8 +68,18 @@
 
 .autowidth-image-carousel {
     .elementor-image-carousel-wrapper {
+
+        .swiper-slide-inner {
+            overflow: hidden;
+        }
+
         img {
             max-height: 470px;
+            transition: .3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
         }
 
         .elementor-swiper-button {
@@ -149,6 +159,17 @@
             .stratum-advanced-posts__image {
                 position: relative;
                 text-align: center;
+                overflow: hidden;
+
+                &:hover {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+
+                img {
+                    transition: .3s ease;
+                }
             }
 
             .stratum-advanced-posts__slide-content {
@@ -271,7 +292,7 @@
         margin-top: 0;
     }
 
-    .stratum-flip-box__layer{
+    .stratum-flip-box__layer {
         border: 1px solid $themeColor3;
     }
 }

@@ -102,6 +102,10 @@
             .title-wrapper {
                 padding: 0;
             }
+
+            &:only-child {
+                text-align: center;
+            }
         }
 
         svg,

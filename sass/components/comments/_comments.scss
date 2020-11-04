@@ -48,7 +48,7 @@
             background: #fff;
             min-height: 126px;
             padding: 120px 30px 30px 30px;
-            @include respond-to(sm){
+            @include respond-to(sm) {
                 padding: 30px 30px 30px 120px;
             }
         }
@@ -116,7 +116,7 @@
         padding: 0;
     }
 
-    .comment-awaiting-moderation{
+    .comment-awaiting-moderation {
         display: block;
         margin: 20px 0;
         font-size: 13px;
@@ -136,13 +136,17 @@
             font-size: 18px;
         }
     }
+
+    .must-log-in {
+        text-align: center;
+    }
 }
 
 .comment-form {
     border: 1px solid $themeColor3;
     background: #fff;
     padding: 20px;
-    @include respond-to(sm){
+    @include respond-to(sm) {
         padding: 35px 45px 45px;
     }
 
@@ -153,7 +157,7 @@
     .form-submit {
 
         button {
-         @extend .animated-button;
+            @extend .animated-button;
         }
     }
 }

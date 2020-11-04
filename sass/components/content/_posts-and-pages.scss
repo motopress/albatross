@@ -410,6 +410,58 @@ body.page-has-thumbnail {
         .slick-track {
             display: flex;
         }
+
+        &[data-fade="1"] {
+            .slide-image {
+                transform: translateY(-50%);
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    background: $themeColor2;
+                    transition: 1s ease;
+                }
+            }
+
+            .slide-header {
+                transform: none;
+            }
+
+            .title {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            .description {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            .slick-active {
+                .title {
+                    opacity: 1;
+                    transition: 1s ease;
+                    transform: none;
+                }
+
+                .description {
+                    transition: 1s ease .25s;
+                    opacity: 1;
+                    transform: none;
+                }
+
+                .slide-image {
+                    &:before {
+                        width: 0;
+                    }
+                }
+            }
+        }
+
     }
 
     .front-page-slider-slide {
