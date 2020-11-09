@@ -27,8 +27,8 @@ function albatross_ocdi_import_files()
 
 	$demos[] = array(
 		'import_file_name' => 'Albatross Demo Import',
-		'local_import_file' => trailingslashit(get_template_directory()) . 'assets/demo-data/albatross.xml',
-		'local_import_widget_file' => trailingslashit(get_template_directory()) . 'assets/demo-data/albatross-widgets.wie',
+		'import_file_url' => 'https://raw.githubusercontent.com/motopress/albatross/master/assets/demo-data/albatross.xml',
+		'import_widget_file_url' => 'https://raw.githubusercontent.com/motopress/albatross/master/assets/demo-data/albatross-widgets.wie',
 		'import_notice' => $import_notice,
 		'preview_url' => 'https://themes.getmotopress.com/albatross',
 	);
