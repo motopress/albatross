@@ -63,7 +63,7 @@
 							array(
 								'theme_location' => 'menu-1',
 								'menu_id' => 'header-menu',
-								'menu_class' => 'header-menu',
+								'menu_class' => 'header-menu menu nav-menu',
 								'container_class' => 'header-menu-container'
 							)
 						);

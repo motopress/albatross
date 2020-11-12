@@ -2,7 +2,6 @@
 
 Contributors: motopress
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, blog, custom-header, flexible-header, sticky-post
-
 Requires at least: 4.5
 Tested up to: 5.4
 Requires PHP: 5.6
@@ -24,6 +23,9 @@ Albatross is a stylish free Elementor Hotel Booking theme. It’s designed speci
 
 == Changelog ==
 
+= 1.0.1 - Nov 10 2020 =
+* Minor bugfixes and improvements.
+
 = 1.0.0 - Nov 9 2020 =
 * Added support for MotoPress Hotel Booking plugin.
 
@@ -35,3 +37,12 @@ Albatross is a stylish free Elementor Hotel Booking theme. It’s designed speci
 * Based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2018 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
 * Part of the image on the screenshot, [source](https://pxhere.com/en/photo/1396211), [CC0 1.0 Universal (CC0 1.0)](https://creativecommons.org/publicdomain/zero/1.0/).
+* TGM Plugin Activation http://tgmpluginactivation.com/, Copyright (c) 2011, Thomas Griffin, [GPL-2.0+](http://opensource.org/licenses/gpl-2.0.php)
+* slick.js http://kenwheeler.github.io/slick/, Copyright (c) 2017 Ken Wheeler, [licensed under the MIT license](https://opensource.org/licenses/MIT)
+* menu_close.svg - self-created graphic
+* angle_down.svg - Material Design Icons https://material.io/, (C) Google, [Apache 2.0](http://www.apache.org/licenses/)
+* angle_down_light.svg - Material Design Icons https://material.io/, (C) Google, [Apache 2.0](http://www.apache.org/licenses/)
+* arrow_left.svg - Material Design Icons https://material.io/, (C) Google, [Apache 2.0](http://www.apache.org/licenses/)
+* arrow_right.svg - Material Design Icons https://material.io/, (C) Google, [Apache 2.0](http://www.apache.org/licenses/)
+* calendar.svg - Material Design Icons https://material.io/, (C) Google, [Apache 2.0](http://www.apache.org/licenses/)
+* calendar_light.svg - Material Design Icons https://material.io/, (C) Google, [Apache 2.0](http://www.apache.org/licenses/)

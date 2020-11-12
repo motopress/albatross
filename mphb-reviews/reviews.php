@@ -74,7 +74,7 @@ do_action('mphbr_reviews_content_before');
 		<?php } ?>
 
 
-        <div class="mphbr-new-review-box <?php comments_open() ? : esc_attr_e('reviews-closed')?>">
+        <div class="mphbr-new-review-box <?php echo comments_open() ? : esc_attr('reviews-closed')?>">
             <div class="mphbr-new-review-box-wrapper">
 				<?php
 

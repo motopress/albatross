@@ -90,7 +90,7 @@ body {
         flex-wrap: nowrap;
         flex: 1 1 auto;
         margin-bottom: 20px;
-        z-index: 20;
+        z-index: 21;
         @include respond-to(sm) {
             margin-bottom: 0;
         }
@@ -179,12 +179,13 @@ body {
         position: relative;
         z-index: 20;
 
+        &:focus,
         &:hover {
             background-color: $themeColor2;
         }
 
         &:focus {
-            outline: none;
+            outline: 1px dotted #eee;
         }
 
         &.toggled-on {
@@ -192,6 +193,11 @@ body {
             border: 2px solid $themeColor1;
             color: transparent;
             background-image: url("images/menu_close.svg");
+
+            &:hover,
+            &:focus {
+                border-color: $themeColor2;
+            }
         }
     }
 

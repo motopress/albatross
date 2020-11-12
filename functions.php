@@ -9,7 +9,7 @@
 
 if (!defined('ALBATROSS_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('ALBATROSS_VERSION', get_albatross_version());
+	define('ALBATROSS_VERSION', albatross_get_version());
 }
 
 if (!function_exists('albatross_setup')) :
@@ -362,7 +362,7 @@ function albatross_fonts_url()
 	return esc_url_raw($url);
 }
 
-function get_albatross_version()
+function albatross_get_version()
 {
 	$theme_info = wp_get_theme(get_template());
 

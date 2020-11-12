@@ -73,8 +73,8 @@ function albatross_posts_pagination()
 
 	the_posts_pagination(array(
 		'mid_size' => 1,
-		'prev_text' => $svg . 'Previous',
-		'next_text' => 'Next' . $svg
+		'prev_text' => $svg . esc_html__('Previous', 'albatross'),
+		'next_text' => esc_attr__('Next', 'albatross') . $svg
 	));
 }
 
@@ -118,7 +118,7 @@ function albatross_page_header()
 	if (is_page_template('template-front-page.php')) {
 		albatross_front_page_header();
 	} elseif (is_page_template('template-page-sidebar.php')) {
-//		albatross_simple_page_header();
+		return;
 	} else {
 		albatross_default_page_header();
 	}
@@ -187,7 +187,7 @@ function albatross_front_page_header()
 {
 	$query = new WP_Query(array(
 		'post_type' => 'page',
-		'posts_per_page' => -1,
+		'posts_per_page' => 20,
 		'post_parent' => get_the_ID(),
 		'order' => 'ASC',
 		'orderby' => 'menu_order',
@@ -413,14 +413,13 @@ function albatross_fp_video_enabled()
 	return apply_filters('albatross_enable_fp_video', $video_enabled && $video_id);
 }
 
-
 function albatross_add_more_to_nav($nav_menu, $args)
 {
 	if ('menu-1' === $args->theme_location) :
 		$nav_menu .= '<div class="primary-menu-more">';
 		$nav_menu .= '<ul class="menu nav-menu">';
 		$nav_menu .= '<li class="menu-item menu-item-has-children">';
-		$nav_menu .= '<button class="submenu-expand primary-menu-more-toggle is-empty" tabindex="-1" aria-label="' . esc_html__('More', 'albatross') . '" aria-haspopup="true" aria-expanded="false">';
+		$nav_menu .= '<button class="submenu-expand primary-menu-more-toggle is-empty" aria-label="' . esc_attr__('More', 'albatross') . '" aria-haspopup="true" aria-expanded="false">';
 		$nav_menu .= '<span class="screen-reader-text">' . esc_html__('More', 'albatross') . '</span>';
 		$nav_menu .= '<svg height="20px" viewBox="-14 -174 474.66578 474" width="20px" xmlns="http://www.w3.org/2000/svg">
 						<path d="m382.457031-10.382812c-34.539062-.003907-62.539062 28-62.539062 62.542968 0 34.539063 28 62.539063 
@@ -448,7 +447,6 @@ function albatross_add_more_to_nav($nav_menu, $args)
 
 add_filter('wp_nav_menu', 'albatross_add_more_to_nav', 10, 2);
 
-
 add_action('comment_form_top', 'albatross_comment_form_top');
 
 function albatross_comment_form_top()
@@ -465,7 +463,6 @@ function albatross_comment_form()
 	?>
     </div>
 	<?php
-
 }
 
 add_action('elementor/widget/render_content', 'albatross_render_elementor_widget', 10, 2);
@@ -478,7 +475,6 @@ function albatross_render_elementor_widget($content, $widget)
 
 	return $content;
 }
-
 
 function albatross_stratum_advanced_posts_content($content, $widget)
 {
@@ -595,8 +591,8 @@ function albatross_stratum_advanced_posts_content($content, $widget)
                                                     <span class="byline">
                                                         <span class="author vcard">
                                                         <a class="url fn n"
-                                                        href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>">
-                                                            <?php echo esc_html(get_the_author());?>
+                                                           href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>">
+                                                            <?php echo esc_html(get_the_author()); ?>
                                                         </a></span>
                                                     </span>
                                                 </div>

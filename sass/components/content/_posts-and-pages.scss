@@ -566,6 +566,10 @@ body.page-has-thumbnail {
                     opacity: 1;
                     background: transparent;
                 }
+
+                &:focus{
+                    outline: 1px solid;
+                }
             }
         }
 

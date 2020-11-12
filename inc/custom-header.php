@@ -23,7 +23,7 @@ function albatross_custom_header_setup()
 		apply_filters(
 			'albatross_custom_header_args',
 			array(
-				'default-image' => get_template_directory_uri() . '/images/fp_slider_bg.jpg',
+				'default-image' => '',
 				'default-text-color' => '000000',
 				'width' => 1920,
 				'height' => 1080,

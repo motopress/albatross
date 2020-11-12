@@ -21,18 +21,18 @@
         <div class="site-info">
 			<?php
 			$dateObj = new DateTime;
-			$year = $dateObj->format("Y");
-			printf(
+			$current_year = $dateObj->format("Y");
+			echo wp_kses_post(printf(
 				get_theme_mod('albatross_footer_text',
 					sprintf(
 						esc_html_x('%1$s &copy; %2$s All Rights Reserved', 'Default footer text, %1$s - blog name, %2$s - current year', 'albatross'),
 						get_bloginfo('name'),
-						$year
+						$current_year
 					)
 				),
 				get_bloginfo('name'),
-				$year
-			);
+				$current_year
+			));
 			?>
         </div><!-- .site-info -->
         <?php

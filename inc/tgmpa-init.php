@@ -10,7 +10,7 @@
  *
  * @package    TGM-Plugin-Activation
  * @subpackage Example
- * @version    2.6.1 for parent theme Getwid Base Theme for publication on WordPress.org
+ * @version    2.6.1 for parent theme Albatross for publication on WordPress.org
  * @author     Thomas Griffin, Gary Jones, Juliette Reinders Folmer
  * @copyright  Copyright (c) 2011, Thomas Griffin
  * @license    http://opensource.org/licenses/gpl-2.0.php GPL v2 or later
@@ -38,6 +38,11 @@ add_action('tgmpa_register', 'albatross_register_required_plugins');
 /**
  * Register the required plugins for this theme.
  *
+ * In this example, we register five plugins:
+ * - one included with the TGMPA library
+ * - two from an external source, one from an arbitrary source, one from a GitHub repository
+ * - two from the .org repo, where one demonstrates the use of the `is_callable` argument
+ *
  * The variables passed to the `tgmpa()` function should be:
  * - an array of plugin arrays;
  * - optionally a configuration array.
@@ -49,6 +54,7 @@ add_action('tgmpa_register', 'albatross_register_required_plugins');
  */
 function albatross_register_required_plugins()
 {
+	/*
 	/*
 	 * Array of plugin arrays. Required keys are name and slug.
 	 * If the source is NOT from the .org repo, then source is also required.
@@ -68,10 +74,6 @@ function albatross_register_required_plugins()
 			'slug' => 'contact-form-7',
 		),
 		array(
-			'name' => 'Hotel Booking Lite',
-			'slug' => 'motopress-hotel-booking-lite',
-		),
-		array(
 			'name' => 'Hotel Booking & Elementor Integration',
 			'slug' => 'mphb-elementor',
 		),
@@ -88,6 +90,13 @@ function albatross_register_required_plugins()
 			'slug' => 'another-mailchimp-widget',
 		),
 	);
+
+	if (!class_exists('HotelBookingPlugin')) {
+		$plugins[] = array(
+			'name' => 'Hotel Booking Lite',
+			'slug' => 'motopress-hotel-booking-lite',
+		);
+	}
 
 
 	/*

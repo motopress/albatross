@@ -41,8 +41,8 @@ function albatross_mphb_pagination_args($args)
 
 	$new_args = array(
 		'mid_size' => 1,
-		'prev_text' => $svg . 'Previous',
-		'next_text' => 'Next' . $svg
+		'prev_text' => $svg . esc_html__('Previous', 'albatross'),
+		'next_text' => esc_html__('Next', 'albatross') . $svg
 	);
 
 	return array_merge($args, $new_args);
@@ -125,17 +125,14 @@ function albatross_review_callback($comment, $args, $depth)
                 <div class="comment-metadata">
                     <a href="<?php echo esc_url(get_comment_link($comment, $args)); ?>">
                         <time datetime="<?php comment_time('c'); ?>">
-							<?php
-							/* translators: 1: Comment date, 2: Comment time. */
-							printf(__('%1$s', 'albatross'), get_comment_date('', $comment));
-							?>
+							<?php echo esc_html(get_comment_date('', $comment)) ?>
                         </time>
                     </a>
 					<?php edit_comment_link(__('Edit', 'albatross'), '<span class="edit-link">', '</span>'); ?>
                 </div><!-- .comment-metadata -->
 
 				<?php if ('0' == $comment->comment_approved) : ?>
-                    <em class="comment-awaiting-moderation"><?php echo $moderation_note; ?></em>
+                    <em class="comment-awaiting-moderation"><?php echo wp_kses_post($moderation_note); ?></em>
 				<?php endif; ?>
             </footer>
 
@@ -148,35 +145,38 @@ function albatross_review_callback($comment, $args, $depth)
 	<?php
 }
 
-add_action( 'mphb_sc_checkout_room_details', 'albatross_mphb_sc_checkout_room_details_before', 15 );
+add_action('mphb_sc_checkout_room_details', 'albatross_mphb_sc_checkout_room_details_before', 15);
 
-
-function albatross_mphb_sc_checkout_room_details_before(){
-    ?>
+function albatross_mphb_sc_checkout_room_details_before()
+{
+	?>
     <div class="guest-chooser-wrapper">
-<?php
+	<?php
 }
 
-add_action( 'mphb_sc_checkout_room_details', 'albatross_mphb_sc_checkout_room_details_after', 25 );
+add_action('mphb_sc_checkout_room_details', 'albatross_mphb_sc_checkout_room_details_after', 25);
 
-function albatross_mphb_sc_checkout_room_details_after(){
-    ?>
+function albatross_mphb_sc_checkout_room_details_after()
+{
+	?>
     </div>
-<?php
+	<?php
 }
 
 add_action('mphb_sc_rooms_before_loop', 'albatross_mphb_sc_rooms_before_loop');
 
-function albatross_mphb_sc_rooms_before_loop(){
-    ?>
+function albatross_mphb_sc_rooms_before_loop()
+{
+	?>
     <div class="rooms-wrapper">
-<?php
+	<?php
 }
 
 add_action('mphb_sc_rooms_after_loop', 'albatross_mphb_sc_rooms_after_loop');
 
-function albatross_mphb_sc_rooms_after_loop(){
-    ?>
+function albatross_mphb_sc_rooms_after_loop()
+{
+	?>
     </div>
-<?php
+	<?php
 }

@@ -55,7 +55,7 @@ if (!function_exists('albatross_post_categories')) :
 	function albatross_post_categories()
 	{
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list(esc_html__(' ', 'albatross'));
+		$categories_list = get_the_category_list(' ');
 		if ($categories_list) {
 			/* translators: 1: list of categories. */
 			echo '<span class="cat-links">' . $categories_list . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped

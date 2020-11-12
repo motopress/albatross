@@ -6,38 +6,24 @@
  *
  **/
 
-function albatross_ocdi_import_files()
+function albatross_ocdi_import_notice($notice)
 {
-	$import_notice = '<h4>' . __('Important note before importing sample data.', 'albatross') . '</h4>';
+	$import_notice = '<h3>' . __('Important note before importing sample data.', 'albatross') . '</h3>';
+	$import_notice .= '<p><b>' . __('According to the WordPress rules for the demo importing or downloading, we can’t pack the theme with import files or provide a direct download link to them, that is why you must manually download and import the files.', 'albatross') . '</b><br/>';
+	$import_notice .= '<small><a href="https://make.wordpress.org/themes/handbook/review/required/#importing-or-downloading" target="_blank">' . __('Theme Requirements - Importing or Downloading', 'albatross') . '</a></small></p>';
+
+	$import_notice .= '<p><b>' . __('Download theme demo data files and then proceed to the "Manual demo files upload" section below to upload theme demo files to this site', 'albatross') . '</b><br/>';
+	$import_notice .= __('Download content import file(XML): ', 'albatross') . '<a href="https://raw.githubusercontent.com/motopress/albatross/master/assets/demo-data/albatross.xml" target="_blank">' . __('albatross.xml', 'albatross') . '</a><br/>';
+	$import_notice .= __('Download widgets import file(WIE): ', 'albatross') . '<a href="https://raw.githubusercontent.com/motopress/albatross/master/assets/demo-data/albatross-widgets.wie" target="_blank">' . __('albatross-widgets.wie', 'albatross') . '</a><br/>';
+	$import_notice .= __('View the theme demo here: ', 'albatross') . '<a href="https://themes.getmotopress.com/albatross" target="_blank">' . __('Albatross', 'albatross') . '</a></p>';
 	$import_notice .= __('Data import is generally not immediate and can take up to 10 minutes.', 'albatross') . '<br/>';
-	$import_notice .= __('After you import this demo, you will have to configure the Google Maps API key separately.', 'albatross');
+	$import_notice .= __('After you import this demo, you will have to configure the Mailchimp and Google Maps API key separately.', 'albatross') . '</p>';
+	$import_notice .= '<hr/>';
 
-	$import_notice = wp_kses(
-		$import_notice,
-		array(
-			'a' => array(
-				'href' => array(),
-			),
-			'ol' => array(),
-			'li' => array(),
-			'h4' => array(),
-			'br' => array(),
-		)
-	);
-
-	$demos[] = array(
-		'import_file_name' => 'Albatross Demo Import',
-		'import_file_url' => 'https://raw.githubusercontent.com/motopress/albatross/master/assets/demo-data/albatross.xml',
-		'import_widget_file_url' => 'https://raw.githubusercontent.com/motopress/albatross/master/assets/demo-data/albatross-widgets.wie',
-		'import_notice' => $import_notice,
-		'preview_url' => 'https://themes.getmotopress.com/albatross',
-	);
-
-
-	return $demos;
+	return $notice . wp_kses_post($import_notice);
 }
 
-add_filter('pt-ocdi/import_files', 'albatross_ocdi_import_files');
+add_filter('pt-ocdi/plugin_intro_text', 'albatross_ocdi_import_notice');
 
 function albatross_ocdi_after_import_setup($selected_import)
 {
@@ -81,7 +67,7 @@ function albatross_ocdi_after_import_setup($selected_import)
 	update_option('mphb_checkout_page', $booking_confirmation_page->ID);
 	update_option('mphb_terms_and_conditions_page', $terms_conditions_page->ID);
 	update_option('mphb_booking_confirmation_page', $booking_confirmed_page->ID);
-	update_option('mphb_user_cancel_redirect_page', $booking_cancelled_page->ID);;
+	update_option('mphb_user_cancel_redirect_page', $booking_cancelled_page->ID);
 
 	update_option('elementor_disable_color_schemes', true);
 	update_option('elementor_disable_typography_schemes', true);
