@@ -25,24 +25,25 @@
 }
 
 .entry-content > *.alignfull {
+	width: auto;
 	max-width: none;
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-left: -10px;
+	margin-right: -10px;
 }
 
 @media (min-width: 768px) {
 
 	.entry-content > *.alignfull {
-		margin-left: 25px;
-		margin-right: 25px;
+		margin-left: -25px;
+		margin-right: -25px;
 	}
 }
 
 @media (min-width: 992px) {
 
 	.entry-content > *.alignfull {
-		margin-left: 50px;
-		margin-right: 50px;
+		margin-left: -50px;
+		margin-right: -50px;
 	}
 }
 

@@ -16,16 +16,17 @@
         }
 
         &.alignfull {
+            width: auto;
             max-width: $block-full-width;
-            margin-left: 10px;
-            margin-right: 10px;
+            margin-left: -10px;
+            margin-right: -10px;
             @include respond-to(sm){
-                margin-left: 25px;
-                margin-right: 25px;
+                margin-left: -25px;
+                margin-right: -25px;
             }
             @include respond-to(md){
-                margin-left: 50px;
-                margin-right: 50px;
+                margin-left: -50px;
+                margin-right: -50px;
             }
         }
     }

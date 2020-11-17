@@ -23,3 +23,21 @@ a {
         outline: 0;
     }
 }
+
+.comment-content,
+.widget,
+.entry-content {
+    a {
+        text-decoration: underline;
+    }
+
+    .wp-block-button__link,
+    button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"],
+    .button,
+    .more-link {
+        text-decoration: none;
+    }
+}
