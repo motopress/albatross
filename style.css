@@ -6,7 +6,7 @@ Theme URI: https://motopress.com/products/albatross
 Author: MotoPress
 Author URI: https://motopress.com/
 Description: Albatross is a stylish free Elementor Hotel Booking theme. It’s designed specifically for building a hotel, vacation rental, B&B, apartment, or any other type of rental property website. Powered by the best-in-class MotoPress Hotel Booking Lite plugin, Albatross makes it easy to use real-time availability calendars for each property, display the property search form, list image galleries and amenities, manage seasonal pricing and coupons, and run online bookings with ease. For design and layout changes, Albatross relies on the flexibility and power of Elementor backed by Stratum, a collection of fantastic Elementor widgets. An elegant, mobile-ready design of the Albatross WordPress hotel template uses many Elementor-powered content blocks, including breathtaking image galleries, animated flip boxes, contact forms, maps, and more. The Albatross free hotel booking theme offers an easy way to import demo data to make your hotel site look exactly like in a stunning demo, in a few clicks: https://themes.getmotopress.com/albatross/.
-Version: 1.0.2
+Version: 1.0.3
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v3
@@ -689,48 +689,6 @@ a:focus {
 a:hover,
 a:active {
 	outline: 0;
-}
-
-.comment-content a,
-.widget a,
-.entry-content a {
-	text-decoration: underline;
-}
-
-.comment-content .wp-block-button__link,
-.comment-content button,
-.comment-content .edit-link .post-edit-link,
-.edit-link .comment-content .post-edit-link,
-.comment-content input[type="button"],
-.comment-content input[type="reset"],
-.comment-content input[type="submit"],
-.comment-content .button,
-.comment-content .stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__read-more a,
-.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__read-more .comment-content a,
-.comment-content .more-link,
-.widget .wp-block-button__link,
-.widget button,
-.widget .edit-link .post-edit-link,
-.edit-link .widget .post-edit-link,
-.widget input[type="button"],
-.widget input[type="reset"],
-.widget input[type="submit"],
-.widget .button,
-.widget .stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__read-more a,
-.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__read-more .widget a,
-.widget .more-link,
-.entry-content .wp-block-button__link,
-.entry-content button,
-.entry-content .edit-link .post-edit-link,
-.edit-link .entry-content .post-edit-link,
-.entry-content input[type="button"],
-.entry-content input[type="reset"],
-.entry-content input[type="submit"],
-.entry-content .button,
-.entry-content .stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__read-more a,
-.stratum-advanced-posts.layout-carousel .swiper-container .swiper-slide .stratum-advanced-posts__read-more .entry-content a,
-.entry-content .more-link {
-	text-decoration: none;
 }
 
 /* Forms
@@ -5555,10 +5513,14 @@ input.mphb-datepick {
 	margin-right: 15px;
 }
 
+.single-room-type-wrapper .mphb-calendar-title {
+	font-size: 38px;
+	line-height: 44px;
+}
+
 .post-navigation-wrapper.room-types-navigation {
 	background: #fff;
 	padding: 0;
-	margin-bottom: 0;
 }
 
 .post-navigation-wrapper.room-types-navigation .navigation {

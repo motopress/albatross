@@ -64,6 +64,9 @@ function albatross_ocdi_after_import_setup($selected_import)
 	update_option('mphb_booking_confirmation_page', $booking_confirmed_page->ID);
 	update_option('mphb_user_cancel_redirect_page', $booking_cancelled_page->ID);
 
+	// skip hotel booking wizard
+	update_option( 'mphb_wizard_passed', true);
+
 	update_option('elementor_disable_color_schemes', true);
 	update_option('elementor_disable_typography_schemes', true);
 

@@ -23,6 +23,9 @@ Albatross is a stylish free Elementor Hotel Booking theme. It’s designed speci
 
 == Changelog ==
 
+= 1.0.3 - Nov 23 2020 =
+* Minor bugfixes and improvements.
+
 = 1.0.2 - Nov 17 2020 =
 * Minor bugfixes and improvements.
 

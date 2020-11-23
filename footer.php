@@ -22,7 +22,7 @@
 			<?php
 			$dateObj = new DateTime;
 			$current_year = $dateObj->format("Y");
-			echo wp_kses_post(printf(
+			echo wp_kses_post(sprintf(
 				get_theme_mod('albatross_footer_text',
 					sprintf(
 						esc_html_x('%1$s &copy; %2$s All Rights Reserved', 'Default footer text, %1$s - blog name, %2$s - current year', 'albatross'),

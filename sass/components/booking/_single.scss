@@ -61,6 +61,11 @@
             margin-right: 15px;
         }
     }
+
+    .mphb-calendar-title {
+        font-size: 38px;
+        line-height: 44px;
+    }
 }
 
 .post-navigation-wrapper {
@@ -68,7 +73,6 @@
     &.room-types-navigation {
         background: #fff;
         padding: 0;
-        margin-bottom: 0;
 
         .navigation {
             padding-top: 100px;

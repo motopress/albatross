@@ -50,7 +50,6 @@ function albatross_mphb_pagination_args($args)
 
 remove_action('mphb_render_single_room_type_metas', array('\MPHB\Views\SingleRoomTypeView', 'renderAttributes'), 20);
 remove_action('mphb_render_single_room_type_metas', array('\MPHB\Views\SingleRoomTypeView', 'renderDefaultOrForDatesPrice'), 30);
-remove_action('mphb_render_single_room_type_metas', array('\MPHB\Views\SingleRoomTypeView', 'renderCalendar'), 40);
 remove_action('mphb_render_single_room_type_metas', array('\MPHB\Views\SingleRoomTypeView', 'renderReservationForm'), 50);
 
 add_action('albatross_single_room_type_metas', array('\MPHB\Views\SingleRoomTypeView', 'renderDefaultOrForDatesPrice'), 10);
