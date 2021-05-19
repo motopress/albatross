@@ -282,7 +282,7 @@ function albatross_customize_register($wp_customize)
 		)
 	);
 
-	$default_footer_text = esc_html_x( '%1$s &copy; %2$s All Rights Reserved', 'Default footer text, %1$s - blog name, %2$s - current year', 'albatross' );
+	$default_footer_text = _x( '%1$s &copy; %2$s All Rights Reserved.<br> <span style="font-size: .875em;">Powered by <a href="https://motopress.com/products/albatross/" rel="nofollow">Albatross</a> WordPress theme.</span>', 'Default footer text, %1$s - blog name, %2$s - current year', 'albatross' );
 	$wp_customize->add_setting( 'albatross_footer_text', array(
 		'default'           => $default_footer_text,
 		'type'              => 'theme_mod',

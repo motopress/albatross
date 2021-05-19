@@ -20,6 +20,11 @@
     .site-info {
         opacity: .5;
         font-size: 15px;
+        line-height: 1.5;
+
+        a {
+            color: inherit;
+        }
     }
 
     .scroll-to-top-button {

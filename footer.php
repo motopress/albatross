@@ -25,7 +25,7 @@
 			echo wp_kses_post(sprintf(
 				get_theme_mod('albatross_footer_text',
 					sprintf(
-						esc_html_x('%1$s &copy; %2$s All Rights Reserved', 'Default footer text, %1$s - blog name, %2$s - current year', 'albatross'),
+						_x('%1$s &copy; %2$s All Rights Reserved.<br> <span style="font-size: .875em;">Powered by <a href="https://motopress.com/products/albatross/" rel="nofollow">Albatross</a> WordPress theme.</span>', 'Default footer text, %1$s - blog name, %2$s - current year', 'albatross'),
 						get_bloginfo('name'),
 						$current_year
 					)
