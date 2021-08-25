@@ -7,7 +7,7 @@
 
 Albatross is a stylish free Elementor Hotel Booking theme powered by the [MotoPres Hotel Booking Lite plugin](https://wordpress.org/plugins/motopress-hotel-booking-lite/).
 
-It’s designed specifically for building a hotel, vacation rental, B&B, apartment, or any other type of rental property website. Powered by the most popular WordPress plugin for rental properties, MotoPress Hotel Booking, Albatross makes it easy to use real-time availability calendars for each property, display the property search form, list image galleries and amenities, manage seasonal pricing and coupons, and run online bookings with ease. For design and layout changes, Albatross relies on the flexibility and power of Elementor backed by Stratum, a collection of fantastic Elementor widgets by MotoPress.
+It’s designed specifically for building a hotel, vacation rental, B&B, apartment, or any other type of rental property website. Powered by the most popular WordPress plugin for rental properties, MotoPress Hotel Booking, Albatross makes it easy to use real-time availability calendars for each property, display the property search form, list image galleries and amenities, manage seasonal pricing and coupons, and run online bookings with ease. For design and layout changes, Albatross relies on the flexibility and power of Elementor backed by Stratum, a collection of fantastic Elementor widgets by MotoPress
 
 An elegant, mobile-ready design of the Albatross WordPress hotel template uses many Elementor-powered content blocks, including breathtaking image galleries, animated flip boxes, contact forms, maps, and more. The Albatross free hotel booking theme offers an easy way to import demo data to make your hotel site look exactly like in a stunning demo, in a few clicks.
 
