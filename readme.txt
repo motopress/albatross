@@ -3,9 +3,8 @@
 Contributors: motopress
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, blog, custom-header, flexible-header, sticky-post
 Requires at least: 4.5
-Tested up to: 5.7
+Tested up to: 6.1
 Requires PHP: 5.6
-Stable tag: 1.0.0
 License: GNU General Public License v3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -22,6 +21,9 @@ Albatross is a stylish free Elementor Hotel Booking theme. It’s designed speci
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
+
+= 1.0.5 - Nov 23 2020 =
+* Version bump.
 
 = 1.0.3 - Nov 23 2020 =
 * Minor bugfixes and improvements.
