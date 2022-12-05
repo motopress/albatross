@@ -5559,6 +5559,22 @@ input.mphb-datepick {
 	margin-bottom: 40px;
 }
 
+.mphb_sc_checkout-wrapper .mphb-login-form-wrap {
+	background: #fff;
+	padding: 40px;
+	border: 1px solid #dadfde;
+	border-radius: 4px;
+	margin-bottom: 86px;
+}
+
+.mphb_sc_checkout-wrapper .mphb-login-form-wrap > p {
+	margin: 0;
+}
+
+.mphb_sc_checkout-wrapper .mphb-login-form-wrap .mphb-login-form {
+	margin-top: 1.5em;
+}
+
 .mphb_sc_account .mphb-account-menu,
 .mphb_sc_account .mphb-account-content {
 	float: none;
@@ -5596,6 +5612,10 @@ input.mphb-datepick {
 
 .mphb_sc_account .mphb-account-bookings th, .mphb_sc_account .mphb-account-bookings td {
 	padding: 10px 15px;
+}
+
+.mphb-login-form form {
+	margin-bottom: 1.5em;
 }
 
 .elementor-widget-heading.outlined .elementor-heading-title {

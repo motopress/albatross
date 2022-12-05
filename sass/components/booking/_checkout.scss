@@ -224,3 +224,21 @@
         margin-bottom: 40px;
     }
 }
+
+.mphb_sc_checkout-wrapper {
+    .mphb-login-form-wrap {
+        background: #fff;
+        padding: 40px;
+        border: 1px solid $themeColor3;
+        border-radius: 4px;
+        margin-bottom: 86px;
+
+        > p {
+            margin: 0;
+        }
+
+        .mphb-login-form {
+            margin-top: 1.5em;
+        }
+    }
+}
