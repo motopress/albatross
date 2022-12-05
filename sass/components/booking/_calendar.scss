@@ -134,6 +134,8 @@
             margin: 0;
             border-collapse: separate;
             border-spacing: 6px;
+            table-layout: fixed;
+            height: auto;
 
             thead {
                 border: 0;
@@ -158,9 +160,9 @@
                     font-size: 15px;
                     letter-spacing: .02em;
                     padding: 0;
-                    line-height: 30px;
-                    height: 30px;
-                    width: 30px;
+                    line-height: 28px;
+                    padding-top: .1em;
+                    height: 100%;
                 }
 
                 .mphb-extra-date {
@@ -178,9 +180,13 @@
                     color: #fff;
                 }
 
-                .mphb-booked-date.mphb-date-check-in.mphb-date-check-out,
-                .mphb-booked-date {
-                    background-image: linear-gradient(135deg, #dadfde 6.25%, #f7f7f7 6.25%, #f7f7f7 50%, #dadfde 50%, #dadfde 56.25%, #f7f7f7 56.25%, #f7f7f7 100%);
+                .mphb-out-of-season-date--check-in,
+                .mphb-out-of-season-date--check-out,
+                .mphb-out-of-season-date,
+                .mphb-mark-as-unavailable--check-in,
+                .mphb-mark-as-unavailable--check-out,
+                .mphb-mark-as-unavailable {
+                    background: linear-gradient(135deg, #dadfde 6.25%, #f7f7f7 6.25%, #f7f7f7 50%, #dadfde 50%, #dadfde 56.25%, #f7f7f7 56.25%, #f7f7f7 100%);
                     background-size: 11.31px 11.31px;
                     position: relative;
                     transform: translateZ(0);
@@ -193,47 +199,45 @@
                     transform: translateZ(0);
                 }
 
-                .mphb-booked-date.mphb-date-check-out.mphb-date-check-in {
+                .mphb-out-of-season-date--check-out.mphb-mark-as-unavailable--check-in,
+                .mphb-out-of-season-date--check-in.mphb-mark-as-unavailable--check-out,
+                .mphb-mark-as-unavailable--check-in.mphb-mark-as-unavailable--check-out {
+                    color: lighten($themeColor2, 25%);
+
                     &:before {
                         display: none;
                     }
                 }
 
-                .mphb-booked-date,
-                .mphb-available-date {
-                    &.mphb-date-check-out,
-                    &.mphb-date-check-in {
-                        background-image: linear-gradient(135deg, #dadfde 6.25%, #f7f7f7 6.25%, #f7f7f7 50%, #dadfde 50%, #dadfde 56.25%, #f7f7f7 56.25%, #f7f7f7 100%);
-                        background-size: 11.31px 11.31px;
-                        color: $themeColor2;
-
-                        &:before {
-                            content: '';
-                            position: absolute;
-                            left: 0;
-                            top: 0;
-                            right: 0;
-                            bottom: 0;
-                            border-top: 16px solid #f7f7f7;
-                            border-left: 16px solid #f7f7f7;
-                            border-bottom: 16px solid transparent;
-                            border-right: 16px solid transparent;
-                            z-index: -1;
-
-                        }
-                    }
-
-                    &.mphb-date-check-out {
-                        &:before {
-                            border-bottom: 16px solid #f7f7f7;
-                            border-right: 16px solid #f7f7f7;
-                            border-top: 16px solid transparent;
-                            border-left: 16px solid transparent;
-                        }
+                .mphb-out-of-season-date--check-in,
+                .mphb-out-of-season-date--check-out,
+                .mphb-mark-as-unavailable--check-in,
+                .mphb-mark-as-unavailable--check-out {
+                    color: $themeColor2;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        z-index: -1;
                     }
                 }
 
+                .mphb-out-of-season-date--check-in,
+                .mphb-mark-as-unavailable--check-in {
+                    &:before {
+                        background: linear-gradient(135deg, #f7f7f7 50%,  rgba(#f7f7f7, 0) 50%);
+                    }
+                }
 
+                .mphb-out-of-season-date--check-out,
+                .mphb-mark-as-unavailable--check-out {
+                    &:before {
+                        background: linear-gradient(135deg, rgba(#f7f7f7, 0) 50%, #f7f7f7 50%);
+                    }
+                }
             }
         }
     }
@@ -256,5 +260,37 @@
 .mphb-datepick-popup{
     span.mphb-date-cell {
         opacity: .5;
+    }
+}
+
+.mphb-calendar.mphb-datepick {
+    &[data-is_show_prices="1"] {
+        .datepick-month table td .mphb-date-cell {
+          line-height: 1;
+          padding: .5em 0 .25em;
+          min-height: 43px;
+        }
+
+        .mphb-date-cell__price {
+          margin-top: .125em;
+        }
+
+        .mphb-not-available-date {
+          .mphb-date-cell__price {
+            display: none;
+          }
+        }
+
+        .datepick-month{
+            padding: 0 20px;
+
+            &.first {
+                padding: 0 10px 0 30px;
+            }
+
+            &.last {
+                padding: 0 30px 0 10px;
+            }
+        }
     }
 }

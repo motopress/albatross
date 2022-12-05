@@ -1,0 +1,41 @@
+.mphb_sc_account {
+    .mphb-account-menu,
+    .mphb-account-content {
+        float: none;
+        width: 100%;
+    }
+
+    .mphb-account-menu {
+        ul {
+            list-style: none;
+            padding: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        li {
+            margin: 0;
+        }
+
+        a {
+            display: block;
+            padding: 5px 15px;
+            font-weight: 700;
+        }
+    }
+
+    .mphb-account-content {
+        background: #fff;
+        border: 1px solid #dadfde;
+        border-radius: 4px;
+        padding: 40px;
+    }
+
+    .mphb-account-bookings {
+        margin: 0;
+        th, td {
+            padding: 10px 15px;
+        }
+    }
+}

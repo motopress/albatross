@@ -95,6 +95,7 @@ function albatross_register_required_plugins()
 		$plugins[] = array(
 			'name' => 'Hotel Booking Lite',
 			'slug' => 'motopress-hotel-booking-lite',
+			'version' => '4.5.0'
 		);
 	}
 

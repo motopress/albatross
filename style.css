@@ -5,7 +5,7 @@ Theme URI: https://motopress.com/products/albatross
 Author: MotoPress
 Author URI: https://motopress.com/
 Description: Albatross is a stylish free Elementor Hotel Booking theme. It’s designed specifically for building a hotel, vacation rental, B&B, apartment, or any other type of rental property website. Powered by the best-in-class MotoPress Hotel Booking Lite plugin, Albatross makes it easy to use real-time availability calendars for each property, display the property search form, list image galleries and amenities, manage seasonal pricing and coupons, and run online bookings with ease. For design and layout changes, Albatross relies on the flexibility and power of Elementor backed by Stratum, a collection of fantastic Elementor widgets. An elegant, mobile-ready design of the Albatross WordPress hotel template uses many Elementor-powered content blocks, including breathtaking image galleries, animated flip boxes, contact forms, maps, and more. The Albatross free hotel booking theme offers an easy way to import demo data to make your hotel site look exactly like in a stunning demo, in a few clicks: https://themes.getmotopress.com/albatross/.
-Version: 1.0.5
+Version: 1.1.0
 Tested up to: 6.1
 Requires PHP: 5.6
 License: GNU General Public License v3
@@ -4828,6 +4828,8 @@ input.mphb-datepick {
 	margin: 0;
 	border-collapse: separate;
 	border-spacing: 6px;
+	table-layout: fixed;
+	height: auto;
 }
 
 .datepick .datepick-month table thead {
@@ -4854,9 +4856,9 @@ input.mphb-datepick {
 	font-size: 15px;
 	letter-spacing: .02em;
 	padding: 0;
-	line-height: 30px;
-	height: 30px;
-	width: 30px;
+	line-height: 28px;
+	padding-top: .1em;
+	height: 100%;
 }
 
 .datepick .datepick-month table td .mphb-extra-date {
@@ -4874,9 +4876,13 @@ input.mphb-datepick {
 	color: #fff;
 }
 
-.datepick .datepick-month table td .mphb-booked-date.mphb-date-check-in.mphb-date-check-out,
-.datepick .datepick-month table td .mphb-booked-date {
-	background-image: linear-gradient(135deg, #dadfde 6.25%, #f7f7f7 6.25%, #f7f7f7 50%, #dadfde 50%, #dadfde 56.25%, #f7f7f7 56.25%, #f7f7f7 100%);
+.datepick .datepick-month table td .mphb-out-of-season-date--check-in,
+.datepick .datepick-month table td .mphb-out-of-season-date--check-out,
+.datepick .datepick-month table td .mphb-out-of-season-date,
+.datepick .datepick-month table td .mphb-mark-as-unavailable--check-in,
+.datepick .datepick-month table td .mphb-mark-as-unavailable--check-out,
+.datepick .datepick-month table td .mphb-mark-as-unavailable {
+	background: linear-gradient(135deg, #dadfde 6.25%, #f7f7f7 6.25%, #f7f7f7 50%, #dadfde 50%, #dadfde 56.25%, #f7f7f7 56.25%, #f7f7f7 100%);
 	background-size: 11.31px 11.31px;
 	position: relative;
 	transform: translateZ(0);
@@ -4889,40 +4895,46 @@ input.mphb-datepick {
 	transform: translateZ(0);
 }
 
-.datepick .datepick-month table td .mphb-booked-date.mphb-date-check-out.mphb-date-check-in:before {
+.datepick .datepick-month table td .mphb-out-of-season-date--check-out.mphb-mark-as-unavailable--check-in,
+.datepick .datepick-month table td .mphb-out-of-season-date--check-in.mphb-mark-as-unavailable--check-out,
+.datepick .datepick-month table td .mphb-mark-as-unavailable--check-in.mphb-mark-as-unavailable--check-out {
+	color: #80a19a;
+}
+
+.datepick .datepick-month table td .mphb-out-of-season-date--check-out.mphb-mark-as-unavailable--check-in:before,
+.datepick .datepick-month table td .mphb-out-of-season-date--check-in.mphb-mark-as-unavailable--check-out:before,
+.datepick .datepick-month table td .mphb-mark-as-unavailable--check-in.mphb-mark-as-unavailable--check-out:before {
 	display: none;
 }
 
-.datepick .datepick-month table td .mphb-booked-date.mphb-date-check-out, .datepick .datepick-month table td .mphb-booked-date.mphb-date-check-in,
-.datepick .datepick-month table td .mphb-available-date.mphb-date-check-out,
-.datepick .datepick-month table td .mphb-available-date.mphb-date-check-in {
-	background-image: linear-gradient(135deg, #dadfde 6.25%, #f7f7f7 6.25%, #f7f7f7 50%, #dadfde 50%, #dadfde 56.25%, #f7f7f7 56.25%, #f7f7f7 100%);
-	background-size: 11.31px 11.31px;
+.datepick .datepick-month table td .mphb-out-of-season-date--check-in,
+.datepick .datepick-month table td .mphb-out-of-season-date--check-out,
+.datepick .datepick-month table td .mphb-mark-as-unavailable--check-in,
+.datepick .datepick-month table td .mphb-mark-as-unavailable--check-out {
 	color: #455d58;
 }
 
-.datepick .datepick-month table td .mphb-booked-date.mphb-date-check-out:before, .datepick .datepick-month table td .mphb-booked-date.mphb-date-check-in:before,
-.datepick .datepick-month table td .mphb-available-date.mphb-date-check-out:before,
-.datepick .datepick-month table td .mphb-available-date.mphb-date-check-in:before {
+.datepick .datepick-month table td .mphb-out-of-season-date--check-in:before,
+.datepick .datepick-month table td .mphb-out-of-season-date--check-out:before,
+.datepick .datepick-month table td .mphb-mark-as-unavailable--check-in:before,
+.datepick .datepick-month table td .mphb-mark-as-unavailable--check-out:before {
 	content: '';
 	position: absolute;
 	left: 0;
 	top: 0;
 	right: 0;
 	bottom: 0;
-	border-top: 16px solid #f7f7f7;
-	border-left: 16px solid #f7f7f7;
-	border-bottom: 16px solid transparent;
-	border-right: 16px solid transparent;
 	z-index: -1;
 }
 
-.datepick .datepick-month table td .mphb-booked-date.mphb-date-check-out:before,
-.datepick .datepick-month table td .mphb-available-date.mphb-date-check-out:before {
-	border-bottom: 16px solid #f7f7f7;
-	border-right: 16px solid #f7f7f7;
-	border-top: 16px solid transparent;
-	border-left: 16px solid transparent;
+.datepick .datepick-month table td .mphb-out-of-season-date--check-in:before,
+.datepick .datepick-month table td .mphb-mark-as-unavailable--check-in:before {
+	background: linear-gradient(135deg, #f7f7f7 50%, rgba(247, 247, 247, 0) 50%);
+}
+
+.datepick .datepick-month table td .mphb-out-of-season-date--check-out:before,
+.datepick .datepick-month table td .mphb-mark-as-unavailable--check-out:before {
+	background: linear-gradient(135deg, rgba(247, 247, 247, 0) 50%, #f7f7f7 50%);
 }
 
 .datepick .datepick-ctrl {
@@ -4941,6 +4953,32 @@ input.mphb-datepick {
 
 .mphb-datepick-popup span.mphb-date-cell {
 	opacity: .5;
+}
+
+.mphb-calendar.mphb-datepick[data-is_show_prices="1"] .datepick-month table td .mphb-date-cell {
+	line-height: 1;
+	padding: .5em 0 .25em;
+	min-height: 43px;
+}
+
+.mphb-calendar.mphb-datepick[data-is_show_prices="1"] .mphb-date-cell__price {
+	margin-top: .125em;
+}
+
+.mphb-calendar.mphb-datepick[data-is_show_prices="1"] .mphb-not-available-date .mphb-date-cell__price {
+	display: none;
+}
+
+.mphb-calendar.mphb-datepick[data-is_show_prices="1"] .datepick-month {
+	padding: 0 20px;
+}
+
+.mphb-calendar.mphb-datepick[data-is_show_prices="1"] .datepick-month.first {
+	padding: 0 10px 0 30px;
+}
+
+.mphb-calendar.mphb-datepick[data-is_show_prices="1"] .datepick-month.last {
+	padding: 0 30px 0 10px;
 }
 
 .single-room-type-wrapper {
@@ -5521,6 +5559,45 @@ input.mphb-datepick {
 	margin-bottom: 40px;
 }
 
+.mphb_sc_account .mphb-account-menu,
+.mphb_sc_account .mphb-account-content {
+	float: none;
+	width: 100%;
+}
+
+.mphb_sc_account .mphb-account-menu ul {
+	list-style: none;
+	padding: none;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.mphb_sc_account .mphb-account-menu li {
+	margin: 0;
+}
+
+.mphb_sc_account .mphb-account-menu a {
+	display: block;
+	padding: 5px 15px;
+	font-weight: 700;
+}
+
+.mphb_sc_account .mphb-account-content {
+	background: #fff;
+	border: 1px solid #dadfde;
+	border-radius: 4px;
+	padding: 40px;
+}
+
+.mphb_sc_account .mphb-account-bookings {
+	margin: 0;
+}
+
+.mphb_sc_account .mphb-account-bookings th, .mphb_sc_account .mphb-account-bookings td {
+	padding: 10px 15px;
+}
+
 .elementor-widget-heading.outlined .elementor-heading-title {
 	-webkit-text-stroke: 1px #dadfde;
 	-webkit-text-fill-color: transparent;
@@ -5921,3 +5998,5 @@ input.mphb-datepick {
 	margin-right: auto;
 	margin-bottom: 30px;
 }
+
+/*# sourceMappingURL=style.css.map */
