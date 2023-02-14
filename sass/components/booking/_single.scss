@@ -3,20 +3,24 @@
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    @include respond-to(sm) {
+    @include respond-to(md) {
         flex-wrap: nowrap;
     }
 
     .entry-content {
-        @include respond-to(sm) {
+        @include respond-to(md) {
             max-width: 640px;
             flex: 2 1 auto;
             margin-right: 50px;
+            min-width: 0;
         }
     }
 
     .single-room-type-sidebar {
-        @include respond-to(sm) {
+        margin-top: 50px;
+        width: 100%;
+
+        @include respond-to(md) {
             flex: 1 2 auto;
             max-width: 500px;
             margin-left: auto;
@@ -35,6 +39,8 @@
 
         &:last-child {
             margin-bottom: 0;
+            position: sticky;
+            top: 40px;
         }
     }
 

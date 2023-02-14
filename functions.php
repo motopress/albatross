@@ -84,7 +84,7 @@ if (!function_exists('albatross_setup')) :
 			apply_filters(
 				'albatross_custom_background_args',
 				array(
-					'default-color' => 'ffffff',
+					'default-color' => 'faf7f2',
 					'default-image' => '',
 				)
 			)
@@ -301,6 +301,16 @@ function albatross_scripts()
 add_action('wp_enqueue_scripts', 'albatross_scripts');
 
 /**
+ * Autoload
+ */
+require get_template_directory() . '/inc/autoload.php';
+
+/**
+ * Notices
+ */
+require get_template_directory() . '/inc/notices.php';
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
@@ -329,6 +339,11 @@ require get_template_directory() . '/inc/tgmpa-init.php';
  * demo-import
  */
 require get_template_directory() . '/inc/demo-import.php';
+
+/**
+ * admin pages
+ */
+require get_template_directory() . '/inc/admin-pages/theme-help.php';
 
 /**
  * MotoPress Hotel Booking functions

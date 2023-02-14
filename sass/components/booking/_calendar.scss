@@ -154,6 +154,10 @@
                 border: 0;
                 background: transparent;
 
+                a {
+                    transition: none;
+                }
+
                 .mphb-date-cell {
                     background: #f7f7f7;
                     color: inherit;
@@ -173,13 +177,6 @@
                     opacity: .5;
                 }
 
-                .mphb-check-in-date,
-                .datepick-selected,
-                .datepick-highlight {
-                    background: #58a193;
-                    color: #fff;
-                }
-
                 .mphb-out-of-season-date--check-in,
                 .mphb-out-of-season-date--check-out,
                 .mphb-out-of-season-date,
@@ -197,6 +194,16 @@
                 .mphb-available-date {
                     position: relative;
                     transform: translateZ(0);
+
+                    &.datepick-today {
+                        background: #f7f7f7;
+                    }
+                }
+
+                .mphb-out-of-season-date {
+                    &::before {
+                        display: none;
+                    }
                 }
 
                 .mphb-out-of-season-date--check-out.mphb-mark-as-unavailable--check-in,
@@ -238,6 +245,24 @@
                         background: linear-gradient(135deg, rgba(#f7f7f7, 0) 50%, #f7f7f7 50%);
                     }
                 }
+
+                .mphb-unselectable-date--check-in,
+                .mphb-unselectable-date--check-out {
+                    color: rgba(lighten($themeColor2, 25%), .5) !important;
+                }
+
+                .mphb-check-in-date,
+                .mphb-selected-date,
+                .datepick-selected,
+                .datepick-highlight {
+                    background: #58a193 !important;
+                    color: #fff !important;
+
+                    &::after,
+                    &::before {
+                        display: none;
+                    }
+                }
             }
         }
     }
@@ -258,9 +283,16 @@
 }
 
 .mphb-datepick-popup{
-    span.mphb-date-cell {
-        opacity: .5;
+    .datepick-month td {
+        span.mphb-date-cell {
+            opacity: .5;
+        }
+        .mphb-booked-date:not(.mphb-selectable-date) {
+            background: #f7f7f7;
+            color: inherit;
+        }
     }
+
 }
 
 .mphb-calendar.mphb-datepick {
@@ -291,6 +323,16 @@
             &.last {
                 padding: 0 30px 0 10px;
             }
+        }
+    }
+}
+
+// calendar on single accommodation-page
+.entry-content > .mphb-calendar {
+    .datepick-month-row > .datepick-month {
+        @include respond-to(md) {
+            width: 50% !important;
+            max-width: 310px;
         }
     }
 }

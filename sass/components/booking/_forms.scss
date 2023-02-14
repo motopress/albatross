@@ -20,6 +20,17 @@ input {
     .mphb-required-fields-tip {
         display: none;
     }
+
+    .mphb-reserve-room-section {
+        select {
+            width: auto;
+            display: inline-block;
+            height: 30px;
+            padding: 1px 30px 0 14px;
+            background-position: right 11px top 11px;
+            margin: 0 5px;
+        }
+    }
 }
 
 .mphb-reserve-btn {

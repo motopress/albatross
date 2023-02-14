@@ -1,4 +1,4 @@
-.mphbr-new-review-box {
+.comments-area:not(.mphb_sc_accommodation_reviews-wrapper) .mphbr-new-review-box {
     display: block !important;
 
     &.reviews-closed {
@@ -6,17 +6,16 @@
     }
 }
 
+.mphbr-star-rating {
+    > span {
+        color: $themeColor1;
+    }
+}
+
 .mphbr-review-wrapper {
     .mphbr-review-rating {
         line-height: 1;
         margin-bottom: 15px;
-    }
-
-    .mphbr-star-rating {
-
-        > span {
-            color: $themeColor1;
-        }
     }
 }
 
@@ -226,6 +225,32 @@
                         margin: 0 5px;
                     }
                 }
+            }
+        }
+    }
+}
+
+.mphb_sc_accommodation_reviews-wrapper {
+    .mphbr-accommodation-rating {
+        border: 1px solid $themeColor3;
+        background: #fff;
+        padding: 20px;
+        margin-bottom: 50px;
+        @include respond-to(sm) {
+            padding: 35px 45px 45px;
+        }
+    }
+
+    .mphbr-new-review-box {
+        background: transparent;
+        padding: 0;
+        border: 0;
+        margin: 50px 0;
+
+        .comment-reply-title {
+            @include respond-to(sm) {
+                font-size: 38px;
+                line-height: 44px;
             }
         }
     }

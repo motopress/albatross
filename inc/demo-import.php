@@ -6,20 +6,6 @@
  *
  **/
 
-function albatross_ocdi_import_notice($notice)
-{
-	$import_notice = '<h3>' . __('Important note before importing sample data.', 'albatross') . '</h3>';
-	$import_notice .= '<p><b>' . __('According to the WordPress rules for the demo importing or downloading, we can’t pack the theme with import files or provide a direct download link to them, that is why you must manually download and import the files.', 'albatross') . '</b><br/>';
-	$import_notice .= '<small><a href="https://make.wordpress.org/themes/handbook/review/required/#importing-or-downloading" target="_blank">' . __('Theme Requirements - Importing or Downloading', 'albatross') . '</a></small></p>';
-	$import_notice .= '<p><b>' . __('Find the guide ', 'albatross') . '<a href="https://motopress.com/products/albatross/#install-demo-guide" target="_blank">' . __('here', 'albatross') . '</a></b><br/>';
-
-	$import_notice .= '<hr/>';
-
-	return $notice . wp_kses_post($import_notice);
-}
-
-add_filter('pt-ocdi/plugin_intro_text', 'albatross_ocdi_import_notice');
-
 function albatross_ocdi_after_import_setup($selected_import)
 {
 	// Assign menus to their locations.

@@ -612,6 +612,7 @@ body.page-has-thumbnail {
         max-width: 920px;
         @include respond-to(md) {
             margin-right: 50px;
+            min-width: 0;
         }
 
         > .hentry {

@@ -174,7 +174,7 @@ body {
         @include respond-to(md) {
             padding: 35px 30px;
         }
-        background: $themeColor1 center center no-repeat;
+        background: $themeColor1;
         border: 2px solid transparent;
         position: relative;
         z-index: 20;

@@ -5,7 +5,7 @@ Theme URI: https://motopress.com/products/albatross
 Author: MotoPress
 Author URI: https://motopress.com/
 Description: Albatross is a stylish free Elementor Hotel Booking theme. It’s designed specifically for building a hotel, vacation rental, B&B, apartment, or any other type of rental property website. Powered by the best-in-class MotoPress Hotel Booking Lite plugin, Albatross makes it easy to use real-time availability calendars for each property, display the property search form, list image galleries and amenities, manage seasonal pricing and coupons, and run online bookings with ease. For design and layout changes, Albatross relies on the flexibility and power of Elementor backed by Stratum, a collection of fantastic Elementor widgets. An elegant, mobile-ready design of the Albatross WordPress hotel template uses many Elementor-powered content blocks, including breathtaking image galleries, animated flip boxes, contact forms, maps, and more. The Albatross free hotel booking theme offers an easy way to import demo data to make your hotel site look exactly like in a stunning demo, in a few clicks: https://themes.getmotopress.com/albatross/.
-Version: 1.1.0
+Version: 1.2.0
 Tested up to: 6.1
 Requires PHP: 5.6
 License: GNU General Public License v3
@@ -1988,7 +1988,7 @@ body.menu-opened .custom-logo-link.light {
 
 .site-header .header-dropdown-toggle {
 	padding: 10px 20px;
-	background: #fc9285 center center no-repeat;
+	background: #fc9285;
 	border: 2px solid transparent;
 	position: relative;
 	z-index: 20;
@@ -2850,6 +2850,7 @@ body.page-has-thumbnail .page-header-wrapper .scroll-to-content-button svg {
 @media (min-width: 992px) {
 	.page-with-sidebar-wrapper .site-main {
 		margin-right: 50px;
+		min-width: 0;
 	}
 }
 
@@ -3027,7 +3028,7 @@ body.blog-minimalistic .navigation.pagination {
 
 /* Comments
 --------------------------------------------- */
-.comment-content a {
+.comment-content {
 	word-wrap: break-word;
 }
 
@@ -4623,6 +4624,15 @@ input.mphb-datepick {
 	display: none;
 }
 
+.mphb-booking-form .mphb-reserve-room-section select {
+	width: auto;
+	display: inline-block;
+	height: 30px;
+	padding: 1px 30px 0 14px;
+	background-position: right 11px top 11px;
+	margin: 0 5px;
+}
+
 .mphb-reserve-btn {
 	width: 100%;
 }
@@ -4850,6 +4860,10 @@ input.mphb-datepick {
 	background: transparent;
 }
 
+.datepick .datepick-month table td a {
+	transition: none;
+}
+
 .datepick .datepick-month table td .mphb-date-cell {
 	background: #f7f7f7;
 	color: inherit;
@@ -4869,13 +4883,6 @@ input.mphb-datepick {
 	opacity: .5;
 }
 
-.datepick .datepick-month table td .mphb-check-in-date,
-.datepick .datepick-month table td .datepick-selected,
-.datepick .datepick-month table td .datepick-highlight {
-	background: #58a193;
-	color: #fff;
-}
-
 .datepick .datepick-month table td .mphb-out-of-season-date--check-in,
 .datepick .datepick-month table td .mphb-out-of-season-date--check-out,
 .datepick .datepick-month table td .mphb-out-of-season-date,
@@ -4893,6 +4900,14 @@ input.mphb-datepick {
 .datepick .datepick-month table td .mphb-available-date {
 	position: relative;
 	transform: translateZ(0);
+}
+
+.datepick .datepick-month table td .mphb-available-date.datepick-today {
+	background: #f7f7f7;
+}
+
+.datepick .datepick-month table td .mphb-out-of-season-date::before {
+	display: none;
 }
 
 .datepick .datepick-month table td .mphb-out-of-season-date--check-out.mphb-mark-as-unavailable--check-in,
@@ -4937,6 +4952,29 @@ input.mphb-datepick {
 	background: linear-gradient(135deg, rgba(247, 247, 247, 0) 50%, #f7f7f7 50%);
 }
 
+.datepick .datepick-month table td .mphb-unselectable-date--check-in,
+.datepick .datepick-month table td .mphb-unselectable-date--check-out {
+	color: rgba(128, 161, 154, 0.5) !important;
+}
+
+.datepick .datepick-month table td .mphb-check-in-date,
+.datepick .datepick-month table td .mphb-selected-date,
+.datepick .datepick-month table td .datepick-selected,
+.datepick .datepick-month table td .datepick-highlight {
+	background: #58a193 !important;
+	color: #fff !important;
+}
+
+.datepick .datepick-month table td .mphb-check-in-date::after, .datepick .datepick-month table td .mphb-check-in-date::before,
+.datepick .datepick-month table td .mphb-selected-date::after,
+.datepick .datepick-month table td .mphb-selected-date::before,
+.datepick .datepick-month table td .datepick-selected::after,
+.datepick .datepick-month table td .datepick-selected::before,
+.datepick .datepick-month table td .datepick-highlight::after,
+.datepick .datepick-month table td .datepick-highlight::before {
+	display: none;
+}
+
 .datepick .datepick-ctrl {
 	padding: 0 30px;
 	margin-top: 10px;
@@ -4951,8 +4989,13 @@ input.mphb-datepick {
 	background: transparent;
 }
 
-.mphb-datepick-popup span.mphb-date-cell {
+.mphb-datepick-popup .datepick-month td span.mphb-date-cell {
 	opacity: .5;
+}
+
+.mphb-datepick-popup .datepick-month td .mphb-booked-date:not(.mphb-selectable-date) {
+	background: #f7f7f7;
+	color: inherit;
 }
 
 .mphb-calendar.mphb-datepick[data-is_show_prices="1"] .datepick-month table td .mphb-date-cell {
@@ -4981,6 +5024,13 @@ input.mphb-datepick {
 	padding: 0 30px 0 10px;
 }
 
+@media (min-width: 992px) {
+	.entry-content > .mphb-calendar .datepick-month-row > .datepick-month {
+		width: 50% !important;
+		max-width: 310px;
+	}
+}
+
 .single-room-type-wrapper {
 	max-width: 1340px;
 	margin: 0 auto;
@@ -4988,21 +5038,27 @@ input.mphb-datepick {
 	flex-wrap: wrap;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
 	.single-room-type-wrapper {
 		flex-wrap: nowrap;
 	}
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
 	.single-room-type-wrapper .entry-content {
 		max-width: 640px;
 		flex: 2 1 auto;
 		margin-right: 50px;
+		min-width: 0;
 	}
 }
 
-@media (min-width: 768px) {
+.single-room-type-wrapper .single-room-type-sidebar {
+	margin-top: 50px;
+	width: 100%;
+}
+
+@media (min-width: 992px) {
 	.single-room-type-wrapper .single-room-type-sidebar {
 		flex: 1 2 auto;
 		max-width: 500px;
@@ -5023,6 +5079,8 @@ input.mphb-datepick {
 
 .single-room-type-wrapper .room-type-sidebar-block:last-child {
 	margin-bottom: 0;
+	position: sticky;
+	top: 40px;
 }
 
 .single-room-type-wrapper .room-type-meta .mphb-regular-price {
@@ -5097,21 +5155,21 @@ input.mphb-datepick {
 	display: none;
 }
 
-.mphbr-new-review-box {
+.comments-area:not(.mphb_sc_accommodation_reviews-wrapper) .mphbr-new-review-box {
 	display: block !important;
 }
 
-.mphbr-new-review-box.reviews-closed {
+.comments-area:not(.mphb_sc_accommodation_reviews-wrapper) .mphbr-new-review-box.reviews-closed {
 	display: none !important;
+}
+
+.mphbr-star-rating > span {
+	color: #fc9285;
 }
 
 .mphbr-review-wrapper .mphbr-review-rating {
 	line-height: 1;
 	margin-bottom: 15px;
-}
-
-.mphbr-review-wrapper .mphbr-star-rating > span {
-	color: #fc9285;
 }
 
 .mphb-reviews {
@@ -5339,6 +5397,33 @@ input.mphb-datepick {
 	display: inline-block;
 	content: '-';
 	margin: 0 5px;
+}
+
+.mphb_sc_accommodation_reviews-wrapper .mphbr-accommodation-rating {
+	border: 1px solid #dadfde;
+	background: #fff;
+	padding: 20px;
+	margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+	.mphb_sc_accommodation_reviews-wrapper .mphbr-accommodation-rating {
+		padding: 35px 45px 45px;
+	}
+}
+
+.mphb_sc_accommodation_reviews-wrapper .mphbr-new-review-box {
+	background: transparent;
+	padding: 0;
+	border: 0;
+	margin: 50px 0;
+}
+
+@media (min-width: 768px) {
+	.mphb_sc_accommodation_reviews-wrapper .mphbr-new-review-box .comment-reply-title {
+		font-size: 38px;
+		line-height: 44px;
+	}
 }
 
 .mphb-checkout-section {

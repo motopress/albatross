@@ -33,7 +33,7 @@
 					clip: 'auto',
 					position: 'relative',
 				} );
-				$( '.site-title a, .site-description' ).css( {
+				$( 'body:not(.menu-opened) .site-header.absolute' ).css( {
 					color: to,
 				} );
 			}

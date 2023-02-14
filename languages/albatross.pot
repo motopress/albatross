@@ -53,9 +53,9 @@ msgstr ""
 #, php-format
 msgctxt "Default footer text, %1$s - blog name, %2$s - current year"
 msgid ""
-"%1$s &copy; %2$s All Rights Reserved.<br> <span style=\"font-size: .875em;"
-"\">Powered by <a href=\"https://motopress.com/products/albatross/\" rel="
-"\"nofollow\">Albatross</a> WordPress theme.</span>"
+"%1$s &copy; %2$s All Rights Reserved.<br/><span style=\"font-size: .875em;"
+"\">Designed by <a href=\"https://motopress.com/\" target=\"_blank\" rel="
+"\"noopener noreferrer nofollow\">MotoPress</a>.</span>"
 msgstr ""
 
 #: functions.php:58
@@ -128,12 +128,12 @@ msgstr ""
 msgid "Front Page Header"
 msgstr ""
 
-#: functions.php:345
+#: functions.php:360
 msgctxt "Amiri font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:350
+#: functions.php:365
 msgctxt "Montserrat font: on or off"
 msgid "on"
 msgstr ""
@@ -149,6 +149,69 @@ msgstr ""
 #: hotel-booking/loop-room-type/book-button.php:21
 msgctxt "Loop book button text"
 msgid "Book now"
+msgstr ""
+
+#: inc/admin-pages/theme-help.php:5 inc/admin-pages/theme-help.php:6
+msgid "Theme Help"
+msgstr ""
+
+#: inc/admin-pages/theme-help.php:21
+msgid "Quick Start Guide"
+msgstr ""
+
+#: inc/admin-pages/theme-help.php:26
+msgid "Editing Home Page slides"
+msgstr ""
+
+#: inc/admin-pages/theme-help.php:27
+msgid ""
+"Each slide is a child page (sub-page) of the Home Page. To edit the slides:"
+msgstr ""
+
+#: inc/admin-pages/theme-help.php:28
+msgid ""
+"1. Navigate to Pages > All Pages and edit child pages (sub-pages) of the "
+"Home Page to change the title, descriptions, and featured image."
+msgstr ""
+
+#: inc/admin-pages/theme-help.php:29
+msgid ""
+"2. Go to Appearance > Customize > Theme Settings > Front Page Slider to "
+"adjust the speed of the animation or slideshow. There you can also set the "
+"video for the slider."
+msgstr ""
+
+#: inc/admin-pages/theme-help.php:33
+msgid "Transforming a list of Accommodations Types into a slider"
+msgstr ""
+
+#: inc/admin-pages/theme-help.php:34
+#, php-format
+msgid ""
+"If you are on Elementor: open the Accommodation Types widget > Parameters "
+"> Class > add a  %1$s CSS class."
+msgstr ""
+
+#: inc/admin-pages/theme-help.php:35
+#, php-format
+msgid ""
+"If you are on the block editor: open the Accommodation Types Listing block "
+"> Advanced > Additional CSS class(es) > add a %1$s CSS class"
+msgstr ""
+
+#: inc/admin-pages/theme-help.php:36
+#, php-format
+msgid ""
+"If you use a shortcode: add %2$s parameter and fill it with a %1$s CSS "
+"class (example %3$s)."
+msgstr ""
+
+#: inc/admin-pages/theme-help.php:40
+msgid "Colors Customization"
+msgstr ""
+
+#: inc/admin-pages/theme-help.php:41
+msgid "Go to Appearance > Customize > Colors > edit colors."
 msgstr ""
 
 #: inc/customizer.php:39
@@ -248,27 +311,28 @@ msgstr ""
 msgid "Use %1$s to insert the blog name, %2$s to insert the current year."
 msgstr ""
 
-#: inc/demo-import.php:11
-msgid "Important note before importing sample data."
+#: inc/customizer.php:308
+msgid "Accent Color"
 msgstr ""
 
-#: inc/demo-import.php:12
-msgid ""
-"According to the WordPress rules for the demo importing or downloading, we "
-"can’t pack the theme with import files or provide a direct download link "
-"to them, that is why you must manually download and import the files."
+#: inc/customizer.php:320
+msgid "Secondary Color"
 msgstr ""
 
-#: inc/demo-import.php:13
-msgid "Theme Requirements - Importing or Downloading"
+#: inc/customizer.php:332
+msgid "Front Page Widgets Background"
 msgstr ""
 
-#: inc/demo-import.php:14
-msgid "Find the guide "
+#: inc/customizer.php:344
+msgid "Front Page Search Availability Controls Background"
 msgstr ""
 
-#: inc/demo-import.php:14
-msgid "here"
+#: inc/customizer.php:356
+msgid "Main Text Color"
+msgstr ""
+
+#: inc/customizer.php:368
+msgid "Headings Text Color"
 msgstr ""
 
 #: inc/mphb-functions.php:44 inc/template-functions.php:76
@@ -293,6 +357,73 @@ msgstr ""
 
 #: inc/mphb-functions.php:130
 msgid "Edit"
+msgstr ""
+
+#: inc/notices.php:11
+#, php-format
+msgid "Follow the prompts to <a href=\"%1$s\">install required plugins</a>."
+msgstr ""
+
+#: inc/notices.php:17
+msgid ""
+"If you create a new website, you may import sample data following these "
+"steps:"
+msgstr ""
+
+#: inc/notices.php:22
+#, php-format
+msgid "Download content and widgets import files <a href=\"%1$s\">here</a>."
+msgstr ""
+
+#: inc/notices.php:31
+#, php-format
+msgid ""
+"Go to  <a href=\"%1$s\">Appearance > Import Demo Data > Manual Demo File "
+"Import</a> section and select downloaded files following the instructions."
+msgstr ""
+
+#: inc/notices.php:42
+#, php-format
+msgid ""
+"Go to <a href=\"%1$s\">Appearance > Theme Help</a> to get useful tips for "
+"quick theme customization."
+msgstr ""
+
+#: inc/notices.php:56
+msgid "To import demo data, follow the steps below:"
+msgstr ""
+
+#: inc/notices.php:58
+msgid "Download content and widgets import files."
+msgstr ""
+
+#: inc/notices.php:61
+msgid ""
+"Go to <strong>Manual Demo File Import</strong> section and select "
+"downloaded files following the instructions."
+msgstr ""
+
+#: inc/notices.php:66
+msgid "Download import files"
+msgstr ""
+
+#: inc/notices.php:67
+msgid ""
+"According to the WordPress rules for the demo importing or downloading, we "
+"can’t pack the theme with import files or provide a direct download link "
+"to them, that is why you must manually download and import the files."
+msgstr ""
+
+#: inc/notices.php:68
+msgid "Theme Requirements - Files"
+msgstr ""
+
+#: inc/notices.php:76
+msgid "Theme installation steps"
+msgstr ""
+
+#: inc/notices.php:91
+msgid "Important note before importing sample data"
 msgstr ""
 
 #: inc/template-functions.php:422 inc/template-functions.php:423

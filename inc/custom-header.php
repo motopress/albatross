@@ -24,7 +24,7 @@ function albatross_custom_header_setup()
 			'albatross_custom_header_args',
 			array(
 				'default-image' => '',
-				'default-text-color' => '000000',
+				'default-text-color' => 'ffffff',
 				'width' => 1920,
 				'height' => 1080,
 				'flex-height' => true,
@@ -71,8 +71,7 @@ if (!function_exists('albatross_header_style')) :
 			// If the user has set a custom color for the text use that.
 		else :
 			?>
-            .site-title a,
-            .site-description {
+            body:not(.menu-opened) .site-header.absolute {
                 color: #<?php echo esc_attr( $header_text_color ); ?>;
             }
 
