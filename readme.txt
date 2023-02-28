@@ -22,6 +22,9 @@ Albatross is a stylish free Elementor Hotel Booking theme. It’s designed speci
 
 == Changelog ==
 
+= 1.2.1, Feb 14 2023 =
+* Minor style improvements.
+
 = 1.2.0, Feb 14 2023 =
 * Minimum required version of the Hotel Booking Lite plugin is set to 4.6.0.
 * Added the ability to change primary colors.
