@@ -143,12 +143,12 @@
         .swiper-slide {
             margin-right: 20px;
             height: auto !important;
-            width: 540px;
+            width: 740px;
             max-width: 100%;
             transition: width .3s ease;
 
-            &.swiper-slide-active {
-                width: 740px;
+            &.swiper-slide-active ~ * {
+                width: 540px;
                 max-width: 100%;
             }
 
