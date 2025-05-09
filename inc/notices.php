@@ -1,5 +1,4 @@
 <?php
-$albatross_notices = new \WPTRT\AdminNotices\Notices();
 
 function albatross_get_import_demo_data_guide_notice() {
 	ob_start();
@@ -70,35 +69,41 @@ function albatross_get_import_demo_data_notice() {
 	return ob_get_clean();
 }
 
-// Add a notice.
-$albatross_notices->add(
-	'import_demo_data_guide', // Unique ID.
-	esc_html__( 'Theme installation steps', 'albatross' ), // The title for this notice.
-	// The content for this notice.
-	albatross_get_import_demo_data_guide_notice(),
-	[
-		'scope'         => 'user',      // user/global.
-		'screens'       => [ 'themes', 'appearance_page_tgmpa-install-plugins' ],
-		'type'          => 'info',      // info, success, warning, error.
-		'alt_style'     => false,       // Use alt styles. true/false
-		'option_prefix' => 'albatross',
-	]
-);
+function albatross_init_notices() {
+	$albatross_notices = new \WPTRT\AdminNotices\Notices();
 
-// Add a notice.
-$albatross_notices->add(
-	'import_demo_data', // Unique ID.
-	esc_html__( 'Important note before importing sample data', 'albatross' ), // The title for this notice.
-	// The content for this notice.
-	albatross_get_import_demo_data_notice(),
-	[
-		'scope'         => 'user',      // user/global.
-		'screens'       => [ 'appearance_page_one-click-demo-import' ],
-		'type'          => 'info',      // info, success, warning, error.
-		'alt_style'     => false,       // Use alt styles. true/false
-		'option_prefix' => 'albatross',
-	]
-);
+	// Add a notice.
+	$albatross_notices->add(
+		'import_demo_data_guide', // Unique ID.
+		esc_html__( 'Theme installation steps', 'albatross' ), // The title for this notice.
+		// The content for this notice.
+		albatross_get_import_demo_data_guide_notice(),
+		[
+			'scope'         => 'user',      // user/global.
+			'screens'       => [ 'themes', 'appearance_page_tgmpa-install-plugins' ],
+			'type'          => 'info',      // info, success, warning, error.
+			'alt_style'     => false,       // Use alt styles. true/false
+			'option_prefix' => 'albatross',
+		]
+	);
 
-// Boot things up.
-$albatross_notices->boot();
+	// Add a notice.
+	$albatross_notices->add(
+		'import_demo_data', // Unique ID.
+		esc_html__( 'Important note before importing sample data', 'albatross' ), // The title for this notice.
+		// The content for this notice.
+		albatross_get_import_demo_data_notice(),
+		[
+			'scope'         => 'user',      // user/global.
+			'screens'       => [ 'appearance_page_one-click-demo-import' ],
+			'type'          => 'info',      // info, success, warning, error.
+			'alt_style'     => false,       // Use alt styles. true/false
+			'option_prefix' => 'albatross',
+		]
+	);
+
+	// Boot things up.
+	$albatross_notices->boot();
+}
+
+add_action( 'after_setup_theme', 'albatross_init_notices' );
